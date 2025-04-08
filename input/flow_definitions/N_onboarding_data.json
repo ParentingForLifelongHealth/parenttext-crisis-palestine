@@ -1,323 +1,567 @@
 {
-  "meta": {
-    "version": "0.1.0"
+  "_idems": {
+    "tabulate": {
+      "content_index": {
+        "headers": [
+          "type",
+          "sheet_name",
+          "data_sheet",
+          "data_row_id",
+          "new_name",
+          "data_model",
+          "template_arguments",
+          "status",
+          "tags.1",
+          "tags.2"
+        ]
+      },
+      "onboarding_messages": {
+        "headers": [
+          "ID",
+          "msg",
+          "next_button_option",
+          "metadata.description"
+        ]
+      },
+      "onboarding_question_language_data": {
+        "headers": [
+          "ID",
+          "question",
+          "image",
+          "options.1.text",
+          "options.1.value",
+          "options.1.alias",
+          "options.2.text",
+          "options.2.value",
+          "options.2.alias"
+        ]
+      },
+      "onboarding_question_with_opt_data": {
+        "headers": [
+          "ID",
+          "question",
+          "image",
+          "variable",
+          "options.1.text",
+          "options.1.value",
+          "options.2.text",
+          "options.2.value",
+          "options.3.text",
+          "options.3.value",
+          "options.4.text",
+          "options.4.value",
+          "options.5.text",
+          "options.5.value",
+          "options.6.text",
+          "options.6.value",
+          "options.7.text",
+          "options.7.value",
+          "options.8.text",
+          "options.8.value",
+          "excluded_values",
+          "confirm_question",
+          "proceed_opt",
+          "stop_opt",
+          "stop_message"
+        ]
+      },
+      "consent_data": {
+        "headers": [
+          "ID",
+          "msg",
+          "metadata.description"
+        ]
+      },
+      "onboarding_input_number": {
+        "headers": [
+          "ID",
+          "question",
+          "variable",
+          "grouping_variable",
+          "lower_bound",
+          "low_error_msg",
+          "low_confirm_question",
+          "low_stop_opt",
+          "low_go_back_opt",
+          "low_stop_message",
+          "upper_bound",
+          "up_error_msg",
+          "up_confirm_question",
+          "up_stop_opt",
+          "up_go_back_opt",
+          "up_stop_message",
+          "general_error_msg",
+          "ranges.1.limit",
+          "ranges.1.var_value",
+          "ranges.2.limit",
+          "ranges.2.var_value",
+          "ranges.3.limit",
+          "ranges.3.var_value"
+        ]
+      }
+    }
   },
-  "sheets": {
-    "content_index": [
-      {
-        "type": "data_sheet",
-        "sheet_name": "onboarding_messages",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "SingleMessageModel",
-        "template_arguments": "",
-        "status": "",
-        "tags.1": "",
-        "tags.2": ""
-      },
-      {
-        "type": "data_sheet",
-        "sheet_name": "onboarding_question_with_opt_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "OnboardingQuestionWithOptionsModel",
-        "template_arguments": "",
-        "status": "",
-        "tags.1": "",
-        "tags.2": ""
-      },
-      {
-        "type": "data_sheet",
-        "sheet_name": "onboarding_question_language_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "OnboardingQuestionWithOptionsModel",
-        "template_arguments": "",
-        "status": "",
-        "tags.1": "",
-        "tags.2": ""
-      },
-      {
-        "type": "data_sheet",
-        "sheet_name": "consent_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "SingleMessageModel",
-        "template_arguments": "",
-        "status": "",
-        "tags.1": "",
-        "tags.2": ""
-      },
-      {
-        "type": "data_sheet",
-        "sheet_name": "onboarding_input_number",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "OnboardingQuestionRangeModel",
-        "template_arguments": "",
-        "status": "",
-        "tags.1": "",
-        "tags.2": ""
+  "content_index": [
+    {
+      "type": "data_sheet",
+      "sheet_name": "onboarding_messages",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "SingleMessageModel",
+      "template_arguments": "",
+      "status": "",
+      "tags": [
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "onboarding_question_with_opt_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "OnboardingQuestionWithOptionsModel",
+      "template_arguments": "",
+      "status": "",
+      "tags": [
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "onboarding_question_language_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "OnboardingQuestionWithOptionsModel",
+      "template_arguments": "",
+      "status": "",
+      "tags": [
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "consent_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "SingleMessageModel",
+      "template_arguments": "",
+      "status": "",
+      "tags": [
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "onboarding_input_number",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "OnboardingQuestionRangeModel",
+      "template_arguments": "",
+      "status": "",
+      "tags": [
+        "",
+        ""
+      ]
+    }
+  ],
+  "onboarding_messages": [
+    {
+      "ID": "onboarding_welcome_msg",
+      "msg": "Welcome to ParentText. Every parent everywhere needs support. We hope we can help. \ud83d\udc9a",
+      "next_button_option": "",
+      "metadata": {
+        "description": "first message after language selection (if present)"
       }
-    ],
-    "onboarding_messages": [
-      {
-        "ID": "onboarding_welcome_msg",
-        "msg": "Welcome to ParentText. Every parent everywhere needs support. We hope we can help. 💚",
-        "next_button_option": "",
-        "metadata.description": "first message after language selection (if present)"
-      },
-      {
-        "ID": "orientation",
-        "msg": "Thanks for answering our questions. We're ready to get started. 💚\nTo start, you can watch this video to learn about this programme. ",
-        "next_button_option": "NEXT",
-        "metadata.description": "message with onboarding video"
+    },
+    {
+      "ID": "orientation",
+      "msg": "Thanks for answering our questions. We're ready to get started. \ud83d\udc9a\nTo start, you can watch this video to learn about this programme.",
+      "next_button_option": "NEXT",
+      "metadata": {
+        "description": "message with onboarding video"
       }
-    ],
-    "onboarding_question_language_data": [
-      {
-        "ID": "entry",
-        "question": "Please select your language:\n\nمن فضلك ادخل اللغة",
-        "image": "https://firebasestorage.googleapis.com/v0/b/idems-media-recorder.appspot.com/o/project%2FPLH%2Fsubproject%2FParentText_v2%2Fdeployment%2FGlobal%2FresourceGroup%2Fimage%2Funiversal%2Fparenttext_logo.png?alt=media&token=09fbdf89-e9c8-4d06-bf14-4c480a3a869a",
-        "options.1.text": "English",
-        "options.1.value": "eng",
-        "options.1.alias": "eng",
-        "options.2.text": "اللغة العربية",
-        "options.2.value": "ara",
-        "options.2.alias": "ara"
-      },
-      {
-        "ID": "menu",
-        "question": "Please select your language:",
-        "image": "",
-        "options.1.text": "English",
-        "options.1.value": "eng",
-        "options.1.alias": "eng",
-        "options.2.text": "Arabic",
-        "options.2.value": "ara",
-        "options.2.alias": "ara"
+    }
+  ],
+  "onboarding_question_language_data": [
+    {
+      "ID": "entry",
+      "question": "Please select your language:\n\n\u0645\u0646 \u0641\u0636\u0644\u0643 \u0627\u062f\u062e\u0644 \u0627\u0644\u0644\u063a\u0629",
+      "image": "https://firebasestorage.googleapis.com/v0/b/idems-media-recorder.appspot.com/o/project%2FPLH%2Fsubproject%2FParentText_v2%2Fdeployment%2FGlobal%2FresourceGroup%2Fimage%2Funiversal%2Fparenttext_logo.png?alt=media&token=09fbdf89-e9c8-4d06-bf14-4c480a3a869a",
+      "options": [
+        {
+          "text": "English",
+          "value": "eng",
+          "alias": "eng"
+        },
+        {
+          "text": "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "value": "ara",
+          "alias": "ara"
+        }
+      ]
+    },
+    {
+      "ID": "menu",
+      "question": "Please select your language:",
+      "image": "",
+      "options": [
+        {
+          "text": "English",
+          "value": "eng",
+          "alias": "eng"
+        },
+        {
+          "text": "Arabic",
+          "value": "ara",
+          "alias": "ara"
+        }
+      ]
+    }
+  ],
+  "onboarding_question_with_opt_data": [
+    {
+      "ID": "media",
+      "question": "\u2754Before we get started, we have a few questions to make this journey personalised:\n\n\ud83d\udcf2 How would you prefer to receive content \u2014through mostly text / images or with audio guides?",
+      "image": "",
+      "variable": "type of media",
+      "options": [
+        {
+          "text": "Text / Images",
+          "value": "low"
+        },
+        {
+          "text": "Audio",
+          "value": "medium"
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        }
+      ],
+      "excluded_values": "",
+      "confirm_question": "",
+      "proceed_opt": "",
+      "stop_opt": "",
+      "stop_message": ""
+    },
+    {
+      "ID": "gender",
+      "question": "Are you a WOMAN or MAN?",
+      "image": "",
+      "variable": "gender",
+      "options": [
+        {
+          "text": "Woman",
+          "value": "woman"
+        },
+        {
+          "text": "Man",
+          "value": "man"
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        }
+      ],
+      "excluded_values": "",
+      "confirm_question": "",
+      "proceed_opt": "",
+      "stop_opt": "",
+      "stop_message": ""
+    },
+    {
+      "ID": "location",
+      "question": "\ud83d\udccd Where are you located?",
+      "image": "",
+      "variable": "location",
+      "options": [
+        {
+          "text": "Jordan",
+          "value": "Jordan"
+        },
+        {
+          "text": "Gaza",
+          "value": "Gaza"
+        },
+        {
+          "text": "West Bank",
+          "value": "West Bank"
+        },
+        {
+          "text": "Lebanon",
+          "value": "Lebanon"
+        },
+        {
+          "text": "Egypt",
+          "value": "Egypt"
+        },
+        {
+          "text": "Syria",
+          "value": "Syria"
+        },
+        {
+          "text": "Yemen",
+          "value": "Yemen"
+        },
+        {
+          "text": "Other",
+          "value": "Other"
+        }
+      ],
+      "excluded_values": [
+        "Gaza",
+        "West Bank"
+      ],
+      "confirm_question": "This is a very difficult and dangerous time for you and your family. These tips might be different from what you need right now. What would you like to do?",
+      "proceed_opt": "I want the tips",
+      "stop_opt": "I do not want the tips",
+      "stop_message": "That's okay. If you decide you want these tips later, type HELLO."
+    },
+    {
+      "ID": "situation",
+      "question": "What is your current living situation?",
+      "image": "",
+      "variable": "situation",
+      "options": [
+        {
+          "text": "Living in a camp or shelter",
+          "value": "camp"
+        },
+        {
+          "text": "Living in a house or apartment",
+          "value": "home"
+        },
+        {
+          "text": "Moving around often",
+          "value": "on_the_move"
+        },
+        {
+          "text": "Prefer not to say",
+          "value": "no"
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        }
+      ],
+      "excluded_values": "",
+      "confirm_question": "",
+      "proceed_opt": "",
+      "stop_opt": "",
+      "stop_message": ""
+    },
+    {
+      "ID": "age",
+      "question": "How old are you?",
+      "image": "",
+      "variable": "age",
+      "options": [
+        {
+          "text": "Under 16 years old",
+          "value": "Under 16 years old"
+        },
+        {
+          "text": "16-19 years old",
+          "value": "16-19 years old"
+        },
+        {
+          "text": "20-35 years old",
+          "value": "20-35 years old"
+        },
+        {
+          "text": "Over 35 years old",
+          "value": "Over 35 years old"
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        }
+      ],
+      "excluded_values": "",
+      "confirm_question": "",
+      "proceed_opt": "",
+      "stop_opt": "",
+      "stop_message": ""
+    }
+  ],
+  "consent_data": [
+    {
+      "ID": "intro",
+      "msg": "The tips you will receive in this programme have been developed with support from Sanadak, Anar for Empowerment and Psychosocial Support, World Without Orphans, Parenting for Lifelong Health, and UNICEF",
+      "metadata": {
+        "description": ""
       }
-    ],
-    "onboarding_question_with_opt_data": [
-      {
-        "ID": "media",
-        "question": "❔Before we get started, we have a few questions to make this journey personalised:\n\n📲 How would you prefer to receive content —through mostly text / images or with audio guides?",
-        "image": "",
-        "variable": "type of media",
-        "options.1.text": "Text / Images",
-        "options.1.value": "low",
-        "options.2.text": "Audio",
-        "options.2.value": "medium",
-        "options.3.text": "",
-        "options.3.value": "",
-        "options.4.text": "",
-        "options.4.value": "",
-        "options.5.text": "",
-        "options.5.value": "",
-        "options.6.text": "",
-        "options.6.value": "",
-        "options.7.text": "",
-        "options.7.value": "",
-        "options.8.text": "",
-        "options.8.value": "",
-        "excluded_values": "",
-        "confirm_question": "",
-        "proceed_opt": "",
-        "stop_opt": "",
-        "stop_message": ""
-      },
-      {
-        "ID": "gender",
-        "question": "Are you a WOMAN or MAN?",
-        "image": "",
-        "variable": "gender",
-        "options.1.text": "Woman",
-        "options.1.value": "woman",
-        "options.2.text": "Man",
-        "options.2.value": "man",
-        "options.3.text": "",
-        "options.3.value": "",
-        "options.4.text": "",
-        "options.4.value": "",
-        "options.5.text": "",
-        "options.5.value": "",
-        "options.6.text": "",
-        "options.6.value": "",
-        "options.7.text": "",
-        "options.7.value": "",
-        "options.8.text": "",
-        "options.8.value": "",
-        "excluded_values": "",
-        "confirm_question": "",
-        "proceed_opt": "",
-        "stop_opt": "",
-        "stop_message": ""
-      },
-      {
-        "ID": "location",
-        "question": "📍 Where are you located?",
-        "image": "",
-        "variable": "location",
-        "options.1.text": "Jordan",
-        "options.1.value": "Jordan",
-        "options.2.text": "Gaza",
-        "options.2.value": "Gaza",
-        "options.3.text": "West Bank",
-        "options.3.value": "West Bank",
-        "options.4.text": "Lebanon",
-        "options.4.value": "Lebanon",
-        "options.5.text": "Egypt",
-        "options.5.value": "Egypt",
-        "options.6.text": "Syria",
-        "options.6.value": "Syria",
-        "options.7.text": "Yemen",
-        "options.7.value": "Yemen",
-        "options.8.text": "Other",
-        "options.8.value": "Other",
-        "excluded_values": "Gaza|West Bank",
-        "confirm_question": "This is a very difficult and dangerous time for you and your family. These tips might be different from what you need right now. What would you like to do? ",
-        "proceed_opt": "I want the tips",
-        "stop_opt": "I do not want the tips",
-        "stop_message": "That's okay. If you decide you want these tips later, type HELLO. "
-      },
-      {
-        "ID": "situation",
-        "question": "What is your current living situation?",
-        "image": "",
-        "variable": "situation",
-        "options.1.text": "Living in a camp or shelter",
-        "options.1.value": "camp",
-        "options.2.text": "Living in a house or apartment",
-        "options.2.value": "home",
-        "options.3.text": "Moving around often",
-        "options.3.value": "on_the_move",
-        "options.4.text": "Prefer not to say",
-        "options.4.value": "no",
-        "options.5.text": "",
-        "options.5.value": "",
-        "options.6.text": "",
-        "options.6.value": "",
-        "options.7.text": "",
-        "options.7.value": "",
-        "options.8.text": "",
-        "options.8.value": "",
-        "excluded_values": "",
-        "confirm_question": "",
-        "proceed_opt": "",
-        "stop_opt": "",
-        "stop_message": ""
-      },
-      {
-        "ID": "age",
-        "question": "How old are you?",
-        "image": "",
-        "variable": "age",
-        "options.1.text": "Under 16 years old",
-        "options.1.value": "Under 16 years old",
-        "options.2.text": "16-19 years old",
-        "options.2.value": "16-19 years old",
-        "options.3.text": "20-35 years old",
-        "options.3.value": "20-35 years old",
-        "options.4.text": "Over 35 years old",
-        "options.4.value": "Over 35 years old",
-        "options.5.text": "",
-        "options.5.value": "",
-        "options.6.text": "",
-        "options.6.value": "",
-        "options.7.text": "",
-        "options.7.value": "",
-        "options.8.text": "",
-        "options.8.value": "",
-        "excluded_values": "",
-        "confirm_question": "",
-        "proceed_opt": "",
-        "stop_opt": "",
-        "stop_message": ""
+    },
+    {
+      "ID": "info",
+      "msg": "\u2705Participating in ParentText is optional. \n\u2705Your personal information is safe and private. Your name and information will not be public, but your responses will be kept and used by researchers to learn how to support families like yours.  They plan to publish the results. \n\u274cYou can stop when you want. Just type {STOP}",
+      "metadata": {
+        "description": "{STOP} placeholder: do not edit\n{consent_link} placeholder: do not edit"
       }
-    ],
-    "consent_data": [
-      {
-        "ID": "intro",
-        "msg": "The tips you will receive in this programme have been developed with support from Sanadak, Anar for Empowerment and Psychosocial Support, World Without Orphans, Parenting for Lifelong Health, and UNICEF",
-        "metadata.description": ""
-      },
-      {
-        "ID": "info",
-        "msg": "✅Participating in ParentText is optional. \n✅Your personal information is safe and private. Your name and information will not be public, but your responses will be kept and used by researchers to learn how to support families like yours.  They plan to publish the results. \n❌You can stop when you want. Just type {STOP}",
-        "metadata.description": "{STOP} placeholder: do not edit\n{consent_link} placeholder: do not edit"
-      },
-      {
-        "ID": "agree_instructions",
-        "msg": "Press YES if you agree with this. Type \"EXIT\" if you do not want to participate. ",
-        "metadata.description": "YES needs to be consistent with \"yes_option\"\nEXIT needs to be consistent with \"exit_option\""
-      },
-      {
-        "ID": "yes_option",
-        "msg": "YES",
-        "metadata.description": "needs to be consistent with \"agree_instructions\""
-      },
-      {
-        "ID": "exit_option",
-        "msg": "EXIT",
-        "metadata.description": "needs to be consistent with \"agree_instructions\""
-      },
-      {
-        "ID": "exit_message",
-        "msg": "Are you sure you do not want to get these messages? If you do not want to receive any more messages, please type NO. If you made a mistake, please press BACK and choose another option.",
-        "metadata.description": "BACK needs to be consistent with \"back_option\"\nNO needs to be consistent with \"stop_option\""
-      },
-      {
-        "ID": "back_option",
-        "msg": "BACK",
-        "metadata.description": "needs to be consistent with \"exit_message\""
-      },
-      {
-        "ID": "stop_option",
-        "msg": "NO",
-        "metadata.description": "needs to be consistent with \"exit_message\""
-      },
-      {
-        "ID": "goodbye_msg",
-        "msg": "That's okay. If you decide you want these tips later, type HELLO. ",
-        "metadata.description": "HELLO can be anything"
-      },
-      {
-        "ID": "agreement_thanks",
-        "msg": "That is wonderful, thank you so much! ",
-        "metadata.description": ""
+    },
+    {
+      "ID": "agree_instructions",
+      "msg": "Press YES if you agree with this. Type \"EXIT\" if you do not want to participate.",
+      "metadata": {
+        "description": "YES needs to be consistent with \"yes_option\"\nEXIT needs to be consistent with \"exit_option\""
       }
-    ],
-    "onboarding_input_number": [
-      {
-        "ID": "children_at_home",
-        "question": "How many children do you take care of? ",
-        "variable": "children at home",
-        "grouping_variable": "",
-        "lower_bound": "0",
-        "low_error_msg": "I'm sorry. I don't understand. Please enter a number 0-30.",
-        "low_confirm_question": "",
-        "low_stop_opt": "",
-        "low_go_back_opt": "",
-        "low_stop_message": "",
-        "upper_bound": "30",
-        "up_error_msg": "I'm sorry. I don't understand. Please enter a number 0-30.",
-        "up_confirm_question": "",
-        "up_stop_opt": "",
-        "up_go_back_opt": "",
-        "up_stop_message": "",
-        "general_error_msg": "I'm sorry. I don't understand. Please enter a number 0-30.",
-        "ranges.1.limit": "",
-        "ranges.1.var_value": "",
-        "ranges.2.limit": "",
-        "ranges.2.var_value": "",
-        "ranges.3.limit": "",
-        "ranges.3.var_value": ""
+    },
+    {
+      "ID": "yes_option",
+      "msg": "YES",
+      "metadata": {
+        "description": "needs to be consistent with \"agree_instructions\""
       }
-    ]
-  }
+    },
+    {
+      "ID": "exit_option",
+      "msg": "EXIT",
+      "metadata": {
+        "description": "needs to be consistent with \"agree_instructions\""
+      }
+    },
+    {
+      "ID": "exit_message",
+      "msg": "Are you sure you do not want to get these messages? If you do not want to receive any more messages, please type NO. If you made a mistake, please press BACK and choose another option.",
+      "metadata": {
+        "description": "BACK needs to be consistent with \"back_option\"\nNO needs to be consistent with \"stop_option\""
+      }
+    },
+    {
+      "ID": "back_option",
+      "msg": "BACK",
+      "metadata": {
+        "description": "needs to be consistent with \"exit_message\""
+      }
+    },
+    {
+      "ID": "stop_option",
+      "msg": "NO",
+      "metadata": {
+        "description": "needs to be consistent with \"exit_message\""
+      }
+    },
+    {
+      "ID": "goodbye_msg",
+      "msg": "That's okay. If you decide you want these tips later, type HELLO.",
+      "metadata": {
+        "description": "HELLO can be anything"
+      }
+    },
+    {
+      "ID": "agreement_thanks",
+      "msg": "That is wonderful, thank you so much!",
+      "metadata": {
+        "description": ""
+      }
+    }
+  ],
+  "onboarding_input_number": [
+    {
+      "ID": "children_at_home",
+      "question": "How many children do you take care of?",
+      "variable": "children at home",
+      "grouping_variable": "",
+      "lower_bound": 0,
+      "low_error_msg": "I'm sorry. I don't understand. Please enter a number 0-30.",
+      "low_confirm_question": "",
+      "low_stop_opt": "",
+      "low_go_back_opt": "",
+      "low_stop_message": "",
+      "upper_bound": 30,
+      "up_error_msg": "I'm sorry. I don't understand. Please enter a number 0-30.",
+      "up_confirm_question": "",
+      "up_stop_opt": "",
+      "up_go_back_opt": "",
+      "up_stop_message": "",
+      "general_error_msg": "I'm sorry. I don't understand. Please enter a number 0-30.",
+      "ranges": [
+        {
+          "limit": "",
+          "var_value": ""
+        },
+        {
+          "limit": "",
+          "var_value": ""
+        },
+        {
+          "limit": "",
+          "var_value": ""
+        }
+      ]
+    }
+  ]
 }

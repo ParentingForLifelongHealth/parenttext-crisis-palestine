@@ -1,141 +1,510 @@
 {
-  "meta": {
-    "version": "0.1.0"
+  "_idems": {
+    "tabulate": {
+      "content_index": {
+        "headers": [
+          "type",
+          "sheet_name",
+          "data_sheet",
+          "data_row_id",
+          "new_name",
+          "data_model",
+          "template_arguments",
+          "status"
+        ]
+      },
+      "ltp_activity_crisis_data": {
+        "headers": [
+          "ID",
+          "name",
+          "text",
+          "act_type",
+          "act_age",
+          "attached_single_doc"
+        ]
+      }
+    }
   },
-  "sheets": {
-    "content_index": [
-      {
-        "type": "data_sheet",
-        "sheet_name": "ltp_activity_crisis_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "ltp_activity_data",
-        "data_model": "LtpActivityModel",
-        "template_arguments": "",
-        "status": ""
-      }
-    ],
-    "ltp_activity_crisis_data": [
-      {
-        "ID": "friendly_chat",
-        "name": "A Friendly Chat",
-        "text": "Talk to your children about something that they are interested in! 😃\n\n⚽ An easy way to start talking to your children is to ask them about something they are interested in. For example, you could talk about local stories, traditions, sports, favourite books, friends, music, famous people or something they have been learning about.\n;\n👂 You may not find everything your children share to be interesting, but it’s important to show enthusiasm and an eagerness to learn. \n\nPaying attention to what matters to your children can make a big difference in your relationship and their happiness. ",
-        "act_type": "Quick | Calm ",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": "https://docs.google.com/document/d/1zmPPPdVyma_H3hjB6-_IpANO7x66tmVwBx5R8-HWRYo"
-      },
-      {
-        "ID": "reflect_positive",
-        "name": "Reflect on Hope ",
-        "text": "Spread Hope! \n💡 Together, take a minute to think about all the things you did today. \n\n☀️ Take turns sharing one positive thing that happened. This could be something small or big, like feeling good because you took a pause to take some deep breaths, exercised like walking or stretching, or spent time with people you care about.\n\n⏰ Try doing this every day - even more on the days it feels like you have not done anything special. ",
-        "act_type": "Calm | Quick",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "whats_new",
-        "name": "What’s New?",
-        "text": "Learning is fun! 🎓\n\n❓ Ask your children to think of a new, fun skill you could learn together. \nFor example, keeping a ball in the air with your foot, learning, practising local language phrases, sharing stories from your culture, playing local games and sports, or learning a new song.\n;\n🔄 Take turns trying out the new skill. Make sure to praise each other and learn and play together!\n💛 Approach learning the skill in a kind and fun way, and do not judge your children or yourself for your ability in the skill. ",
-        "act_type": "Active",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "checkin_chat",
-        "name": "Check-in Chat",
-        "text": "Actively checking in on one another helps to keep relationships healthy! ⭐\nAsk each other questions like: “What made you happy today?” 👂 “What was difficult today?” 👂 “How can I help you?” 👂\nFor this to help, your children need to feel safe while sharing things with you. Be open to their responses. 💚 \n;\nOlder children tend to be more honest when they trust that what they say will not be used against them later.\nBe kind to yourself if your children do not want to share their problems with you. 💙 Often, children are afraid to share as they are scared they will get in trouble. Getting upset with them won’t help - keep showing you love them and give them time! 🌷",
-        "act_type": "Quick | Calm",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "express_yourself",
-        "name": "Express Yourself",
-        "text": "Movement makes people happy!\nThis game can be played in pairs or as a group - stand facing each other or in a circle.\n🎵 Together, choose a song, a fun sound, or a clapping pattern to follow and choose a person to start the game by creating one movement.\n👀 The person to their right must copy that movement and add their own movement to it.\n✨ Go around the circle, each person adding a new movement.\n;\n🔄 The first one who forgets someone's movements or does it in the wrong order chooses the next song, sound, or pattern and starts the game again.\n\n🎉 Have fun trying out different movements together with this fun game.",
-        "act_type": "Quick | Active ",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "2truth_1lie",
-        "name": "2 Truths, 1 Lie",
-        "text": "This is a fun, quick game, and the point of it is to learn things about each other. Make your answers as interesting as possible! 🎨\n💡 Everyone thinks of 3 facts about themselves. 2 must be true, and 1 must be a lie. \n🔷 Here are some examples: I hate cold weather, and my favourite thing to learn about is maths.\n👀 Share your facts with your children and ask them to guess which one is a lie. \n🔄 Now ask them to do the same, and guess theirs.\nDid you learn anything new about your children, or did they learn anything new about you? 💛",
-        "act_type": "Quick | Calm ",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "yes_no_maybe",
-        "name": "Yes, No or Maybe",
-        "text": "Are you tired of hearing your children say yes, no, or maybe to all of your questions? Turn your chat into a game, and don’t allow one-word answers. 🎈\n\n🔴 Older children are known to give one-word answers to avoid talking. \n💡 When you would like to really know how your children are doing, you can turn your chat into a game. \n⭐ Take turns asking each other questions. The only rule is that you cannot use one-word responses like Yes, No, Maybe, Fine, and Okay.\n⚽ You can ask about things your children like or what they did today. For example, how was your day? What are you excited about? What is one thing that is worrying you today?\n🔄 It is important to let your children ask a question as well. Trust is built when your children can see that you are also sharing your life with them and not only trying to learn about their life.",
-        "act_type": "Quick | Calm ",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "get_active",
-        "name": "Get Active",
-        "text": "Exercise is a great way to spend time together, and it is so good for your health. 🌱 Find an exercise activity that both you and your children want to do and try it out together! Be mindful of the safety of the space you are using for exercise. \n\n⏰ Even walking for 10 minutes a day is good for you. \n⚽Together, try walking, running, stretching, playing games like hide-and-seek, or any other physical activities you enjoy.\n;\n🏆 Together, think of ways to make it even more fun. Can you run to a certain point? Take turns being the coach? Can there be a small, free reward like getting to decide the next activity?\nExercise becomes easier and more enjoyable the more you do it. \n🔄 If you or your children do not like the first type of exercise you pick, try a new way to exercise.",
-        "act_type": "Active",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "take_a_pause",
-        "name": "Take a Pause With Your Children",
-        "text": "Take a pause with your children. This helps them deal with stress in a healthy way!\n⏰ You could take a pause together at any time, or you could try at a specific time like before bedtime.\n👂 Sit down together and close your eyes. Listen to your breath as it goes in and out. Notice how you feel. \n⭐ Take 5 more deep breaths.\n;\n👀 When you are ready, open your eyes again. Do you feel any different? \n⏸ Ask your children what it was like to take a pause. Listen and accept whatever they say about it.",
-        "act_type": "Calm | Quick",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "who_i_am",
-        "name": "This Is Who I Am",
-        "text": "Self-esteem is the way you value yourself, either in a positive or negative way. Helping your children have high self-esteem is a recipe for success! 🏆\n⭐Share with your children 3 things you like about yourself!\n3️⃣ Ask your children to tell you 3 things they like about themselves. \n;\nFor example, I am great at treating others kindly. I am great at playing football. I am great at drawing flowers. If this is too hard, try thinking of just one thing. ",
-        "act_type": "Calm | Quick",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "setting_goal",
-        "name": "Weekly Goal Setting",
-        "text": "Let’s set some goals ⭐\n\n⏰ It can be helpful to set smaller weekly goals that are easier to reach, especially when life feels uncertain. \n \n💡Ask each of your children for one goal that they would like to achieve this week. \n\n🔄 Make sure this goal is *specific* and *achievable* to reach in 1 week, like: practising deep breathing for 5 minutes every day, exercising for 10 minutes three times a week, journaling feelings every night, or spending quality time with family or friends daily.\n;\n💚 You can also share your own weekly goals with your children and support each other so you can both achieve your goals.\n\n🎉 Make sure to praise and celebrate your children for their hard work towards reaching their goals.\n\n🔔 If your children do not reach their goals, that is okay. Discuss with them the steps they still need to take or how they could reach it a different way.",
-        "act_type": "Calm",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "one_on_one_time",
-        "name": "One-on-One Time",
-        "text": "💚 Spending time just with your children and taking an interest in them can improve your relationship. \n\n👀 When your children are playing alone or occupying themselves, join them and show interest in what they are doing.\n\n👂Ask questions about their activity and listen to them.\n;\nLet your children lead the activity and follow them to build their confidence and autonomy. 😃\n\n👀 Say what you see - describing everything and supporting your children’s actions.\n\nBe positive, praise your children and enjoy spending this time with them. 😃💚",
-        "act_type": "Calm",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "animals",
-        "name": "Animals",
-        "text": "🧸 **Active Animals** \nTake turns with your children doing animal actions. You might hop like a frog, stretch like a cat, run like a dog, slither like a snake, or flap like a bird. Add your own actions and animals! \n;\n💡**All the Animals We Can Think Of** \nThink about groups of animals and talk about them with your children! \nWhat are all the animals we can think of that have feathers? What are all the animals we can think of that eat plants? 🌱 What animals can we think of that lay eggs?",
-        "act_type": "Active | Quick",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "active_counting",
-        "name": "Active Counting",
-        "text": "👋 Clap, hop, jump: Play the following game with your children. Make it active!\n\n1️⃣ Clap hands 1 time. \n2️⃣ Clap hands 2 times.\n1️⃣ Jump 1 time. \n2️⃣ Jump 2 times.\n1️⃣ Hop 1 time.\n3️⃣ Hop 3 times.\n💡 Can you hop, then jump, then clap? \n🏆 Can you clap twice, jump once, and hop three times?\n;\n💡 Remembering Instructions\nTake turns playing a game where you give 2-3 instructions that the other person has to remember to follow. Make sure physical movement is included!\nFor example:\nHop twice, turn around.\nTake ten steps forward, three steps to the side and sit down. ✅",
-        "act_type": "Active",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      },
-      {
-        "ID": "active_songs",
-        "name": "Active Songs",
-        "text": "😃 Young children love physical games but they need reminders about how to play. 💡\n🎵 Songs with movements are fun and active and give instructions on how to move!\n;\nSing songs to your children in which they have to follow instructions like:\n✅ Start and stop ❌\n⬇️ Slow down and speed up ⬆️",
-        "act_type": "Active",
-        "act_age": "0|1|2|3| 4 | 5 | 6 | 7 | 8 | 9|10|11|12|13|14|15|16|17",
-        "attached_single_doc": ""
-      }
-    ]
-  }
+  "content_index": [
+    {
+      "type": "data_sheet",
+      "sheet_name": "ltp_activity_crisis_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "ltp_activity_data",
+      "data_model": "LtpActivityModel",
+      "template_arguments": "",
+      "status": ""
+    }
+  ],
+  "ltp_activity_crisis_data": [
+    {
+      "ID": "friendly_chat",
+      "name": "A Friendly Chat",
+      "text": [
+        "Talk to your children about something that they are interested in! \ud83d\ude03\n\n\u26bd An easy way to start talking to your children is to ask them about something they are interested in. For example, you could talk about local stories, traditions, sports, favourite books, friends, music, famous people or something they have been learning about.",
+        "\ud83d\udc42 You may not find everything your children share to be interesting, but it\u2019s important to show enthusiasm and an eagerness to learn. \n\nPaying attention to what matters to your children can make a big difference in your relationship and their happiness."
+      ],
+      "act_type": [
+        "Quick",
+        "Calm"
+      ],
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": "https://docs.google.com/document/d/1zmPPPdVyma_H3hjB6-_IpANO7x66tmVwBx5R8-HWRYo"
+    },
+    {
+      "ID": "reflect_positive",
+      "name": "Reflect on Hope",
+      "text": "Spread Hope! \n\ud83d\udca1 Together, take a minute to think about all the things you did today. \n\n\u2600\ufe0f Take turns sharing one positive thing that happened. This could be something small or big, like feeling good because you took a pause to take some deep breaths, exercised like walking or stretching, or spent time with people you care about.\n\n\u23f0 Try doing this every day - even more on the days it feels like you have not done anything special.",
+      "act_type": [
+        "Calm",
+        "Quick"
+      ],
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "whats_new",
+      "name": "What\u2019s New?",
+      "text": [
+        "Learning is fun! \ud83c\udf93\n\n\u2753 Ask your children to think of a new, fun skill you could learn together. \nFor example, keeping a ball in the air with your foot, learning, practising local language phrases, sharing stories from your culture, playing local games and sports, or learning a new song.",
+        "\ud83d\udd04 Take turns trying out the new skill. Make sure to praise each other and learn and play together!\n\ud83d\udc9b Approach learning the skill in a kind and fun way, and do not judge your children or yourself for your ability in the skill."
+      ],
+      "act_type": "Active",
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "checkin_chat",
+      "name": "Check-in Chat",
+      "text": [
+        "Actively checking in on one another helps to keep relationships healthy! \u2b50\nAsk each other questions like: \u201cWhat made you happy today?\u201d \ud83d\udc42 \u201cWhat was difficult today?\u201d \ud83d\udc42 \u201cHow can I help you?\u201d \ud83d\udc42\nFor this to help, your children need to feel safe while sharing things with you. Be open to their responses. \ud83d\udc9a",
+        "Older children tend to be more honest when they trust that what they say will not be used against them later.\nBe kind to yourself if your children do not want to share their problems with you. \ud83d\udc99 Often, children are afraid to share as they are scared they will get in trouble. Getting upset with them won\u2019t help - keep showing you love them and give them time! \ud83c\udf37"
+      ],
+      "act_type": [
+        "Quick",
+        "Calm"
+      ],
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "express_yourself",
+      "name": "Express Yourself",
+      "text": [
+        "Movement makes people happy!\nThis game can be played in pairs or as a group - stand facing each other or in a circle.\n\ud83c\udfb5 Together, choose a song, a fun sound, or a clapping pattern to follow and choose a person to start the game by creating one movement.\n\ud83d\udc40 The person to their right must copy that movement and add their own movement to it.\n\u2728 Go around the circle, each person adding a new movement.",
+        "\ud83d\udd04 The first one who forgets someone's movements or does it in the wrong order chooses the next song, sound, or pattern and starts the game again.\n\n\ud83c\udf89 Have fun trying out different movements together with this fun game."
+      ],
+      "act_type": [
+        "Quick",
+        "Active"
+      ],
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "2truth_1lie",
+      "name": "2 Truths, 1 Lie",
+      "text": "This is a fun, quick game, and the point of it is to learn things about each other. Make your answers as interesting as possible! \ud83c\udfa8\n\ud83d\udca1 Everyone thinks of 3 facts about themselves. 2 must be true, and 1 must be a lie. \n\ud83d\udd37 Here are some examples: I hate cold weather, and my favourite thing to learn about is maths.\n\ud83d\udc40 Share your facts with your children and ask them to guess which one is a lie. \n\ud83d\udd04 Now ask them to do the same, and guess theirs.\nDid you learn anything new about your children, or did they learn anything new about you? \ud83d\udc9b",
+      "act_type": [
+        "Quick",
+        "Calm"
+      ],
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "yes_no_maybe",
+      "name": "Yes, No or Maybe",
+      "text": "Are you tired of hearing your children say yes, no, or maybe to all of your questions? Turn your chat into a game, and don\u2019t allow one-word answers. \ud83c\udf88\n\n\ud83d\udd34 Older children are known to give one-word answers to avoid talking. \n\ud83d\udca1 When you would like to really know how your children are doing, you can turn your chat into a game. \n\u2b50 Take turns asking each other questions. The only rule is that you cannot use one-word responses like Yes, No, Maybe, Fine, and Okay.\n\u26bd You can ask about things your children like or what they did today. For example, how was your day? What are you excited about? What is one thing that is worrying you today?\n\ud83d\udd04 It is important to let your children ask a question as well. Trust is built when your children can see that you are also sharing your life with them and not only trying to learn about their life.",
+      "act_type": [
+        "Quick",
+        "Calm"
+      ],
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "get_active",
+      "name": "Get Active",
+      "text": [
+        "Exercise is a great way to spend time together, and it is so good for your health. \ud83c\udf31 Find an exercise activity that both you and your children want to do and try it out together! Be mindful of the safety of the space you are using for exercise. \n\n\u23f0 Even walking for 10 minutes a day is good for you. \n\u26bdTogether, try walking, running, stretching, playing games like hide-and-seek, or any other physical activities you enjoy.",
+        "\ud83c\udfc6 Together, think of ways to make it even more fun. Can you run to a certain point? Take turns being the coach? Can there be a small, free reward like getting to decide the next activity?\nExercise becomes easier and more enjoyable the more you do it. \n\ud83d\udd04 If you or your children do not like the first type of exercise you pick, try a new way to exercise."
+      ],
+      "act_type": "Active",
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "take_a_pause",
+      "name": "Take a Pause With Your Children",
+      "text": [
+        "Take a pause with your children. This helps them deal with stress in a healthy way!\n\u23f0 You could take a pause together at any time, or you could try at a specific time like before bedtime.\n\ud83d\udc42 Sit down together and close your eyes. Listen to your breath as it goes in and out. Notice how you feel. \n\u2b50 Take 5 more deep breaths.",
+        "\ud83d\udc40 When you are ready, open your eyes again. Do you feel any different? \n\u23f8 Ask your children what it was like to take a pause. Listen and accept whatever they say about it."
+      ],
+      "act_type": [
+        "Calm",
+        "Quick"
+      ],
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "who_i_am",
+      "name": "This Is Who I Am",
+      "text": [
+        "Self-esteem is the way you value yourself, either in a positive or negative way. Helping your children have high self-esteem is a recipe for success! \ud83c\udfc6\n\u2b50Share with your children 3 things you like about yourself!\n3\ufe0f\u20e3 Ask your children to tell you 3 things they like about themselves.",
+        "For example, I am great at treating others kindly. I am great at playing football. I am great at drawing flowers. If this is too hard, try thinking of just one thing."
+      ],
+      "act_type": [
+        "Calm",
+        "Quick"
+      ],
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "setting_goal",
+      "name": "Weekly Goal Setting",
+      "text": [
+        "Let\u2019s set some goals \u2b50\n\n\u23f0 It can be helpful to set smaller weekly goals that are easier to reach, especially when life feels uncertain. \n \n\ud83d\udca1Ask each of your children for one goal that they would like to achieve this week. \n\n\ud83d\udd04 Make sure this goal is *specific* and *achievable* to reach in 1 week, like: practising deep breathing for 5 minutes every day, exercising for 10 minutes three times a week, journaling feelings every night, or spending quality time with family or friends daily.",
+        "\ud83d\udc9a You can also share your own weekly goals with your children and support each other so you can both achieve your goals.\n\n\ud83c\udf89 Make sure to praise and celebrate your children for their hard work towards reaching their goals.\n\n\ud83d\udd14 If your children do not reach their goals, that is okay. Discuss with them the steps they still need to take or how they could reach it a different way."
+      ],
+      "act_type": "Calm",
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "one_on_one_time",
+      "name": "One-on-One Time",
+      "text": [
+        "\ud83d\udc9a Spending time just with your children and taking an interest in them can improve your relationship. \n\n\ud83d\udc40 When your children are playing alone or occupying themselves, join them and show interest in what they are doing.\n\n\ud83d\udc42Ask questions about their activity and listen to them.",
+        "Let your children lead the activity and follow them to build their confidence and autonomy. \ud83d\ude03\n\n\ud83d\udc40 Say what you see - describing everything and supporting your children\u2019s actions.\n\nBe positive, praise your children and enjoy spending this time with them. \ud83d\ude03\ud83d\udc9a"
+      ],
+      "act_type": "Calm",
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "animals",
+      "name": "Animals",
+      "text": [
+        "\ud83e\uddf8 **Active Animals** \nTake turns with your children doing animal actions. You might hop like a frog, stretch like a cat, run like a dog, slither like a snake, or flap like a bird. Add your own actions and animals!",
+        "\ud83d\udca1**All the Animals We Can Think Of** \nThink about groups of animals and talk about them with your children! \nWhat are all the animals we can think of that have feathers? What are all the animals we can think of that eat plants? \ud83c\udf31 What animals can we think of that lay eggs?"
+      ],
+      "act_type": [
+        "Active",
+        "Quick"
+      ],
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "active_counting",
+      "name": "Active Counting",
+      "text": [
+        "\ud83d\udc4b Clap, hop, jump: Play the following game with your children. Make it active!\n\n1\ufe0f\u20e3 Clap hands 1 time. \n2\ufe0f\u20e3 Clap hands 2 times.\n1\ufe0f\u20e3 Jump 1 time. \n2\ufe0f\u20e3 Jump 2 times.\n1\ufe0f\u20e3 Hop 1 time.\n3\ufe0f\u20e3 Hop 3 times.\n\ud83d\udca1 Can you hop, then jump, then clap? \n\ud83c\udfc6 Can you clap twice, jump once, and hop three times?",
+        "\ud83d\udca1 Remembering Instructions\nTake turns playing a game where you give 2-3 instructions that the other person has to remember to follow. Make sure physical movement is included!\nFor example:\nHop twice, turn around.\nTake ten steps forward, three steps to the side and sit down. \u2705"
+      ],
+      "act_type": "Active",
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    },
+    {
+      "ID": "active_songs",
+      "name": "Active Songs",
+      "text": [
+        "\ud83d\ude03 Young children love physical games but they need reminders about how to play. \ud83d\udca1\n\ud83c\udfb5 Songs with movements are fun and active and give instructions on how to move!",
+        "Sing songs to your children in which they have to follow instructions like:\n\u2705 Start and stop \u274c\n\u2b07\ufe0f Slow down and speed up \u2b06\ufe0f"
+      ],
+      "act_type": "Active",
+      "act_age": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "attached_single_doc": ""
+    }
+  ]
 }

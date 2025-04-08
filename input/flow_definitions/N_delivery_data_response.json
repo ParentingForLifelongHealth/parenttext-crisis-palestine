@@ -1,604 +1,997 @@
 {
-  "meta": {
-    "version": "0.1.0"
+  "_idems": {
+    "tabulate": {
+      "content_index": {
+        "headers": [
+          "type",
+          "sheet_name",
+          "data_sheet",
+          "data_row_id",
+          "new_name",
+          "data_model",
+          "template_arguments",
+          "operation",
+          "status",
+          "group",
+          "tags.1",
+          "tags.2",
+          "tags.3",
+          "tags.4"
+        ]
+      },
+      "survey": {
+        "headers": [
+          "ID",
+          "tags",
+          "type",
+          "messages",
+          "variable",
+          "expiration.message",
+          "choices.1.text",
+          "choices.1.value",
+          "choices.2.text",
+          "choices.2.value",
+          "choices.3.text",
+          "choices.3.value",
+          "stop.conditions.1.condition",
+          "stop.conditions.1.message",
+          "stop.conditions.2.condition",
+          "stop.conditions.2.message",
+          "postprocessing.flow"
+        ]
+      },
+      "congrats_data": {
+        "headers": [
+          "ID",
+          "msg",
+          "extra_msg"
+        ]
+      },
+      "make_options_wrapper_data": {
+        "headers": [
+          "ID",
+          "list_var",
+          "print_type",
+          "n_max_opt",
+          "msg_no_options.message",
+          "msg_no_options.image",
+          "msg_one_option.message",
+          "msg_one_option.question",
+          "msg_one_option.affirmative",
+          "msg_one_option.negative",
+          "msg_one_option.no_message",
+          "msg_multiple_options",
+          "extra_option",
+          "extra_message",
+          "update_var"
+        ]
+      },
+      "description_data": {
+        "headers": [
+          "ID",
+          "msg"
+        ]
+      },
+      "wa_templates": {
+        "headers": [
+          "ID",
+          "text",
+          "ara"
+        ]
+      },
+      "interaction_data": {
+        "headers": [
+          "ID",
+          "question",
+          "webhook_template_name",
+          "webhook_template_args",
+          "options.1.text",
+          "options.1.proceed_result_value",
+          "options.1.stop_message",
+          "options.2.text",
+          "options.2.proceed_result_value",
+          "options.2.stop_message",
+          "options.3.text",
+          "options.3.proceed_result_value",
+          "options.3.stop_message",
+          "wa_template_ID",
+          "wa_template_vars.1",
+          "wa_template_vars.2"
+        ]
+      },
+      "activity_offer_data": {
+        "headers": [
+          "ID",
+          "activity_handler_flow",
+          "offer_msg",
+          "accept.child",
+          "accept.teen",
+          "accept.baby",
+          "other_option",
+          "other_flow",
+          "refuse",
+          "refuse_msg",
+          "next_offer_msg",
+          "next_accept",
+          "next_refuse",
+          "next_refuse_msg",
+          "next_refuse_flow",
+          "next_other_opt",
+          "next_other_msg",
+          "next_other_flow"
+        ]
+      },
+      "delivery_messages": {
+        "headers": [
+          "ID",
+          "msg",
+          "next_button_option",
+          "metadata.description"
+        ]
+      },
+      "completion_tracker_data": {
+        "headers": [
+          "ID",
+          "msg",
+          "next_button_option",
+          "metadata.description"
+        ]
+      },
+      "activity_type_data": {
+        "headers": [
+          "ID",
+          "option_name"
+        ]
+      }
+    }
   },
-  "sheets": {
-    "content_index": [
-      {
-        "type": "data_sheet",
-        "sheet_name": "congrats_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "CongratsDataModel",
-        "template_arguments": "",
-        "operation": "",
-        "status": "",
-        "group": "",
-        "tags.1": "",
-        "tags.2": "",
-        "tags.3": "",
-        "tags.4": ""
+  "content_index": [
+    {
+      "type": "data_sheet",
+      "sheet_name": "congrats_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "CongratsDataModel",
+      "template_arguments": "",
+      "operation": "",
+      "status": "",
+      "group": "",
+      "tags": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "delivery_messages",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "SingleMessageModel",
+      "template_arguments": "",
+      "operation": "",
+      "status": "",
+      "group": "",
+      "tags": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "make_options_wrapper_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "OptionsWrapperModel",
+      "template_arguments": "",
+      "operation": "",
+      "status": "",
+      "group": "",
+      "tags": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "description_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "SingleMessageModel",
+      "template_arguments": "",
+      "operation": "",
+      "status": "",
+      "group": "",
+      "tags": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "interaction_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "InteractionModel",
+      "template_arguments": "",
+      "operation": "",
+      "status": "",
+      "group": "",
+      "tags": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "activity_type_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "ActivityTypeModel",
+      "template_arguments": "",
+      "operation": "",
+      "status": "",
+      "group": "",
+      "tags": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "activity_offer_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "ActivityOfferModel",
+      "template_arguments": "",
+      "operation": "",
+      "status": "",
+      "group": "",
+      "tags": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "show_options_wrapper_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "OptionsWrapperModel",
+      "template_arguments": "",
+      "operation": "",
+      "status": "",
+      "group": "",
+      "tags": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "data_sheet",
+      "sheet_name": "completion_tracker_data",
+      "data_sheet": "",
+      "data_row_id": "",
+      "new_name": "",
+      "data_model": "SingleMessageModel",
+      "template_arguments": "",
+      "operation": "",
+      "status": "",
+      "group": "",
+      "tags": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "survey": [
+    {
+      "ID": "intro",
+      "tags": [
+        1,
+        2
+      ],
+      "type": "intro",
+      "messages": "Please type a number between 0-7 or type S to skip the question:",
+      "variable": "",
+      "expiration": {
+        "message": ""
       },
-      {
-        "type": "data_sheet",
-        "sheet_name": "delivery_messages",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "SingleMessageModel",
-        "template_arguments": "",
-        "operation": "",
-        "status": "",
-        "group": "",
-        "tags.1": "",
-        "tags.2": "",
-        "tags.3": "",
-        "tags.4": ""
+      "choices": [
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        }
+      ],
+      "stop": {
+        "conditions": [
+          {
+            "condition": "",
+            "message": ""
+          },
+          {
+            "condition": "",
+            "message": ""
+          }
+        ]
       },
-      {
-        "type": "data_sheet",
-        "sheet_name": "make_options_wrapper_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "OptionsWrapperModel",
-        "template_arguments": "",
-        "operation": "",
-        "status": "",
-        "group": "",
-        "tags.1": "",
-        "tags.2": "",
-        "tags.3": "",
-        "tags.4": ""
-      },
-      {
-        "type": "data_sheet",
-        "sheet_name": "description_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "SingleMessageModel",
-        "template_arguments": "",
-        "operation": "",
-        "status": "",
-        "group": "",
-        "tags.1": "",
-        "tags.2": "",
-        "tags.3": "",
-        "tags.4": ""
-      },
-      {
-        "type": "data_sheet",
-        "sheet_name": "interaction_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "InteractionModel",
-        "template_arguments": "",
-        "operation": "",
-        "status": "",
-        "group": "",
-        "tags.1": "",
-        "tags.2": "",
-        "tags.3": "",
-        "tags.4": ""
-      },
-      {
-        "type": "data_sheet",
-        "sheet_name": "activity_type_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "ActivityTypeModel",
-        "template_arguments": "",
-        "operation": "",
-        "status": "",
-        "group": "",
-        "tags.1": "",
-        "tags.2": "",
-        "tags.3": "",
-        "tags.4": ""
-      },
-      {
-        "type": "data_sheet",
-        "sheet_name": "activity_offer_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "ActivityOfferModel",
-        "template_arguments": "",
-        "operation": "",
-        "status": "",
-        "group": "",
-        "tags.1": "",
-        "tags.2": "",
-        "tags.3": "",
-        "tags.4": ""
-      },
-      {
-        "type": "data_sheet",
-        "sheet_name": "show_options_wrapper_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "OptionsWrapperModel",
-        "template_arguments": "",
-        "operation": "",
-        "status": "",
-        "group": "",
-        "tags.1": "",
-        "tags.2": "",
-        "tags.3": "",
-        "tags.4": ""
-      },
-      {
-        "type": "data_sheet",
-        "sheet_name": "completion_tracker_data",
-        "data_sheet": "",
-        "data_row_id": "",
-        "new_name": "",
-        "data_model": "SingleMessageModel",
-        "template_arguments": "",
-        "operation": "",
-        "status": "",
-        "group": "",
-        "tags.1": "",
-        "tags.2": "",
-        "tags.3": "",
-        "tags.4": ""
+      "postprocessing": {
+        "flow": ""
       }
-    ],
-    "survey": [
-      {
-        "ID": "intro",
-        "tags": "1|2",
-        "type": "intro",
-        "messages": "Please type a number between 0-7 or type S to skip the question: ",
-        "variable": "",
-        "expiration.message": "",
-        "choices.1.text": "",
-        "choices.1.value": "",
-        "choices.2.text": "",
-        "choices.2.value": "",
-        "choices.3.text": "",
-        "choices.3.value": "",
-        "stop.conditions.1.condition": "",
-        "stop.conditions.1.message": "",
-        "stop.conditions.2.condition": "",
-        "stop.conditions.2.message": "",
-        "postprocessing.flow": ""
+    },
+    {
+      "ID": "monitoring",
+      "tags": [
+        1,
+        2
+      ],
+      "type": "numeric",
+      "messages": "How many days in the past week did you do something to keep your child(ren) safe, such as make sure they don't spend time alone with unknown adults/children or walk home alone outside after dark?",
+      "variable": "",
+      "expiration": {
+        "message": ""
       },
-      {
-        "ID": "monitoring",
-        "tags": "1|2",
-        "type": "numeric",
-        "messages": "How many days in the past week did you do something to keep your child(ren) safe, such as make sure they don't spend time alone with unknown adults/children or walk home alone outside after dark? ",
-        "variable": "",
-        "expiration.message": "",
-        "choices.1.text": "",
-        "choices.1.value": "",
-        "choices.2.text": "",
-        "choices.2.value": "",
-        "choices.3.text": "",
-        "choices.3.value": "",
-        "stop.conditions.1.condition": "",
-        "stop.conditions.1.message": "",
-        "stop.conditions.2.condition": "",
-        "stop.conditions.2.message": "",
-        "postprocessing.flow": ""
+      "choices": [
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        }
+      ],
+      "stop": {
+        "conditions": [
+          {
+            "condition": "",
+            "message": ""
+          },
+          {
+            "condition": "",
+            "message": ""
+          }
+        ]
       },
-      {
-        "ID": "emotional_violence",
-        "tags": "1|2",
-        "type": "numeric",
-        "messages": "How many days in the past week did you shout, yell, or scream at your child(ren)?",
-        "variable": "",
-        "expiration.message": "",
-        "choices.1.text": "",
-        "choices.1.value": "",
-        "choices.2.text": "",
-        "choices.2.value": "",
-        "choices.3.text": "",
-        "choices.3.value": "",
-        "stop.conditions.1.condition": "",
-        "stop.conditions.1.message": "",
-        "stop.conditions.2.condition": "",
-        "stop.conditions.2.message": "",
-        "postprocessing.flow": ""
-      },
-      {
-        "ID": "physical_violence",
-        "tags": "1|2",
-        "type": "numeric",
-        "messages": "How many days in the past week did you discipline your child(ren) physically, such as hitting them with your hand or another object?",
-        "variable": "",
-        "expiration.message": "",
-        "choices.1.text": "",
-        "choices.1.value": "",
-        "choices.2.text": "",
-        "choices.2.value": "",
-        "choices.3.text": "",
-        "choices.3.value": "",
-        "stop.conditions.1.condition": "",
-        "stop.conditions.1.message": "",
-        "stop.conditions.2.condition": "",
-        "stop.conditions.2.message": "",
-        "postprocessing.flow": ""
-      },
-      {
-        "ID": "nonviol_disc",
-        "tags": "1|2",
-        "type": "numeric",
-        "messages": "How many days in the past week did you try to speak calmly with your child when you were upset with them?",
-        "variable": "",
-        "expiration.message": "",
-        "choices.1.text": "",
-        "choices.1.value": "",
-        "choices.2.text": "",
-        "choices.2.value": "",
-        "choices.3.text": "",
-        "choices.3.value": "",
-        "stop.conditions.1.condition": "",
-        "stop.conditions.1.message": "",
-        "stop.conditions.2.condition": "",
-        "stop.conditions.2.message": "",
-        "postprocessing.flow": ""
-      },
-      {
-        "ID": "parent_child_comm",
-        "tags": "1|2",
-        "type": "numeric",
-        "messages": "How many days in the past week did you have a meaningful conversation with your child(ren) about how they’re doing amidst the current war, displacement, and other tough times?",
-        "variable": "",
-        "expiration.message": "",
-        "choices.1.text": "",
-        "choices.1.value": "",
-        "choices.2.text": "",
-        "choices.2.value": "",
-        "choices.3.text": "",
-        "choices.3.value": "",
-        "stop.conditions.1.condition": "",
-        "stop.conditions.1.message": "",
-        "stop.conditions.2.condition": "",
-        "stop.conditions.2.message": "",
-        "postprocessing.flow": ""
+      "postprocessing": {
+        "flow": ""
       }
-    ],
-    "show_options_wrapper_data": [],
-    "congrats_data": [
-      {
-        "ID": "final_completion",
-        "msg": "You have completed the programme. Well done!\nRemember, you can always return to ParentText to review these tips. Just type {MENU}.",
-        "extra_msg": "Was ParentText helpful? If so, share it with a friend. Just send this link: {insert link}"
+    },
+    {
+      "ID": "emotional_violence",
+      "tags": [
+        1,
+        2
+      ],
+      "type": "numeric",
+      "messages": "How many days in the past week did you shout, yell, or scream at your child(ren)?",
+      "variable": "",
+      "expiration": {
+        "message": ""
+      },
+      "choices": [
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        }
+      ],
+      "stop": {
+        "conditions": [
+          {
+            "condition": "",
+            "message": ""
+          },
+          {
+            "condition": "",
+            "message": ""
+          }
+        ]
+      },
+      "postprocessing": {
+        "flow": ""
       }
-    ],
-    "make_options_wrapper_data": [
-      {
-        "ID": "start_started_module_daily",
-        "list_var": "fields.c_mod_started",
-        "print_type": "module",
-        "n_max_opt": "11",
-        "msg_no_options.message": "NA",
-        "msg_no_options.image": "",
-        "msg_one_option.message": "The tip you haven't finished is:",
-        "msg_one_option.question": "",
-        "msg_one_option.affirmative": "",
-        "msg_one_option.negative": "",
-        "msg_one_option.no_message": "",
-        "msg_multiple_options": "Which tip would you like to receive?",
-        "extra_option": "",
-        "extra_message": "",
-        "update_var": "accessed module"
+    },
+    {
+      "ID": "physical_violence",
+      "tags": [
+        1,
+        2
+      ],
+      "type": "numeric",
+      "messages": "How many days in the past week did you discipline your child(ren) physically, such as hitting them with your hand or another object?",
+      "variable": "",
+      "expiration": {
+        "message": ""
       },
-      {
-        "ID": "choose_skill_to_review",
-        "list_var": "fields.s_modules_compl",
-        "print_type": "module",
-        "n_max_opt": "11",
-        "msg_no_options.message": "You haven't received any tips yet. ",
-        "msg_no_options.image": "",
-        "msg_one_option.message": "You have received the following tip:",
-        "msg_one_option.question": "Would you like to review it?",
-        "msg_one_option.affirmative": "Yes",
-        "msg_one_option.negative": "No",
-        "msg_one_option.no_message": "That's okay. You can come back here at any time to review it.",
-        "msg_multiple_options": "You have completed @fields.n_s_modules_compl out of @fields.n_s_modules tips. Which of the following tips would you like to review?",
-        "extra_option": "Return to Main Menu",
-        "extra_message": "",
-        "update_var": "accessed module"
+      "choices": [
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        }
+      ],
+      "stop": {
+        "conditions": [
+          {
+            "condition": "",
+            "message": ""
+          },
+          {
+            "condition": "",
+            "message": ""
+          }
+        ]
+      },
+      "postprocessing": {
+        "flow": ""
       }
-    ],
-    "description_data": [
-      {
-        "ID": "new",
-        "msg": "In this program, you will receive @fields.c_n_mod tips. Your first tip is \"@results.name\"."
+    },
+    {
+      "ID": "nonviol_disc",
+      "tags": [
+        1,
+        2
+      ],
+      "type": "numeric",
+      "messages": "How many days in the past week did you try to speak calmly with your child when you were upset with them?",
+      "variable": "",
+      "expiration": {
+        "message": ""
       },
-      {
-        "ID": "first",
-        "msg": ""
+      "choices": [
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        }
+      ],
+      "stop": {
+        "conditions": [
+          {
+            "condition": "",
+            "message": ""
+          },
+          {
+            "condition": "",
+            "message": ""
+          }
+        ]
+      },
+      "postprocessing": {
+        "flow": ""
       }
-    ],
-    "wa_templates": [
-      {
-        "ID": "daily_interaction",
-        "text": "A new tip is ready for you. Would you like to continue now?\n\nPress a number on your keypad:\n1. Yes\n2. No, remind me tomorrow. ",
-        "ara": "Un nouveau conseil est disponible. Voulez-vous continuer maintenant ?\n\nAppuyez sur un numéro de votre clavier:\n1. Oui\n2. Non, rappelez-moi cela demain"
+    },
+    {
+      "ID": "parent_child_comm",
+      "tags": [
+        1,
+        2
+      ],
+      "type": "numeric",
+      "messages": "How many days in the past week did you have a meaningful conversation with your child(ren) about how they\u2019re doing amidst the current war, displacement, and other tough times?",
+      "variable": "",
+      "expiration": {
+        "message": ""
       },
-      {
-        "ID": "first_module_intro",
-        "text": "You and your family are facing a challenging time. ParentText provides tips to find hope and build your own strength to support your child during this crisis. Would you like to recieve your first tip now?\n\nPress a number on your keypad:\n1. Yes\n2. Remind me tomorrow",
-        "ara": "Vous et votre famille traversez une période difficile. ParentText vous donne des conseils sur la manière dont vous pouvez soutenir votre enfant pendant cette crise. Souhaitez-vous recevoir votre premier conseil dès maintenant ?\n\nAppuyez sur un numéro de votre clavier:\n1. Oui\n2. Non, rappelez-moi cela demain"
+      "choices": [
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        },
+        {
+          "text": "",
+          "value": ""
+        }
+      ],
+      "stop": {
+        "conditions": [
+          {
+            "condition": "",
+            "message": ""
+          },
+          {
+            "condition": "",
+            "message": ""
+          }
+        ]
       },
-      {
-        "ID": "start_started_mod_or_later_single",
-        "text": "It looks like you started a parenting tip, but didn't finish receiving all of the information. What would you like to do?\n\nPress a number on your keypad:\n1. Receive the remaining information\n2. Remind me about this tomorrow\n3. I've finished receiving all of the information that I want from this chatbot.",
-        "ara": "On dirait que vous avez commencé avec un conseil pour parents, mais que vous n'avez pas fini de recevoir toutes les informations. Que voulez-vous faire ?\n\nAppuyez sur un numéro de votre clavier:\n1. Recevez les informations restantes\n2. Rappelez-moi cela demain\n3. J'ai fini de recevoir toutes les informations que je souhaitais de la part de ce chatbot."
-      },
-      {
-        "ID": "start_started_mod_or_later_multiple",
-        "text": "It looks like you started to receive tips, but haven't finished receiving all of them. You have @fields.c_n_mod_started tips with more information available for you. What would you like to do?\n\nPress a number on your keypad:\n1. Receive the remaining information\n2. Remind me about this tomorrow\n3. I've finished receiving all of the information that I want from this chatbot.",
-        "ara": "Il semble que vous ayez commencé à recevoir des conseils, mais que vous n'ayez pas fini de les recevoir tous. Vous avez @fields.c_n_mod_started conseils avec plus d'informations à votre disposition. Que voulez-vous faire ?\n\nAppuyez sur un numéro de votre clavier:\n1. Recevez les informations restantes\n2. Rappelez-moi cela demain\n3. J'ai fini de recevoir toutes les informations que je souhaitais de la part de ce chatbot."
-      },
-      {
-        "ID": "unfinished_onboarding",
-        "text": "It’s a difficult moment for your family. I’m here today with a few tips for you to build hope and strength for yourself and to create small moments of connection with your child. Press 1 to continue with your registration.\n\nPress a number on your keypad:\n1. Continue my registration\n2. Remind me tomorrow",
-        "ara": "C'est un moment difficile pour votre famille. Je suis ici aujourd'hui pour vous donner quelques conseils afin de créer de petits moments de complicité avec votre enfant afin de lui donner les bonnes habitudes et la stabilité dont vous avez tous besoin en ce moment. Appuyez sur 1 pour continuer votre inscription. \n\nAppuyez sur un numéro de votre clavier:\n1. Continuer mon inscription\n2. Rappelez-le moi demain"
-      },
-      {
-        "ID": "no_response",
-        "text": "This time is so difficult. It seems like you might not have time for these tips right now, and that's ok! When you want to keep going, press 1.",
-        "ara": "Cette période est difficile. Apparemment, vous n'avez pas le temps de suivre ces conseils pour l'instant. Lorsque vous êtes prêt à continuer, appuyez sur 1. "
-      },
-      {
-        "ID": "complete_start_module",
-        "text": "It looks like you started a parenting tip, but didn't finish receiving all of the information. Would you like to receive it now or start a new tip?\n \nPress a number on your keypad:\n1. Complete my previous tip\n2. Receive a new tip\n3. Remind me tomorrow",
-        "ara": "On dirait que vous avez commencé avec un conseil pour parents, mais que vous n'avez pas fini de recevoir toutes les informations. Voulez-vous les recevoir maintenant ou commencer un nouveau conseil ?\n\nAppuyez sur un numéro de votre clavier:\n1. Appliquer l'astuce précédente\n2. Recevez une nouvelle astuce\n3. Rappelez-le moi demain"
+      "postprocessing": {
+        "flow": ""
       }
-    ],
-    "interaction_data": [
-      {
-        "ID": "unfinished_onboarding",
-        "question": "It’s a difficult moment for your family. I’m here today with a few tips to create small moments of connection with your child to give them the routine and stability you all need right now. Press 1 to continue with your registration. ",
-        "webhook_template_name": "",
-        "webhook_template_args": "",
-        "options.1.text": "Continue my registration",
-        "options.1.proceed_result_value": "yes",
-        "options.1.stop_message": "",
-        "options.2.text": "Remind me tomorrow",
-        "options.2.proceed_result_value": "",
-        "options.2.stop_message": "OK, see you tomorrow.",
-        "options.3.text": "",
-        "options.3.proceed_result_value": "",
-        "options.3.stop_message": "",
-        "wa_template_ID": "unfinished_onboarding",
-        "wa_template_vars.1": "",
-        "wa_template_vars.2": ""
+    }
+  ],
+  "show_options_wrapper_data": [],
+  "congrats_data": [
+    {
+      "ID": "final_completion",
+      "msg": "You have completed the programme. Well done!\nRemember, you can always return to ParentText to review these tips. Just type {MENU}.",
+      "extra_msg": "Was ParentText helpful? If so, share it with a friend. Just send this link: {insert link}"
+    }
+  ],
+  "make_options_wrapper_data": [
+    {
+      "ID": "start_started_module_daily",
+      "list_var": "fields.c_mod_started",
+      "print_type": "module",
+      "n_max_opt": 11,
+      "msg_no_options": {
+        "message": "NA",
+        "image": ""
       },
-      {
-        "ID": "unfinished_baseline",
-        "question": "It looks like you started answering some baseline questions but didn't get a chance to finish. Would you like to continue now and then we can move onto the tips?",
-        "webhook_template_name": "",
-        "webhook_template_args": "",
-        "options.1.text": "Continue my initial questions",
-        "options.1.proceed_result_value": "yes",
-        "options.1.stop_message": "",
-        "options.2.text": "Remind me tomorrow",
-        "options.2.proceed_result_value": "",
-        "options.2.stop_message": "OK, see you tomorrow.",
-        "options.3.text": "",
-        "options.3.proceed_result_value": "",
-        "options.3.stop_message": "",
-        "wa_template_ID": "unfinished_onboarding",
-        "wa_template_vars.1": "",
-        "wa_template_vars.2": ""
+      "msg_one_option": {
+        "message": "The tip you haven't finished is:",
+        "question": "",
+        "affirmative": "",
+        "negative": "",
+        "no_message": ""
       },
-      {
-        "ID": "complete_start_module",
-        "question": "It looks like you started a parenting tip, but didn't finish receiving all of the information. Would you like to receive it now or start a new tip?",
-        "webhook_template_name": "",
-        "webhook_template_args": "",
-        "options.1.text": "Complete my previous tip",
-        "options.1.proceed_result_value": "complete",
-        "options.1.stop_message": "",
-        "options.2.text": "Receive a new tip",
-        "options.2.proceed_result_value": "new",
-        "options.2.stop_message": "",
-        "options.3.text": "Remind me tomorrow",
-        "options.3.proceed_result_value": "",
-        "options.3.stop_message": "OK, see you tomorrow.",
-        "wa_template_ID": "complete_start_module",
-        "wa_template_vars.1": "",
-        "wa_template_vars.2": ""
+      "msg_multiple_options": "Which tip would you like to receive?",
+      "extra_option": "",
+      "extra_message": "",
+      "update_var": "accessed module"
+    },
+    {
+      "ID": "choose_skill_to_review",
+      "list_var": "fields.s_modules_compl",
+      "print_type": "module",
+      "n_max_opt": 11,
+      "msg_no_options": {
+        "message": "You haven't received any tips yet.",
+        "image": ""
       },
-      {
-        "ID": "start_started_mod_or_later_one",
-        "question": "It looks like you started a parenting tip, but didn't finish receiving all of the information. What would you like to do?",
-        "webhook_template_name": "",
-        "webhook_template_args": "",
-        "options.1.text": "Receive the remaining information",
-        "options.1.proceed_result_value": "complete",
-        "options.1.stop_message": "",
-        "options.2.text": "Remind me about this tomorrow",
-        "options.2.proceed_result_value": "",
-        "options.2.stop_message": "OK, see you tomorrow.",
-        "options.3.text": "I've finished receiving all of the information that I want from this chatbot.",
-        "options.3.proceed_result_value": "stop",
-        "options.3.stop_message": "",
-        "wa_template_ID": "start_started_mod_or_later_one",
-        "wa_template_vars.1": "",
-        "wa_template_vars.2": ""
+      "msg_one_option": {
+        "message": "You have received the following tip:",
+        "question": "Would you like to review it?",
+        "affirmative": "Yes",
+        "negative": "No",
+        "no_message": "That's okay. You can come back here at any time to review it."
       },
-      {
-        "ID": "start_started_mod_or_later_multiple",
-        "question": "It looks like you started to receive tips, but haven't finished receiving all of them. You have @fields.c_n_mod_started tips with more information available for you. What would you like to do?",
-        "webhook_template_name": "",
-        "webhook_template_args": "",
-        "options.1.text": "Receive the remaining information",
-        "options.1.proceed_result_value": "complete",
-        "options.1.stop_message": "",
-        "options.2.text": "Remind me about this tomorrow",
-        "options.2.proceed_result_value": "",
-        "options.2.stop_message": "OK, see you tomorrow.",
-        "options.3.text": "I've finished receiving all of the information that I want from this chatbot.",
-        "options.3.proceed_result_value": "stop",
-        "options.3.stop_message": "",
-        "wa_template_ID": "start_started_mod_or_later_multiple",
-        "wa_template_vars.1": "",
-        "wa_template_vars.2": ""
+      "msg_multiple_options": "You have completed @fields.n_s_modules_compl out of @fields.n_s_modules tips. Which of the following tips would you like to review?",
+      "extra_option": "Return to Main Menu",
+      "extra_message": "",
+      "update_var": "accessed module"
+    }
+  ],
+  "description_data": [
+    {
+      "ID": "new",
+      "msg": "In this program, you will receive @fields.c_n_mod tips. Your first tip is \"@results.name\"."
+    },
+    {
+      "ID": "first",
+      "msg": ""
+    }
+  ],
+  "wa_templates": [
+    {
+      "ID": "daily_interaction",
+      "text": "A new tip is ready for you. Would you like to continue now?\n\nPress a number on your keypad:\n1. Yes\n2. No, remind me tomorrow.",
+      "ara": "Un nouveau conseil est disponible. Voulez-vous continuer maintenant ?\n\nAppuyez sur un num\u00e9ro de votre clavier:\n1. Oui\n2. Non, rappelez-moi cela demain"
+    },
+    {
+      "ID": "first_module_intro",
+      "text": "You and your family are facing a challenging time. ParentText provides tips to find hope and build your own strength to support your child during this crisis. Would you like to recieve your first tip now?\n\nPress a number on your keypad:\n1. Yes\n2. Remind me tomorrow",
+      "ara": "Vous et votre famille traversez une p\u00e9riode difficile. ParentText vous donne des conseils sur la mani\u00e8re dont vous pouvez soutenir votre enfant pendant cette crise. Souhaitez-vous recevoir votre premier conseil d\u00e8s maintenant ?\n\nAppuyez sur un num\u00e9ro de votre clavier:\n1. Oui\n2. Non, rappelez-moi cela demain"
+    },
+    {
+      "ID": "start_started_mod_or_later_single",
+      "text": "It looks like you started a parenting tip, but didn't finish receiving all of the information. What would you like to do?\n\nPress a number on your keypad:\n1. Receive the remaining information\n2. Remind me about this tomorrow\n3. I've finished receiving all of the information that I want from this chatbot.",
+      "ara": "On dirait que vous avez commenc\u00e9 avec un conseil pour parents, mais que vous n'avez pas fini de recevoir toutes les informations. Que voulez-vous faire ?\n\nAppuyez sur un num\u00e9ro de votre clavier:\n1. Recevez les informations restantes\n2. Rappelez-moi cela demain\n3. J'ai fini de recevoir toutes les informations que je souhaitais de la part de ce chatbot."
+    },
+    {
+      "ID": "start_started_mod_or_later_multiple",
+      "text": "It looks like you started to receive tips, but haven't finished receiving all of them. You have @fields.c_n_mod_started tips with more information available for you. What would you like to do?\n\nPress a number on your keypad:\n1. Receive the remaining information\n2. Remind me about this tomorrow\n3. I've finished receiving all of the information that I want from this chatbot.",
+      "ara": "Il semble que vous ayez commenc\u00e9 \u00e0 recevoir des conseils, mais que vous n'ayez pas fini de les recevoir tous. Vous avez @fields.c_n_mod_started conseils avec plus d'informations \u00e0 votre disposition. Que voulez-vous faire ?\n\nAppuyez sur un num\u00e9ro de votre clavier:\n1. Recevez les informations restantes\n2. Rappelez-moi cela demain\n3. J'ai fini de recevoir toutes les informations que je souhaitais de la part de ce chatbot."
+    },
+    {
+      "ID": "unfinished_onboarding",
+      "text": "It\u2019s a difficult moment for your family. I\u2019m here today with a few tips for you to build hope and strength for yourself and to create small moments of connection with your child. Press 1 to continue with your registration.\n\nPress a number on your keypad:\n1. Continue my registration\n2. Remind me tomorrow",
+      "ara": "C'est un moment difficile pour votre famille. Je suis ici aujourd'hui pour vous donner quelques conseils afin de cr\u00e9er de petits moments de complicit\u00e9 avec votre enfant afin de lui donner les bonnes habitudes et la stabilit\u00e9 dont vous avez tous besoin en ce moment. Appuyez sur 1 pour continuer votre inscription. \n\nAppuyez sur un num\u00e9ro de votre clavier:\n1. Continuer mon inscription\n2. Rappelez-le moi demain"
+    },
+    {
+      "ID": "no_response",
+      "text": "This time is so difficult. It seems like you might not have time for these tips right now, and that's ok! When you want to keep going, press 1.",
+      "ara": "Cette p\u00e9riode est difficile. Apparemment, vous n'avez pas le temps de suivre ces conseils pour l'instant. Lorsque vous \u00eates pr\u00eat \u00e0 continuer, appuyez sur 1."
+    },
+    {
+      "ID": "complete_start_module",
+      "text": "It looks like you started a parenting tip, but didn't finish receiving all of the information. Would you like to receive it now or start a new tip?\n \nPress a number on your keypad:\n1. Complete my previous tip\n2. Receive a new tip\n3. Remind me tomorrow",
+      "ara": "On dirait que vous avez commenc\u00e9 avec un conseil pour parents, mais que vous n'avez pas fini de recevoir toutes les informations. Voulez-vous les recevoir maintenant ou commencer un nouveau conseil ?\n\nAppuyez sur un num\u00e9ro de votre clavier:\n1. Appliquer l'astuce pr\u00e9c\u00e9dente\n2. Recevez une nouvelle astuce\n3. Rappelez-le moi demain"
+    }
+  ],
+  "interaction_data": [
+    {
+      "ID": "unfinished_onboarding",
+      "question": "It\u2019s a difficult moment for your family. I\u2019m here today with a few tips to create small moments of connection with your child to give them the routine and stability you all need right now. Press 1 to continue with your registration.",
+      "webhook_template_name": "",
+      "webhook_template_args": "",
+      "options": [
+        {
+          "text": "Continue my registration",
+          "proceed_result_value": "yes",
+          "stop_message": ""
+        },
+        {
+          "text": "Remind me tomorrow",
+          "proceed_result_value": "",
+          "stop_message": "OK, see you tomorrow."
+        },
+        {
+          "text": "",
+          "proceed_result_value": "",
+          "stop_message": ""
+        }
+      ],
+      "wa_template_ID": "unfinished_onboarding",
+      "wa_template_vars": [
+        "",
+        ""
+      ]
+    },
+    {
+      "ID": "unfinished_baseline",
+      "question": "It looks like you started answering some baseline questions but didn't get a chance to finish. Would you like to continue now and then we can move onto the tips?",
+      "webhook_template_name": "",
+      "webhook_template_args": "",
+      "options": [
+        {
+          "text": "Continue my initial questions",
+          "proceed_result_value": "yes",
+          "stop_message": ""
+        },
+        {
+          "text": "Remind me tomorrow",
+          "proceed_result_value": "",
+          "stop_message": "OK, see you tomorrow."
+        },
+        {
+          "text": "",
+          "proceed_result_value": "",
+          "stop_message": ""
+        }
+      ],
+      "wa_template_ID": "unfinished_onboarding",
+      "wa_template_vars": [
+        "",
+        ""
+      ]
+    },
+    {
+      "ID": "complete_start_module",
+      "question": "It looks like you started a parenting tip, but didn't finish receiving all of the information. Would you like to receive it now or start a new tip?",
+      "webhook_template_name": "",
+      "webhook_template_args": "",
+      "options": [
+        {
+          "text": "Complete my previous tip",
+          "proceed_result_value": "complete",
+          "stop_message": ""
+        },
+        {
+          "text": "Receive a new tip",
+          "proceed_result_value": "new",
+          "stop_message": ""
+        },
+        {
+          "text": "Remind me tomorrow",
+          "proceed_result_value": "",
+          "stop_message": "OK, see you tomorrow."
+        }
+      ],
+      "wa_template_ID": "complete_start_module",
+      "wa_template_vars": [
+        "",
+        ""
+      ]
+    },
+    {
+      "ID": "start_started_mod_or_later_one",
+      "question": "It looks like you started a parenting tip, but didn't finish receiving all of the information. What would you like to do?",
+      "webhook_template_name": "",
+      "webhook_template_args": "",
+      "options": [
+        {
+          "text": "Receive the remaining information",
+          "proceed_result_value": "complete",
+          "stop_message": ""
+        },
+        {
+          "text": "Remind me about this tomorrow",
+          "proceed_result_value": "",
+          "stop_message": "OK, see you tomorrow."
+        },
+        {
+          "text": "I've finished receiving all of the information that I want from this chatbot.",
+          "proceed_result_value": "stop",
+          "stop_message": ""
+        }
+      ],
+      "wa_template_ID": "start_started_mod_or_later_one",
+      "wa_template_vars": [
+        "",
+        ""
+      ]
+    },
+    {
+      "ID": "start_started_mod_or_later_multiple",
+      "question": "It looks like you started to receive tips, but haven't finished receiving all of them. You have @fields.c_n_mod_started tips with more information available for you. What would you like to do?",
+      "webhook_template_name": "",
+      "webhook_template_args": "",
+      "options": [
+        {
+          "text": "Receive the remaining information",
+          "proceed_result_value": "complete",
+          "stop_message": ""
+        },
+        {
+          "text": "Remind me about this tomorrow",
+          "proceed_result_value": "",
+          "stop_message": "OK, see you tomorrow."
+        },
+        {
+          "text": "I've finished receiving all of the information that I want from this chatbot.",
+          "proceed_result_value": "stop",
+          "stop_message": ""
+        }
+      ],
+      "wa_template_ID": "start_started_mod_or_later_multiple",
+      "wa_template_vars": [
+        "",
+        ""
+      ]
+    },
+    {
+      "ID": "first_module_intro",
+      "question": "You and your family are facing a challenging time. ParentText provides tips on how you can support your child during this crisis. Would you like to recieve your first tip now?",
+      "webhook_template_name": "",
+      "webhook_template_args": "",
+      "options": [
+        {
+          "text": "Yes",
+          "proceed_result_value": "yes",
+          "stop_message": ""
+        },
+        {
+          "text": "Remind me tomorrow",
+          "proceed_result_value": "",
+          "stop_message": "OK, see you tomorrow."
+        },
+        {
+          "text": "",
+          "proceed_result_value": "",
+          "stop_message": ""
+        }
+      ],
+      "wa_template_ID": "first_module_intro",
+      "wa_template_vars": [
+        "",
+        ""
+      ]
+    },
+    {
+      "ID": "daily_interaction",
+      "question": "A new tip is ready for you. Would you like to continue now?",
+      "webhook_template_name": "",
+      "webhook_template_args": "",
+      "options": [
+        {
+          "text": "Yes",
+          "proceed_result_value": "yes",
+          "stop_message": ""
+        },
+        {
+          "text": "No, remind me tomorrow.",
+          "proceed_result_value": "",
+          "stop_message": "OK, see you tomorrow."
+        },
+        {
+          "text": "",
+          "proceed_result_value": "",
+          "stop_message": ""
+        }
+      ],
+      "wa_template_ID": "daily_interaction",
+      "wa_template_vars": [
+        "",
+        ""
+      ]
+    }
+  ],
+  "activity_offer_data": [
+    {
+      "ID": "timed_programme",
+      "activity_handler_flow": "activity_handler",
+      "offer_msg": "What would you like now?",
+      "accept": {
+        "child": "A fun activity I can do with my child",
+        "teen": "NA",
+        "baby": "NA"
       },
-      {
-        "ID": "first_module_intro",
-        "question": "You and your family are facing a challenging time. ParentText provides tips on how you can support your child during this crisis. Would you like to recieve your first tip now?",
-        "webhook_template_name": "",
-        "webhook_template_args": "",
-        "options.1.text": "Yes",
-        "options.1.proceed_result_value": "yes",
-        "options.1.stop_message": "",
-        "options.2.text": "Remind me tomorrow",
-        "options.2.proceed_result_value": "",
-        "options.2.stop_message": "OK, see you tomorrow.",
-        "options.3.text": "",
-        "options.3.proceed_result_value": "",
-        "options.3.stop_message": "",
-        "wa_template_ID": "first_module_intro",
-        "wa_template_vars.1": "",
-        "wa_template_vars.2": ""
+      "other_option": "Proceed to the next tip",
+      "other_flow": "new_day_goal_content",
+      "refuse": "Nothing. Let's continue tomorrow.",
+      "refuse_msg": "Alright. I will share another tip tomorrow.",
+      "next_offer_msg": "What would you like now?",
+      "next_accept": "Another fun activity I can do with my child",
+      "next_refuse": "Nothing. Let's continue tomorrow.",
+      "next_refuse_msg": "OK, see you tomorrow.",
+      "next_refuse_flow": "",
+      "next_other_opt": "",
+      "next_other_msg": "",
+      "next_other_flow": ""
+    },
+    {
+      "ID": "demo",
+      "activity_handler_flow": "activity_handler",
+      "offer_msg": "What would you like now?",
+      "accept": {
+        "child": "A fun activity I can do with my child",
+        "teen": "NA",
+        "baby": "NA"
       },
-      {
-        "ID": "daily_interaction",
-        "question": "A new tip is ready for you. Would you like to continue now?",
-        "webhook_template_name": "",
-        "webhook_template_args": "",
-        "options.1.text": "Yes",
-        "options.1.proceed_result_value": "yes",
-        "options.1.stop_message": "",
-        "options.2.text": "No, remind me tomorrow.",
-        "options.2.proceed_result_value": "",
-        "options.2.stop_message": "OK, see you tomorrow.",
-        "options.3.text": "",
-        "options.3.proceed_result_value": "",
-        "options.3.stop_message": "",
-        "wa_template_ID": "daily_interaction",
-        "wa_template_vars.1": "",
-        "wa_template_vars.2": ""
+      "other_option": "Proceed to the next tip",
+      "other_flow": "new_day_goal_content",
+      "refuse": "Continue with another tip tomorrow.",
+      "refuse_msg": "Alright. I will share another tip tomorrow.",
+      "next_offer_msg": "What would you like now?",
+      "next_accept": "View another activity idea",
+      "next_refuse": "Nothing. Let's continue tomorrow.",
+      "next_refuse_msg": "OK, see you tomorrow.",
+      "next_refuse_flow": "",
+      "next_other_opt": "",
+      "next_other_msg": "",
+      "next_other_flow": ""
+    },
+    {
+      "ID": "menu",
+      "activity_handler_flow": "activity_handler",
+      "offer_msg": "",
+      "accept": {
+        "child": "",
+        "teen": "",
+        "baby": ""
+      },
+      "other_option": "",
+      "other_flow": "",
+      "refuse": "",
+      "refuse_msg": "",
+      "next_offer_msg": "What would you like to do?",
+      "next_accept": "View another activity idea",
+      "next_refuse": "Exit menu",
+      "next_refuse_msg": "",
+      "next_refuse_flow": "exit_menu",
+      "next_other_opt": "Go to Main Menu",
+      "next_other_msg": "",
+      "next_other_flow": "menu - main"
+    }
+  ],
+  "delivery_messages": [
+    {
+      "ID": "activity_handler",
+      "msg": "What kind of activity do you want to try with your child?",
+      "next_button_option": "",
+      "metadata": {
+        "description": "message for choosing which type of activity to do. Types in \"activity_type_data\""
       }
-    ],
-    "activity_offer_data": [
-      {
-        "ID": "timed_programme",
-        "activity_handler_flow": "activity_handler",
-        "offer_msg": "What would you like now?",
-        "accept.child": "A fun activity I can do with my child",
-        "accept.teen": "NA",
-        "accept.baby": "NA",
-        "other_option": "Proceed to the next tip",
-        "other_flow": "new_day_goal_content",
-        "refuse": "Nothing. Let's continue tomorrow.",
-        "refuse_msg": "Alright. I will share another tip tomorrow. ",
-        "next_offer_msg": "What would you like now?",
-        "next_accept": "Another fun activity I can do with my child",
-        "next_refuse": "Nothing. Let's continue tomorrow.",
-        "next_refuse_msg": "OK, see you tomorrow.",
-        "next_refuse_flow": "",
-        "next_other_opt": "",
-        "next_other_msg": "",
-        "next_other_flow": ""
-      },
-      {
-        "ID": "demo",
-        "activity_handler_flow": "activity_handler",
-        "offer_msg": "What would you like now?",
-        "accept.child": "A fun activity I can do with my child",
-        "accept.teen": "NA",
-        "accept.baby": "NA",
-        "other_option": "Proceed to the next tip",
-        "other_flow": "new_day_goal_content",
-        "refuse": "Continue with another tip tomorrow. ",
-        "refuse_msg": "Alright. I will share another tip tomorrow. ",
-        "next_offer_msg": "What would you like now?",
-        "next_accept": "View another activity idea",
-        "next_refuse": "Nothing. Let's continue tomorrow.",
-        "next_refuse_msg": "OK, see you tomorrow.",
-        "next_refuse_flow": "",
-        "next_other_opt": "",
-        "next_other_msg": "",
-        "next_other_flow": ""
-      },
-      {
-        "ID": "menu",
-        "activity_handler_flow": "activity_handler",
-        "offer_msg": "",
-        "accept.child": "",
-        "accept.teen": "",
-        "accept.baby": "",
-        "other_option": "",
-        "other_flow": "",
-        "refuse": "",
-        "refuse_msg": "",
-        "next_offer_msg": "What would you like to do?",
-        "next_accept": "View another activity idea",
-        "next_refuse": "Exit menu",
-        "next_refuse_msg": "",
-        "next_refuse_flow": "exit_menu",
-        "next_other_opt": "Go to Main Menu",
-        "next_other_msg": "",
-        "next_other_flow": "menu - main"
+    },
+    {
+      "ID": "hook_message",
+      "msg": "This time is difficult. It doesn't seem like you have the time for the these tips right now. When you are ready to keep going, press 1.",
+      "next_button_option": 1,
+      "metadata": {
+        "description": "hook message sent after 3 days of no response from the user. Needs to be aligned with whatsapp template \"no_response\". 1 can be replaced by anything (anything typed in the chat will work anyway)"
       }
-    ],
-    "delivery_messages": [
-      {
-        "ID": "activity_handler",
-        "msg": "What kind of activity do you want to try with your child?",
-        "next_button_option": "",
-        "metadata.description": "message for choosing which type of activity to do. Types in \"activity_type_data\""
-      },
-      {
-        "ID": "hook_message",
-        "msg": "This time is difficult. It doesn't seem like you have the time for the these tips right now. When you are ready to keep going, press 1. ",
-        "next_button_option": "1",
-        "metadata.description": "hook message sent after 3 days of no response from the user. Needs to be aligned with whatsapp template \"no_response\". 1 can be replaced by anything (anything typed in the chat will work anyway)"
-      },
-      {
-        "ID": "first_selection_intro",
-        "msg": "NA",
-        "next_button_option": "",
-        "metadata.description": ""
-      },
-      {
-        "ID": "pregoal_checkin_wrapper",
-        "msg": "Let’s get started. Press NEXT to begin.",
-        "next_button_option": "NEXT",
-        "metadata.description": "message received before the first module. It has a NEXT button, where NEXT can be replaced by anything  (anything typed in the chat will work anyway)"
+    },
+    {
+      "ID": "first_selection_intro",
+      "msg": "NA",
+      "next_button_option": "",
+      "metadata": {
+        "description": ""
       }
-    ],
-    "completion_tracker_data": [
-      {
-        "ID": "multiple",
-        "msg": "There are @(fields.c_n_mod - fields.c_n_mod_compl) more tips.",
-        "next_button_option": "NEXT",
-        "metadata.description": ""
-      },
-      {
-        "ID": "one",
-        "msg": "There is one more tip.",
-        "next_button_option": "NEXT",
-        "metadata.description": ""
+    },
+    {
+      "ID": "pregoal_checkin_wrapper",
+      "msg": "Let\u2019s get started. Press NEXT to begin.",
+      "next_button_option": "NEXT",
+      "metadata": {
+        "description": "message received before the first module. It has a NEXT button, where NEXT can be replaced by anything  (anything typed in the chat will work anyway)"
       }
-    ],
-    "activity_type_data": [
-      {
-        "ID": "quick",
-        "option_name": "Something Quick"
-      },
-      {
-        "ID": "active",
-        "option_name": "Something Active"
-      },
-      {
-        "ID": "calm",
-        "option_name": "Something Calm"
+    }
+  ],
+  "completion_tracker_data": [
+    {
+      "ID": "multiple",
+      "msg": "There are @(fields.c_n_mod - fields.c_n_mod_compl) more tips.",
+      "next_button_option": "NEXT",
+      "metadata": {
+        "description": ""
       }
-    ]
-  }
+    },
+    {
+      "ID": "one",
+      "msg": "There is one more tip.",
+      "next_button_option": "NEXT",
+      "metadata": {
+        "description": ""
+      }
+    }
+  ],
+  "activity_type_data": [
+    {
+      "ID": "quick",
+      "option_name": "Something Quick"
+    },
+    {
+      "ID": "active",
+      "option_name": "Something Active"
+    },
+    {
+      "ID": "calm",
+      "option_name": "Something Calm"
+    }
+  ]
 }
