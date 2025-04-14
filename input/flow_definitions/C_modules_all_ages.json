@@ -36,7 +36,7 @@
         "data_sheet": "",
         "data_row_id": "",
         "new_name": "take_a_pause_data",
-        "data_model": "",
+        "data_model": "PlhContentModel",
         "template_arguments": "",
         "operation": "",
         "status": "",
