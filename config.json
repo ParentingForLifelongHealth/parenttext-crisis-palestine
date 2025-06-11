@@ -106,8 +106,8 @@
                 "1TJ1YVSu87ubc5GvGea2hfRh4v234OyJUccQnZ90VUP4"
             ]
         },
-        "sources": {
         "media_assets": {
+            "format": "media_assets",
             "mappings": {
                 "Language": {
                     "Arabic": "ara"
@@ -131,7 +131,6 @@
                 }
             }
         }
-    }
     },
     "steps": [
         {
