@@ -8,6 +8,8 @@
         "ID": "testers",
         "Trigger (en)": "test",
         "Trigger (ar)": "",
+        "Link (en)": "https://wa.me/447400410660?text=test",
+        "Link (ar)": "",
         "Experience (user group)": "digital",
         "Recruitment (user group)": "",
         "Additional (user group)": "",
@@ -17,69 +19,11 @@
         "Description": ""
       },
       {
-        "ID": "support",
-        "Trigger (en)": "support",
-        "Trigger (ar)": "سند",
-        "Experience (user group)": "digital",
-        "Recruitment (user group)": "SANADAK",
-        "Additional (user group)": "",
-        "Included in Reach? ": "reach",
-        "Cap Users At": "2400",
-        "Location, if applicable": "",
-        "Description": "SANADAK/World Evangelical Alliance/MENA Evangelical Alliance "
-      },
-      {
-        "ID": "strengthening",
-        "Trigger (en)": "strengthening",
-        "Trigger (ar)": "دعم",
-        "Experience (user group)": "digital",
-        "Recruitment (user group)": "Schools",
-        "Additional (user group)": "",
-        "Included in Reach? ": "reach",
-        "Cap Users At": "800",
-        "Location, if applicable": "Jordan",
-        "Description": "3 different schools in Jordan"
-      },
-      {
-        "ID": "family",
-        "Trigger (en)": "family",
-        "Trigger (ar)": "عائلة",
-        "Experience (user group)": "digital",
-        "Recruitment (user group)": "UNRWA",
-        "Additional (user group)": "",
-        "Included in Reach? ": "reach",
-        "Cap Users At": "500",
-        "Location, if applicable": "",
-        "Description": "UNRWA school"
-      },
-      {
-        "ID": "children",
-        "Trigger (en)": "children",
-        "Trigger (ar)": "أطفال",
-        "Experience (user group)": "digital",
-        "Recruitment (user group)": "Caritas",
-        "Additional (user group)": "",
-        "Included in Reach? ": "reach",
-        "Cap Users At": "100",
-        "Location, if applicable": "Jordan",
-        "Description": "Caritas Jordan"
-      },
-      {
-        "ID": "caregivers",
-        "Trigger (en)": "caregivers",
-        "Trigger (ar)": "الرعاية",
-        "Experience (user group)": "digital",
-        "Recruitment (user group)": "Together",
-        "Additional (user group)": "",
-        "Included in Reach? ": "reach",
-        "Cap Users At": "200",
-        "Location, if applicable": "Syria",
-        "Description": "Together NGO"
-      },
-      {
         "ID": "enlightening",
         "Trigger (en)": "enlightening",
         "Trigger (ar)": "إستنارة",
+        "Link (en)": "https://wa.me/447400410660?text=enlightening",
+        "Link (ar)": "https://wa.me/447400410660?text=إستنارة",
         "Experience (user group)": "digital",
         "Recruitment (user group)": "Anar",
         "Additional (user group)": "",
@@ -92,8 +36,10 @@
         "ID": "tips",
         "Trigger (en)": "tips",
         "Trigger (ar)": "نصائح",
+        "Link (en)": "https://wa.me/447400410660?text=tips",
+        "Link (ar)": "https://wa.me/447400410660?text=نصائح",
         "Experience (user group)": "digital",
-        "Recruitment (user group)": "WVI",
+        "Recruitment (user group)": "WVI Jordan",
         "Additional (user group)": "",
         "Included in Reach? ": "reach",
         "Cap Users At": "500",
@@ -101,9 +47,179 @@
         "Description": "World Vision, Jordan office, with primary reach among Syrian refugees"
       },
       {
+        "ID": "family",
+        "Trigger (en)": "family",
+        "Trigger (ar)": "عائلة",
+        "Link (en)": "https://wa.me/447400410660?text=family",
+        "Link (ar)": "https://wa.me/447400410660?text=عائلة",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "UNRWA",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "500",
+        "Location, if applicable": "",
+        "Description": "UNRWA school"
+      },
+      {
+        "ID": "strengthening",
+        "Trigger (en)": "strengthening",
+        "Trigger (ar)": "دعم",
+        "Link (en)": "https://wa.me/447400410660?text=strengthening",
+        "Link (ar)": "https://wa.me/447400410660?text=دعم",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "Charities Jordan",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "800",
+        "Location, if applicable": "Jordan",
+        "Description": "Charities in Jordan"
+      },
+      {
+        "ID": "children",
+        "Trigger (en)": "children",
+        "Trigger (ar)": "أطفال",
+        "Link (en)": "https://wa.me/447400410660?text=children",
+        "Link (ar)": "https://wa.me/447400410660?text=أطفال",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "Caritas",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "100",
+        "Location, if applicable": "Jordan",
+        "Description": "Caritas Jordan"
+      },
+      {
+        "ID": "caregivers",
+        "Trigger (en)": "caregivers",
+        "Trigger (ar)": "مقدمي الرعاية",
+        "Link (en)": "https://wa.me/447400410660?text=caregivers",
+        "Link (ar)": "https://wa.me/447400410660?text=الرعاية",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "Together Egypt",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "200",
+        "Location, if applicable": "Egypt",
+        "Description": "Together NGO"
+      },
+      {
+        "ID": "support",
+        "Trigger (en)": "support",
+        "Trigger (ar)": "سند",
+        "Link (en)": "https://wa.me/447400410660?text=support",
+        "Link (ar)": "https://wa.me/447400410660?text=سند",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "SANADAK",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "735",
+        "Location, if applicable": "",
+        "Description": "SANADAK/World Evangelical Alliance/MENA Evangelical Alliance "
+      },
+      {
+        "ID": "guidance",
+        "Trigger (en)": "guidance",
+        "Trigger (ar)": "توجيه",
+        "Link (en)": "https://wa.me/447400410660?text=guidance",
+        "Link (ar)": "https://wa.me/447400410660?text=توجيه",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "WVI West Bank 1",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "250",
+        "Location, if applicable": "West Bank",
+        "Description": "World Vision, West bank office, among Palestinians – GROUP 1"
+      },
+      {
+        "ID": "vision",
+        "Trigger (en)": "vision",
+        "Trigger (ar)": "تبصر",
+        "Link (en)": "https://wa.me/447400410660?text=vision",
+        "Link (ar)": "https://wa.me/447400410660?text=تبصر",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "WVI West Bank 2",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "250",
+        "Location, if applicable": "West Bank",
+        "Description": "World Vision, West bank office, among Palestinians – GROUP 2"
+      },
+      {
+        "ID": "development",
+        "Trigger (en)": "development",
+        "Trigger (ar)": "تنمية",
+        "Link (en)": "https://wa.me/447400410660?text=development",
+        "Link (ar)": "https://wa.me/447400410660?text=تنمية",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "MSD Jordan",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "250",
+        "Location, if applicable": "Jordan",
+        "Description": "Jordanian Ministry of Social Development"
+      },
+      {
+        "ID": "counseling",
+        "Trigger (en)": "counseling",
+        "Trigger (ar)": "ارشاد",
+        "Link (en)": "https://wa.me/447400410660?text=counseling",
+        "Link (ar)": "https://wa.me/447400410660?text=ارشاد",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "Jordan River Foundation",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "285",
+        "Location, if applicable": "Jordan",
+        "Description": "Jordan River Foundation"
+      },
+      {
+        "ID": "assistance",
+        "Trigger (en)": "assistance",
+        "Trigger (ar)": "الرعاية",
+        "Link (en)": "https://wa.me/447400410660?text=assistance",
+        "Link (ar)": "https://wa.me/447400410660?text=الرعاية",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "Together Syria",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "200",
+        "Location, if applicable": "Syria",
+        "Description": "Together Syria"
+      },
+      {
+        "ID": "advice",
+        "Trigger (en)": "advice",
+        "Trigger (ar)": "مشورة",
+        "Link (en)": "https://wa.me/447400410660?text=advice",
+        "Link (ar)": "https://wa.me/447400410660?text=مشورة",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "Lebanese NGO",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "150",
+        "Location, if applicable": "Lebanon",
+        "Description": "Lebanese NGO"
+      },
+      {
+        "ID": "learn",
+        "Trigger (en)": "learn",
+        "Trigger (ar)": "تعلم",
+        "Link (en)": "https://wa.me/447400410660?text=learn",
+        "Link (ar)": "https://wa.me/447400410660?text=تعلم",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "Schools Jordan",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "280",
+        "Location, if applicable": "Jordan",
+        "Description": "Schools in Jordan"
+      },
+      {
         "ID": "share",
         "Trigger (en)": "share",
         "Trigger (ar)": "شارك",
+        "Link (en)": "https://wa.me/447400410660?text=share",
+        "Link (ar)": "https://wa.me/447400410660?text=شارك",
         "Experience (user group)": "digital",
         "Recruitment (user group)": "Social Share",
         "Additional (user group)": "",
@@ -154,17 +270,17 @@
         "location": ""
       },
       {
-        "ID": "support",
-        "triggers": "support;سند",
-        "groups": "digital;SANADAK;reach",
-        "cap": "2400",
-        "location": ""
+        "ID": "enlightening",
+        "triggers": "enlightening;إستنارة",
+        "groups": "digital;Anar;reach",
+        "cap": "500",
+        "location": "State of Palestine"
       },
       {
-        "ID": "strengthening",
-        "triggers": "strengthening;دعم",
-        "groups": "digital;Schools;reach",
-        "cap": "800",
+        "ID": "tips",
+        "triggers": "tips;نصائح",
+        "groups": "digital;WVI Jordan;reach",
+        "cap": "500",
         "location": "Jordan"
       },
       {
@@ -175,6 +291,13 @@
         "location": ""
       },
       {
+        "ID": "strengthening",
+        "triggers": "strengthening;دعم",
+        "groups": "digital;Charities Jordan;reach",
+        "cap": "800",
+        "location": "Jordan"
+      },
+      {
         "ID": "children",
         "triggers": "children;أطفال",
         "groups": "digital;Caritas;reach",
@@ -183,23 +306,65 @@
       },
       {
         "ID": "caregivers",
-        "triggers": "caregivers;الرعاية",
-        "groups": "digital;Together;reach",
+        "triggers": "caregivers;مقدمي الرعاية",
+        "groups": "digital;Together Egypt;reach",
+        "cap": "200",
+        "location": "Egypt"
+      },
+      {
+        "ID": "support",
+        "triggers": "support;سند",
+        "groups": "digital;SANADAK;reach",
+        "cap": "735",
+        "location": ""
+      },
+      {
+        "ID": "guidance",
+        "triggers": "guidance;توجيه",
+        "groups": "digital;WVI West Bank 1;reach",
+        "cap": "250",
+        "location": "West Bank"
+      },
+      {
+        "ID": "vision",
+        "triggers": "vision;تبصر",
+        "groups": "digital;WVI West Bank 2;reach",
+        "cap": "250",
+        "location": "West Bank"
+      },
+      {
+        "ID": "development",
+        "triggers": "development;تنمية",
+        "groups": "digital;MSD Jordan;reach",
+        "cap": "250",
+        "location": "Jordan"
+      },
+      {
+        "ID": "counseling",
+        "triggers": "counseling;ارشاد",
+        "groups": "digital;Jordan River Foundation;reach",
+        "cap": "285",
+        "location": "Jordan"
+      },
+      {
+        "ID": "assistance",
+        "triggers": "assistance;الرعاية",
+        "groups": "digital;Together Syria;reach",
         "cap": "200",
         "location": "Syria"
       },
       {
-        "ID": "enlightening",
-        "triggers": "enlightening;إستنارة",
-        "groups": "digital;Anar;reach",
-        "cap": "500",
-        "location": "State of Palestine"
+        "ID": "advice",
+        "triggers": "advice;مشورة",
+        "groups": "digital;Lebanese NGO;reach",
+        "cap": "150",
+        "location": "Lebanon"
       },
       {
-        "ID": "tips",
-        "triggers": "tips;نصائح",
-        "groups": "digital;WVI;reach",
-        "cap": "500",
+        "ID": "learn",
+        "triggers": "learn;تعلم",
+        "groups": "digital;Schools Jordan;reach",
+        "cap": "280",
         "location": "Jordan"
       },
       {
@@ -217,19 +382,24 @@
         "var_value": ""
       },
       {
-        "ID": "support",
-        "var_key": "n_support",
-        "var_value": "2400"
+        "ID": "enlightening",
+        "var_key": "n_enlightening",
+        "var_value": "500"
       },
       {
-        "ID": "strengthening",
-        "var_key": "n_strengthening",
-        "var_value": "800"
+        "ID": "tips",
+        "var_key": "n_tips",
+        "var_value": "500"
       },
       {
         "ID": "family",
         "var_key": "n_family",
         "var_value": "500"
+      },
+      {
+        "ID": "strengthening",
+        "var_key": "n_strengthening",
+        "var_value": "800"
       },
       {
         "ID": "children",
@@ -242,14 +412,44 @@
         "var_value": "200"
       },
       {
-        "ID": "enlightening",
-        "var_key": "n_enlightening",
-        "var_value": "500"
+        "ID": "support",
+        "var_key": "n_support",
+        "var_value": "735"
       },
       {
-        "ID": "tips",
-        "var_key": "n_tips",
-        "var_value": "500"
+        "ID": "guidance",
+        "var_key": "n_guidance",
+        "var_value": "250"
+      },
+      {
+        "ID": "vision",
+        "var_key": "n_vision",
+        "var_value": "250"
+      },
+      {
+        "ID": "development",
+        "var_key": "n_development",
+        "var_value": "250"
+      },
+      {
+        "ID": "counseling",
+        "var_key": "n_counseling",
+        "var_value": "285"
+      },
+      {
+        "ID": "assistance",
+        "var_key": "n_assistance",
+        "var_value": "200"
+      },
+      {
+        "ID": "advice",
+        "var_key": "n_advice",
+        "var_value": "150"
+      },
+      {
+        "ID": "learn",
+        "var_key": "n_learn",
+        "var_value": "280"
       },
       {
         "ID": "share",

@@ -1338,7 +1338,7 @@
     "joining_messages": [
       {
         "ID": "waiting_list",
-        "msg": "Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.",
+        "msg": "Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.\n\nFor now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: \n{resources_waiting_list}",
         "metadata.description": ""
       }
     ]

@@ -1186,24 +1186,6 @@
         {
             "English": {
                 "keywords": [
-                    "Demo",
-                    "\u062a\u0648\u0636\u064a\u062d"
-                ],
-                "mispellings": []
-            },
-            "Translation": {
-                "ara": {
-                    "keywords": [
-                        "\u062a\u0648\u0636\u064a\u062d",
-                        "Demo"
-                    ],
-                    "mispellings": []
-                }
-            }
-        },
-        {
-            "English": {
-                "keywords": [
                     "test"
                 ],
                 "mispellings": []
@@ -1220,16 +1202,16 @@
         {
             "English": {
                 "keywords": [
-                    "support",
-                    "\u0633\u0646\u062f"
+                    "advice",
+                    "\u0645\u0634\u0648\u0631\u0629"
                 ],
                 "mispellings": []
             },
             "Translation": {
                 "ara": {
                     "keywords": [
-                        "\u0633\u0646\u062f",
-                        "support"
+                        "advice",
+                        "\u0645\u0634\u0648\u0631\u0629"
                     ],
                     "mispellings": []
                 }
@@ -1238,16 +1220,16 @@
         {
             "English": {
                 "keywords": [
-                    "strengthening",
-                    "\u062f\u0639\u0645"
+                    "assistance",
+                    "\u0627\u0644\u0631\u0639\u0627\u064a\u0629"
                 ],
                 "mispellings": []
             },
             "Translation": {
                 "ara": {
                     "keywords": [
-                        "strengthening",
-                        "\u062f\u0639\u0645"
+                        "assistance",
+                        "\u0627\u0644\u0631\u0639\u0627\u064a\u0629"
                     ],
                     "mispellings": []
                 }
@@ -1256,16 +1238,16 @@
         {
             "English": {
                 "keywords": [
-                    "family",
-                    "\u0639\u0627\u0626\u0644\u0629"
+                    "caregivers",
+                    "\u0645\u0642\u062f\u0645\u064a \u0627\u0644\u0631\u0639\u0627\u064a\u0629"
                 ],
                 "mispellings": []
             },
             "Translation": {
                 "ara": {
                     "keywords": [
-                        "family",
-                        "\u0639\u0627\u0626\u0644\u0629"
+                        "caregivers",
+                        "\u0645\u0642\u062f\u0645\u064a \u0627\u0644\u0631\u0639\u0627\u064a\u0629"
                     ],
                     "mispellings": []
                 }
@@ -1292,16 +1274,34 @@
         {
             "English": {
                 "keywords": [
-                    "caregivers",
-                    "\u0627\u0644\u0631\u0639\u0627\u064a\u0629"
+                    "counseling",
+                    "\u0627\u0631\u0634\u0627\u062f"
                 ],
                 "mispellings": []
             },
             "Translation": {
                 "ara": {
                     "keywords": [
-                        "caregivers",
-                        "\u0627\u0644\u0631\u0639\u0627\u064a\u0629"
+                        "counseling",
+                        "\u0627\u0631\u0634\u0627\u062f"
+                    ],
+                    "mispellings": []
+                }
+            }
+        },
+        {
+            "English": {
+                "keywords": [
+                    "development",
+                    "\u062a\u0646\u0645\u064a\u0629"
+                ],
+                "mispellings": []
+            },
+            "Translation": {
+                "ara": {
+                    "keywords": [
+                        "development",
+                        "\u062a\u0646\u0645\u064a\u0629"
                     ],
                     "mispellings": []
                 }
@@ -1328,16 +1328,52 @@
         {
             "English": {
                 "keywords": [
-                    "tips",
-                    "\u0646\u0635\u0627\u0626\u062d"
+                    "family",
+                    "\u0639\u0627\u0626\u0644\u0629"
                 ],
                 "mispellings": []
             },
             "Translation": {
                 "ara": {
                     "keywords": [
-                        "tips",
-                        "\u0646\u0635\u0627\u0626\u062d"
+                        "family",
+                        "\u0639\u0627\u0626\u0644\u0629"
+                    ],
+                    "mispellings": []
+                }
+            }
+        },
+        {
+            "English": {
+                "keywords": [
+                    "guidance",
+                    "\u062a\u0648\u062c\u064a\u0647"
+                ],
+                "mispellings": []
+            },
+            "Translation": {
+                "ara": {
+                    "keywords": [
+                        "guidance",
+                        "\u062a\u0648\u062c\u064a\u0647"
+                    ],
+                    "mispellings": []
+                }
+            }
+        },
+        {
+            "English": {
+                "keywords": [
+                    "learn",
+                    "\u062a\u0639\u0644\u0645"
+                ],
+                "mispellings": []
+            },
+            "Translation": {
+                "ara": {
+                    "keywords": [
+                        "learn",
+                        "\u062a\u0639\u0644\u0645"
                     ],
                     "mispellings": []
                 }
@@ -1356,6 +1392,78 @@
                     "keywords": [
                         "share",
                         "\u0634\u0627\u0631\u0643"
+                    ],
+                    "mispellings": []
+                }
+            }
+        },
+        {
+            "English": {
+                "keywords": [
+                    "strengthening",
+                    "\u062f\u0639\u0645"
+                ],
+                "mispellings": []
+            },
+            "Translation": {
+                "ara": {
+                    "keywords": [
+                        "strengthening",
+                        "\u062f\u0639\u0645"
+                    ],
+                    "mispellings": []
+                }
+            }
+        },
+        {
+            "English": {
+                "keywords": [
+                    "support",
+                    "\u0633\u0646\u062f"
+                ],
+                "mispellings": []
+            },
+            "Translation": {
+                "ara": {
+                    "keywords": [
+                        "support",
+                        "\u0633\u0646\u062f"
+                    ],
+                    "mispellings": []
+                }
+            }
+        },
+        {
+            "English": {
+                "keywords": [
+                    "tips",
+                    "\u0646\u0635\u0627\u0626\u062d"
+                ],
+                "mispellings": []
+            },
+            "Translation": {
+                "ara": {
+                    "keywords": [
+                        "tips",
+                        "\u0646\u0635\u0627\u0626\u062d"
+                    ],
+                    "mispellings": []
+                }
+            }
+        },
+        {
+            "English": {
+                "keywords": [
+                    "vision",
+                    "\u062a\u0628\u0635\u0631"
+                ],
+                "mispellings": []
+            },
+            "Translation": {
+                "ara": {
+                    "keywords": [
+                        "vision",
+                        "\u062a\u0628\u0635\u0631"
                     ],
                     "mispellings": []
                 }
