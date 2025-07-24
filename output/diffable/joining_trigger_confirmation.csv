@@ -1,0 +1,243 @@
+row_id,type,edges.1.from,webhook.url,webhook.method,webhook.headers.1.1,webhook.headers.1.2,webhook.headers.2.1,webhook.headers.2.2,webhook.headers.3.1,webhook.headers.3.2,webhook.body,edges.1.condition,edges.2.from,edges.2.condition,edges.3.from,message_text,save_name
+set_run_result.proceed,save_flow_result,start,,,,,,,,,,,,,,yes,proceed
+switch.input_text,split_by_value,set_run_result.proceed,,,,,,,,,,,,,,@input.text,
+add_contact_groups.testers,add_to_group,switch.input_text,,,,,,,,,,value;test|variable;@input.text|type;has_any_word|name;Test,,,,testers|,
+set_contact_field.joining_trigger,save_value,add_contact_groups.testers,,,,,,,,,,,,,,testers,joining_trigger_id
+add_contact_groups.digital,add_to_group,set_contact_field.joining_trigger,,,,,,,,,,,,,,digital|,
+add_contact_groups.enlightening,add_to_group,switch.input_text,,,,,,,,,,value;enlightening|variable;@input.text|type;has_any_word|name;Enlightening,switch.input_text,value;إستنارة|variable;@input.text|type;has_any_word|name;إستنارة,,enlightening|,
+set_contact_field.joining_trigger.1,save_value,add_contact_groups.enlightening,,,,,,,,,,,,,,enlightening,joining_trigger_id
+add_contact_groups.digital.1,add_to_group,set_contact_field.joining_trigger.1,,,,,,,,,,,,,,digital|,
+add_contact_groups.Anar,add_to_group,add_contact_groups.digital.1,,,,,,,,,,,,,,Anar|,
+add_contact_groups.reach,add_to_group,add_contact_groups.Anar,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n,save_flow_result,add_contact_groups.reach,,,,,,,,,,,,,,@(globals.n_enlightening -1),curr n
+switch.results_curr_n,split_by_value,set_run_result.curr_n,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac,send_message,switch.results_curr_n,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups.,remove_from_group,msg.Thanks_for_reac,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_en,add_to_group,remove_contact_groups.,,,,,,,,,,,,,,waiting room enlightening|,
+set_run_result.proceed.1,save_flow_result,add_contact_groups.waiting_room_en,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_,call_webhook,switch.results_curr_n,"@(globals.rp_url &""/api/v2/globals.json?key=n_enlightening"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio,save_value,set_run_result.proceed.1,,,,,,,,,,,webhook.globals_rp_url_,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_,State of Palestine,trigger_location
+add_contact_groups.tips,add_to_group,switch.input_text,,,,,,,,,,value;tips|variable;@input.text|type;has_any_word|name;Tips,switch.input_text,value;نصائح|variable;@input.text|type;has_any_word|name;نصائح,,tips|,
+set_contact_field.joining_trigger.2,save_value,add_contact_groups.tips,,,,,,,,,,,,,,tips,joining_trigger_id
+add_contact_groups.digital.2,add_to_group,set_contact_field.joining_trigger.2,,,,,,,,,,,,,,digital|,
+add_contact_groups.WVI_Jordan,add_to_group,add_contact_groups.digital.2,,,,,,,,,,,,,,WVI Jordan|,
+add_contact_groups.reach.1,add_to_group,add_contact_groups.WVI_Jordan,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.1,save_flow_result,add_contact_groups.reach.1,,,,,,,,,,,,,,@(globals.n_tips -1),curr n
+switch.results_curr_n.1,split_by_value,set_run_result.curr_n.1,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.1,send_message,switch.results_curr_n.1,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..1,remove_from_group,msg.Thanks_for_reac.1,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_ti,add_to_group,remove_contact_groups..1,,,,,,,,,,,,,,waiting room tips|,
+set_run_result.proceed.2,save_flow_result,add_contact_groups.waiting_room_ti,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.1,call_webhook,switch.results_curr_n.1,"@(globals.rp_url &""/api/v2/globals.json?key=n_tips"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.1,save_value,set_run_result.proceed.2,,,,,,,,,,,webhook.globals_rp_url_.1,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.1,Jordan,trigger_location
+add_contact_groups.family,add_to_group,switch.input_text,,,,,,,,,,value;family|variable;@input.text|type;has_any_word|name;Family,switch.input_text,value;عائلة|variable;@input.text|type;has_any_word|name;عائلة,,family|,
+set_contact_field.joining_trigger.3,save_value,add_contact_groups.family,,,,,,,,,,,,,,family,joining_trigger_id
+add_contact_groups.digital.3,add_to_group,set_contact_field.joining_trigger.3,,,,,,,,,,,,,,digital|,
+add_contact_groups.UNRWA,add_to_group,add_contact_groups.digital.3,,,,,,,,,,,,,,UNRWA|,
+add_contact_groups.reach.2,add_to_group,add_contact_groups.UNRWA,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.2,save_flow_result,add_contact_groups.reach.2,,,,,,,,,,,,,,@(globals.n_family -1),curr n
+switch.results_curr_n.2,split_by_value,set_run_result.curr_n.2,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.2,send_message,switch.results_curr_n.2,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..2,remove_from_group,msg.Thanks_for_reac.2,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_fa,add_to_group,remove_contact_groups..2,,,,,,,,,,,,,,waiting room family|,
+set_run_result.proceed.3,save_flow_result,add_contact_groups.waiting_room_fa,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.2,call_webhook,switch.results_curr_n.2,"@(globals.rp_url &""/api/v2/globals.json?key=n_family"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+add_contact_groups.strengthening,add_to_group,switch.input_text,,,,,,,,,,value;strengthening|variable;@input.text|type;has_any_word|name;Strengthening,switch.input_text,value;دعم|variable;@input.text|type;has_any_word|name;دعم,,strengthening|,
+set_contact_field.joining_trigger.4,save_value,add_contact_groups.strengthening,,,,,,,,,,,,,,strengthening,joining_trigger_id
+add_contact_groups.digital.4,add_to_group,set_contact_field.joining_trigger.4,,,,,,,,,,,,,,digital|,
+add_contact_groups.Charities_Jorda,add_to_group,add_contact_groups.digital.4,,,,,,,,,,,,,,Charities Jordan|,
+add_contact_groups.reach.3,add_to_group,add_contact_groups.Charities_Jorda,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.3,save_flow_result,add_contact_groups.reach.3,,,,,,,,,,,,,,@(globals.n_strengthening -1),curr n
+switch.results_curr_n.3,split_by_value,set_run_result.curr_n.3,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.3,send_message,switch.results_curr_n.3,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..3,remove_from_group,msg.Thanks_for_reac.3,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_st,add_to_group,remove_contact_groups..3,,,,,,,,,,,,,,waiting room strengthening|,
+set_run_result.proceed.4,save_flow_result,add_contact_groups.waiting_room_st,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.3,call_webhook,switch.results_curr_n.3,"@(globals.rp_url &""/api/v2/globals.json?key=n_strengthening"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.2,save_value,set_run_result.proceed.4,,,,,,,,,,,webhook.globals_rp_url_.3,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.3,Jordan,trigger_location
+add_contact_groups.children,add_to_group,switch.input_text,,,,,,,,,,value;children|variable;@input.text|type;has_any_word|name;Children,switch.input_text,value;أطفال|variable;@input.text|type;has_any_word|name;أطفال,,children|,
+set_contact_field.joining_trigger.5,save_value,add_contact_groups.children,,,,,,,,,,,,,,children,joining_trigger_id
+add_contact_groups.digital.5,add_to_group,set_contact_field.joining_trigger.5,,,,,,,,,,,,,,digital|,
+add_contact_groups.Caritas,add_to_group,add_contact_groups.digital.5,,,,,,,,,,,,,,Caritas|,
+add_contact_groups.reach.4,add_to_group,add_contact_groups.Caritas,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.4,save_flow_result,add_contact_groups.reach.4,,,,,,,,,,,,,,@(globals.n_children -1),curr n
+switch.results_curr_n.4,split_by_value,set_run_result.curr_n.4,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.4,send_message,switch.results_curr_n.4,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..4,remove_from_group,msg.Thanks_for_reac.4,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_ch,add_to_group,remove_contact_groups..4,,,,,,,,,,,,,,waiting room children|,
+set_run_result.proceed.5,save_flow_result,add_contact_groups.waiting_room_ch,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.4,call_webhook,switch.results_curr_n.4,"@(globals.rp_url &""/api/v2/globals.json?key=n_children"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.3,save_value,set_run_result.proceed.5,,,,,,,,,,,webhook.globals_rp_url_.4,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.4,Jordan,trigger_location
+add_contact_groups.caregivers,add_to_group,switch.input_text,,,,,,,,,,value;caregivers|variable;@input.text|type;has_any_word|name;Caregivers,switch.input_text,value;مقدمي|variable;@input.text|type;has_any_word|name;مقدمي الرعاية,,caregivers|,
+set_contact_field.joining_trigger.6,save_value,add_contact_groups.caregivers,,,,,,,,,,,,,,caregivers,joining_trigger_id
+add_contact_groups.digital.6,add_to_group,set_contact_field.joining_trigger.6,,,,,,,,,,,,,,digital|,
+add_contact_groups.Together_Egypt,add_to_group,add_contact_groups.digital.6,,,,,,,,,,,,,,Together Egypt|,
+add_contact_groups.reach.5,add_to_group,add_contact_groups.Together_Egypt,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.5,save_flow_result,add_contact_groups.reach.5,,,,,,,,,,,,,,@(globals.n_caregivers -1),curr n
+switch.results_curr_n.5,split_by_value,set_run_result.curr_n.5,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.5,send_message,switch.results_curr_n.5,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..5,remove_from_group,msg.Thanks_for_reac.5,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_ca,add_to_group,remove_contact_groups..5,,,,,,,,,,,,,,waiting room caregivers|,
+set_run_result.proceed.6,save_flow_result,add_contact_groups.waiting_room_ca,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.5,call_webhook,switch.results_curr_n.5,"@(globals.rp_url &""/api/v2/globals.json?key=n_caregivers"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.4,save_value,set_run_result.proceed.6,,,,,,,,,,,webhook.globals_rp_url_.5,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.5,Egypt,trigger_location
+add_contact_groups.support,add_to_group,switch.input_text,,,,,,,,,,value;support|variable;@input.text|type;has_any_word|name;Support,switch.input_text,value;سند|variable;@input.text|type;has_any_word|name;سند,,support|,
+set_contact_field.joining_trigger.7,save_value,add_contact_groups.support,,,,,,,,,,,,,,support,joining_trigger_id
+add_contact_groups.digital.7,add_to_group,set_contact_field.joining_trigger.7,,,,,,,,,,,,,,digital|,
+add_contact_groups.SANADAK,add_to_group,add_contact_groups.digital.7,,,,,,,,,,,,,,SANADAK|,
+add_contact_groups.reach.6,add_to_group,add_contact_groups.SANADAK,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.6,save_flow_result,add_contact_groups.reach.6,,,,,,,,,,,,,,@(globals.n_support -1),curr n
+switch.results_curr_n.6,split_by_value,set_run_result.curr_n.6,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.6,send_message,switch.results_curr_n.6,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..6,remove_from_group,msg.Thanks_for_reac.6,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_su,add_to_group,remove_contact_groups..6,,,,,,,,,,,,,,waiting room support|,
+set_run_result.proceed.7,save_flow_result,add_contact_groups.waiting_room_su,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.6,call_webhook,switch.results_curr_n.6,"@(globals.rp_url &""/api/v2/globals.json?key=n_support"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+add_contact_groups.guidance,add_to_group,switch.input_text,,,,,,,,,,value;guidance|variable;@input.text|type;has_any_word|name;Guidance,switch.input_text,value;توجيه|variable;@input.text|type;has_any_word|name;توجيه,,guidance|,
+set_contact_field.joining_trigger.8,save_value,add_contact_groups.guidance,,,,,,,,,,,,,,guidance,joining_trigger_id
+add_contact_groups.digital.8,add_to_group,set_contact_field.joining_trigger.8,,,,,,,,,,,,,,digital|,
+add_contact_groups.WVI_West_Bank_1,add_to_group,add_contact_groups.digital.8,,,,,,,,,,,,,,WVI West Bank 1|,
+add_contact_groups.reach.7,add_to_group,add_contact_groups.WVI_West_Bank_1,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.7,save_flow_result,add_contact_groups.reach.7,,,,,,,,,,,,,,@(globals.n_guidance -1),curr n
+switch.results_curr_n.7,split_by_value,set_run_result.curr_n.7,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.7,send_message,switch.results_curr_n.7,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..7,remove_from_group,msg.Thanks_for_reac.7,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_gu,add_to_group,remove_contact_groups..7,,,,,,,,,,,,,,waiting room guidance|,
+set_run_result.proceed.8,save_flow_result,add_contact_groups.waiting_room_gu,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.7,call_webhook,switch.results_curr_n.7,"@(globals.rp_url &""/api/v2/globals.json?key=n_guidance"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.5,save_value,set_run_result.proceed.8,,,,,,,,,,,webhook.globals_rp_url_.7,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.7,West Bank,trigger_location
+add_contact_groups.vision,add_to_group,switch.input_text,,,,,,,,,,value;vision|variable;@input.text|type;has_any_word|name;Vision,switch.input_text,value;الرؤية|variable;@input.text|type;has_any_word|name;الرؤية,,vision|,
+set_contact_field.joining_trigger.9,save_value,add_contact_groups.vision,,,,,,,,,,,,,,vision,joining_trigger_id
+add_contact_groups.digital.9,add_to_group,set_contact_field.joining_trigger.9,,,,,,,,,,,,,,digital|,
+add_contact_groups.WVI_West_Bank_2,add_to_group,add_contact_groups.digital.9,,,,,,,,,,,,,,WVI West Bank 2|,
+add_contact_groups.reach.8,add_to_group,add_contact_groups.WVI_West_Bank_2,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.8,save_flow_result,add_contact_groups.reach.8,,,,,,,,,,,,,,@(globals.n_vision -1),curr n
+switch.results_curr_n.8,split_by_value,set_run_result.curr_n.8,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.8,send_message,switch.results_curr_n.8,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..8,remove_from_group,msg.Thanks_for_reac.8,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_vi,add_to_group,remove_contact_groups..8,,,,,,,,,,,,,,waiting room vision|,
+set_run_result.proceed.9,save_flow_result,add_contact_groups.waiting_room_vi,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.8,call_webhook,switch.results_curr_n.8,"@(globals.rp_url &""/api/v2/globals.json?key=n_vision"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.6,save_value,set_run_result.proceed.9,,,,,,,,,,,webhook.globals_rp_url_.8,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.8,West Bank,trigger_location
+add_contact_groups.development,add_to_group,switch.input_text,,,,,,,,,,value;development|variable;@input.text|type;has_any_word|name;Development,switch.input_text,value;تنمية|variable;@input.text|type;has_any_word|name;تنمية,,development|,
+set_contact_field.joining_trigger.10,save_value,add_contact_groups.development,,,,,,,,,,,,,,development,joining_trigger_id
+add_contact_groups.digital.10,add_to_group,set_contact_field.joining_trigger.10,,,,,,,,,,,,,,digital|,
+add_contact_groups.MSD_Jordan,add_to_group,add_contact_groups.digital.10,,,,,,,,,,,,,,MSD Jordan|,
+add_contact_groups.reach.9,add_to_group,add_contact_groups.MSD_Jordan,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.9,save_flow_result,add_contact_groups.reach.9,,,,,,,,,,,,,,@(globals.n_development -1),curr n
+switch.results_curr_n.9,split_by_value,set_run_result.curr_n.9,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.9,send_message,switch.results_curr_n.9,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..9,remove_from_group,msg.Thanks_for_reac.9,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_de,add_to_group,remove_contact_groups..9,,,,,,,,,,,,,,waiting room development|,
+set_run_result.proceed.10,save_flow_result,add_contact_groups.waiting_room_de,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.9,call_webhook,switch.results_curr_n.9,"@(globals.rp_url &""/api/v2/globals.json?key=n_development"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.7,save_value,set_run_result.proceed.10,,,,,,,,,,,webhook.globals_rp_url_.9,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.9,Jordan,trigger_location
+add_contact_groups.counseling,add_to_group,switch.input_text,,,,,,,,,,value;counseling|variable;@input.text|type;has_any_word|name;Counseling,switch.input_text,value;ارشاد|variable;@input.text|type;has_any_word|name;ارشاد,,counseling|,
+set_contact_field.joining_trigger.11,save_value,add_contact_groups.counseling,,,,,,,,,,,,,,counseling,joining_trigger_id
+add_contact_groups.digital.11,add_to_group,set_contact_field.joining_trigger.11,,,,,,,,,,,,,,digital|,
+add_contact_groups.Jordan_River_Fo,add_to_group,add_contact_groups.digital.11,,,,,,,,,,,,,,Jordan River Foundation|,
+add_contact_groups.reach.10,add_to_group,add_contact_groups.Jordan_River_Fo,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.10,save_flow_result,add_contact_groups.reach.10,,,,,,,,,,,,,,@(globals.n_counseling -1),curr n
+switch.results_curr_n.10,split_by_value,set_run_result.curr_n.10,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.10,send_message,switch.results_curr_n.10,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..10,remove_from_group,msg.Thanks_for_reac.10,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_co,add_to_group,remove_contact_groups..10,,,,,,,,,,,,,,waiting room counseling|,
+set_run_result.proceed.11,save_flow_result,add_contact_groups.waiting_room_co,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.10,call_webhook,switch.results_curr_n.10,"@(globals.rp_url &""/api/v2/globals.json?key=n_counseling"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.8,save_value,set_run_result.proceed.11,,,,,,,,,,,webhook.globals_rp_url_.10,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.10,Jordan,trigger_location
+add_contact_groups.assistance,add_to_group,switch.input_text,,,,,,,,,,value;assistance|variable;@input.text|type;has_any_word|name;Assistance,switch.input_text,value;الرعاية|variable;@input.text|type;has_any_word|name;الرعاية,,assistance|,
+set_contact_field.joining_trigger.12,save_value,add_contact_groups.assistance,,,,,,,,,,,,,,assistance,joining_trigger_id
+add_contact_groups.digital.12,add_to_group,set_contact_field.joining_trigger.12,,,,,,,,,,,,,,digital|,
+add_contact_groups.Together_Syria,add_to_group,add_contact_groups.digital.12,,,,,,,,,,,,,,Together Syria|,
+add_contact_groups.reach.11,add_to_group,add_contact_groups.Together_Syria,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.11,save_flow_result,add_contact_groups.reach.11,,,,,,,,,,,,,,@(globals.n_assistance -1),curr n
+switch.results_curr_n.11,split_by_value,set_run_result.curr_n.11,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.11,send_message,switch.results_curr_n.11,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..11,remove_from_group,msg.Thanks_for_reac.11,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_as,add_to_group,remove_contact_groups..11,,,,,,,,,,,,,,waiting room assistance|,
+set_run_result.proceed.12,save_flow_result,add_contact_groups.waiting_room_as,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.11,call_webhook,switch.results_curr_n.11,"@(globals.rp_url &""/api/v2/globals.json?key=n_assistance"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.9,save_value,set_run_result.proceed.12,,,,,,,,,,,webhook.globals_rp_url_.11,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.11,Syria,trigger_location
+add_contact_groups.advice,add_to_group,switch.input_text,,,,,,,,,,value;advice|variable;@input.text|type;has_any_word|name;Advice,switch.input_text,value;مشورة|variable;@input.text|type;has_any_word|name;مشورة,,advice|,
+set_contact_field.joining_trigger.13,save_value,add_contact_groups.advice,,,,,,,,,,,,,,advice,joining_trigger_id
+add_contact_groups.digital.13,add_to_group,set_contact_field.joining_trigger.13,,,,,,,,,,,,,,digital|,
+add_contact_groups.Lebanese_NGO,add_to_group,add_contact_groups.digital.13,,,,,,,,,,,,,,Lebanese NGO|,
+add_contact_groups.reach.12,add_to_group,add_contact_groups.Lebanese_NGO,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.12,save_flow_result,add_contact_groups.reach.12,,,,,,,,,,,,,,@(globals.n_advice -1),curr n
+switch.results_curr_n.12,split_by_value,set_run_result.curr_n.12,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.12,send_message,switch.results_curr_n.12,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..12,remove_from_group,msg.Thanks_for_reac.12,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_ad,add_to_group,remove_contact_groups..12,,,,,,,,,,,,,,waiting room advice|,
+set_run_result.proceed.13,save_flow_result,add_contact_groups.waiting_room_ad,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.12,call_webhook,switch.results_curr_n.12,"@(globals.rp_url &""/api/v2/globals.json?key=n_advice"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.10,save_value,set_run_result.proceed.13,,,,,,,,,,,webhook.globals_rp_url_.12,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.12,Lebanon,trigger_location
+add_contact_groups.learn,add_to_group,switch.input_text,,,,,,,,,,value;learn|variable;@input.text|type;has_any_word|name;Learn,switch.input_text,value;تعلم|variable;@input.text|type;has_any_word|name;تعلم,,learn|,
+set_contact_field.joining_trigger.14,save_value,add_contact_groups.learn,,,,,,,,,,,,,,learn,joining_trigger_id
+add_contact_groups.digital.14,add_to_group,set_contact_field.joining_trigger.14,,,,,,,,,,,,,,digital|,
+add_contact_groups.Schools_Jordan,add_to_group,add_contact_groups.digital.14,,,,,,,,,,,,,,Schools Jordan|,
+add_contact_groups.reach.13,add_to_group,add_contact_groups.Schools_Jordan,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.13,save_flow_result,add_contact_groups.reach.13,,,,,,,,,,,,,,@(globals.n_learn -1),curr n
+switch.results_curr_n.13,split_by_value,set_run_result.curr_n.13,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.13,send_message,switch.results_curr_n.13,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..13,remove_from_group,msg.Thanks_for_reac.13,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_le,add_to_group,remove_contact_groups..13,,,,,,,,,,,,,,waiting room learn|,
+set_run_result.proceed.14,save_flow_result,add_contact_groups.waiting_room_le,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.13,call_webhook,switch.results_curr_n.13,"@(globals.rp_url &""/api/v2/globals.json?key=n_learn"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result
+set_contact_field.trigger_locatio.11,save_value,set_run_result.proceed.14,,,,,,,,,,,webhook.globals_rp_url_.13,value;Success|variable;@results.webhook_result.category|type;has_only_text|name;Success,webhook.globals_rp_url_.13,Jordan,trigger_location
+add_contact_groups.share,add_to_group,switch.input_text,,,,,,,,,,value;share|variable;@input.text|type;has_any_word|name;Share,switch.input_text,value;شارك|variable;@input.text|type;has_any_word|name;شارك,,share|,
+set_contact_field.joining_trigger.15,save_value,add_contact_groups.share,,,,,,,,,,,,,,share,joining_trigger_id
+add_contact_groups.digital.15,add_to_group,set_contact_field.joining_trigger.15,,,,,,,,,,,,,,digital|,
+add_contact_groups.Social_Share,add_to_group,add_contact_groups.digital.15,,,,,,,,,,,,,,Social Share|,
+add_contact_groups.reach.14,add_to_group,add_contact_groups.Social_Share,,,,,,,,,,,,,,reach|,
+set_run_result.curr_n.14,save_flow_result,add_contact_groups.reach.14,,,,,,,,,,,,,,@(globals.n_share -1),curr n
+switch.results_curr_n.14,split_by_value,set_run_result.curr_n.14,,,,,,,,,,,,,,@results.curr_n,
+msg.Thanks_for_reac.14,send_message,switch.results_curr_n.14,,,,,,,,,,value;0|variable;@results.curr_n|type;has_number_lt|name;no spots left,,,,"Thanks for reaching out 🤍 It really shows how much you care about your children. Right now, the programme is full, but we’ve added you to the waiting list. As soon as a spot opens up, we’ll let you know.
+
+For now, we welcome you to look at SANADAK's facebook page for videos of encouragement and tips for taking care of yourself and your children: 
+https://www.facebook.com/share/19GgH9B6E2/?mibextid=wwXIfr",
+remove_contact_groups..14,remove_from_group,msg.Thanks_for_reac.14,,,,,,,,,,,,,,,
+add_contact_groups.waiting_room_sh,add_to_group,remove_contact_groups..14,,,,,,,,,,,,,,waiting room share|,
+set_run_result.proceed.15,save_flow_result,add_contact_groups.waiting_room_sh,,,,,,,,,,,,,,no,proceed
+webhook.globals_rp_url_.14,call_webhook,switch.results_curr_n.14,"@(globals.rp_url &""/api/v2/globals.json?key=n_share"")",POST,Accept,application/json,Authorization,Token @globals.rp_api_token,Content-Type,application/json,"{ ""value"" : ""@results.curr_n""}",,,,,,webhook_result

@@ -1,0 +1,13 @@
+row_id,type,edges.1.from,edges.1.condition,edges.2.from,edges.2.condition,edges.3.from,edges.4.from,edges.5.from,message_text,choices.1,choices.2
+switch.fields_gender,split_by_value,start,,,,,,,@fields.gender,,
+msg.You_didnt_tell_,send_message,switch.fields_gender,value;no|variable;@fields.gender|type;has_only_phrase|name;No,,,,,,You didn't tell us if you are a woman or a man.,,
+msg.You_told_us_tha,send_message,switch.fields_gender,value;female|variable;@fields.gender|type;has_only_phrase|name;female,,,,,,You told us that you are a Woman.,,
+msg.You_told_us_tha.1,send_message,switch.fields_gender,value;male|variable;@fields.gender|type;has_only_phrase|name;male,,,,,,You told us that you are a Man.,,
+msg.You_told_us_tha.2,send_message,switch.fields_gender,variable;@fields.gender|type;has_text|name;has val,,,,,,You told us that you are a,,
+msg.You_didnt_tell_.1,send_message,switch.fields_gender,,,,,,,You didn't tell us if you are a woman or a man.,,
+msg.Would_you_like_,send_message,msg.You_didnt_tell_,,msg.You_told_us_tha,,msg.You_told_us_tha.1,msg.You_told_us_tha.2,msg.You_didnt_tell_.1,Would you like to update your gender?,Yes,No
+switch.input_text,wait_for_response,msg.Would_you_like_,,,,,,,,,
+flow.survey_-_onb_-_,start_new_flow,switch.input_text,value;Yes|variable;@input.text|type;has_only_phrase|name;Yes,,,,,,survey - onb - question - gender,,
+flow.menu_-_settings,start_new_flow,flow.survey_-_onb_-_,value;completed|,switch.input_text,value;No|variable;@input.text|type;has_only_phrase|name;No,,,,menu - settings_profile,,
+msg.Sorry_I_dont_un,send_message,switch.input_text,,,,,,,"Sorry, I don't understand what you mean.",,
+goto.msg.Would_you_like_,go_to,msg.Sorry_I_dont_un,,,,,,,msg.Would_you_like_|,,

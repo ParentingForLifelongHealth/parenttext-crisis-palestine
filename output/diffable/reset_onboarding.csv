@@ -1,0 +1,56 @@
+row_id,type,edges.1.from,edges.1.condition,message_text,save_name
+set_contact_field.completed_langu,save_value,start,,,completed_language
+set_contact_language.language,set_contact_language,set_contact_field.completed_langu,,eng,
+set_contact_field.consent,save_value,set_contact_language.language,,,consent
+set_contact_field.completed_conse,save_value,set_contact_field.consent,,,completed_consent
+set_contact_field.completed_emoji,save_value,set_contact_field.completed_conse,,,completed_emojis
+set_contact_field.completed_media,save_value,set_contact_field.completed_emoji,,,completed_media
+set_contact_field.completed_orien,save_value,set_contact_field.completed_media,,,completed_orientation
+set_contact_field.completed_timin,save_value,set_contact_field.completed_orien,,,completed_timing
+set_contact_field.completed_gende,save_value,set_contact_field.completed_timin,,,completed_gender
+set_contact_field.completed_marit,save_value,set_contact_field.completed_gende,,,completed_marital_status
+set_contact_field.completed_child,save_value,set_contact_field.completed_marit,,,completed_child_age
+set_contact_field.completed_child.1,save_value,set_contact_field.completed_child,,,completed_child_name
+set_contact_field.child_nickname,save_value,set_contact_field.completed_child.1,,,child_nickname
+remove_contact_groups.completed_progr,remove_from_group,set_contact_field.child_nickname,,completed program|,
+remove_contact_groups.enrolled,remove_from_group,remove_contact_groups.completed_progr,,enrolled|,
+remove_contact_groups.left_program,remove_from_group,remove_contact_groups.enrolled,,left program|,
+remove_contact_groups.in_program,remove_from_group,remove_contact_groups.left_program,,in program|,
+set_contact_field.goals_to_start,save_value,remove_contact_groups.in_program,,,goals_to_start
+set_contact_field.goals_started,save_value,set_contact_field.goals_to_start,,,goals_started
+set_contact_field.goals_accessed,save_value,set_contact_field.goals_started,,,goals_accessed
+set_contact_field.goals_compl,save_value,set_contact_field.goals_accessed,,,goals_compl
+set_contact_field.pre_goal_checki,save_value,set_contact_field.goals_compl,,,pre_goal_checkin_compl
+set_contact_field.n_goals_prog,save_value,set_contact_field.pre_goal_checki,,,n_goals_prog
+set_contact_field.n_goals_to_star,save_value,set_contact_field.n_goals_prog,,,n_goals_to_start
+set_contact_field.n_goals_complet,save_value,set_contact_field.n_goals_to_star,,,n_goals_completed
+set_contact_field.n_goals_started,save_value,set_contact_field.n_goals_complet,,,n_goals_started
+set_contact_field.assigned_resear,save_value,set_contact_field.n_goals_started,,,assigned_research_id
+set_contact_field.research_id,save_value,set_contact_field.assigned_resear,,,research_id
+set_contact_field.completion_time,save_value,set_contact_field.research_id,,,completion_time
+set_contact_field.curr_demo_day,save_value,set_contact_field.completion_time,,,curr_demo_day
+set_contact_field.c_mod_to_start,save_value,set_contact_field.curr_demo_day,,,c_mod_to_start
+set_contact_field.c_mod_started,save_value,set_contact_field.c_mod_to_start,,,c_mod_started
+set_contact_field.c_mod_compl,save_value,set_contact_field.c_mod_started,,,c_mod_compl
+set_contact_field.c_checkins_to_s,save_value,set_contact_field.c_mod_compl,,,c_checkins_to_start
+set_contact_field.c_n_mod,save_value,set_contact_field.c_checkins_to_s,,,c_n_mod
+set_contact_field.c_n_mod_compl,save_value,set_contact_field.c_n_mod,,,c_n_mod_compl
+set_contact_field.c_n_mod_started,save_value,set_contact_field.c_n_mod_compl,,,c_n_mod_started
+set_contact_field.c_goal_checkin_,save_value,set_contact_field.c_n_mod_started,,,c_goal_checkin_id
+set_contact_field.curr_goal,save_value,set_contact_field.c_goal_checkin_,,,curr_goal
+set_contact_field.assigned_resear.1,save_value,set_contact_field.curr_goal,,,assigned_research_id
+set_contact_field.completed_onboa,save_value,set_contact_field.assigned_resear.1,,,completed_onboarding
+set_contact_field.completed_progc,save_value,set_contact_field.completed_onboa,,,completed_progcheck
+set_contact_field.completed_pause,save_value,set_contact_field.completed_progc,,,completed_pause
+set_contact_field.completed_pre_g,save_value,set_contact_field.completed_pause,,,completed_pre_goal_checkin
+set_contact_field.opt_in_base,save_value,set_contact_field.completed_pre_g,,,opt_in_base
+set_contact_field.opt_in_end,save_value,set_contact_field.opt_in_base,,,opt_in_end
+flow.reset_base1,start_new_flow,set_contact_field.opt_in_end,,reset base1,
+flow.reset_base2,start_new_flow,flow.reset_base1,value;completed|,reset base2,
+flow.reset_dem,start_new_flow,flow.reset_base2,value;completed|,reset dem,
+flow.reset_feed,start_new_flow,flow.reset_dem,value;completed|,reset feed,
+flow.reset_end1,start_new_flow,flow.reset_feed,value;completed|,reset end1,
+flow.reset_end2,start_new_flow,flow.reset_end1,value;completed|,reset end2,
+flow.reset_f1,start_new_flow,flow.reset_end2,value;completed|,reset f1,
+flow.reset_onboardin,start_new_flow,flow.reset_f1,value;completed|,reset_onboarding_survey,
+msg.variables_have_,send_message,flow.reset_onboardin,value;completed|,variables have been reset,

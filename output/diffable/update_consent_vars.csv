@@ -1,0 +1,5 @@
+row_id,type,edges.1.from,edges.1.condition,message_text,save_name
+switch.fields_consent,split_by_value,start,,@fields.consent,
+add_contact_groups.in_program,add_to_group,switch.fields_consent,value;yes|variable;@fields.consent|type;has_any_word|name;yes,in program|,
+add_contact_groups.consent_to_stud,add_to_group,add_contact_groups.in_program,,consent to study|,
+set_contact_field.consent_time,save_value,add_contact_groups.consent_to_stud,,@(now()),consent_time

@@ -1,0 +1,11 @@
+row_id,type,edges.1.from,no_response,edges.2.from,edges.2.condition,edges.3.from,edges.3.condition,edges.4.from,edges.1.condition,message_text,choices.1,save_name
+switch.fields_sq_end1_,split_by_value,start,,,,,,,,@fields.sq_end1_endlineintro1a,,
+set_contact_field.sq_end1_endline,save_value,switch.fields_sq_end1_,,,,,,,value;NA|variable;@fields.sq_end1_endlineintro1a|type;has_only_phrase|name;is NA,,,sq_end1_endlineintro1a
+switch.fields_over_six,split_by_value,set_contact_field.sq_end1_endline,,switch.fields_sq_end1_,,,,,,@fields.over_sixteen,,
+switch.1,split_by_value,switch.fields_over_six,,,,,,,value;yes|variable;@fields.over_sixteen|type;has_any_word|name;Yes,1,,
+set_run_result.dummy,save_flow_result,switch.1,,,,,,,,"Block can’t start with for loop, see issue #47",,dummy
+msg.Thank_you_so_mu,send_message,set_run_result.dummy,,,,,,,,Thank you so much for participating in these tips! You are so brave and such an amazing caregiver.,NEXT,
+wait_for.input_text,wait_for_response,msg.Thank_you_so_mu,60,,,,,,,,,
+switch.fields_sq_end1_.1,split_by_value,switch.fields_over_six,,,,,,,,@fields.sq_end1_endlineintro1a,,
+set_contact_field.sq_end1_endline.1,save_value,switch.fields_sq_end1_.1,,,,,,,,NA,,sq_end1_endlineintro1a
+set_contact_field.sq_end1_endline.2,save_value,wait_for.input_text,,wait_for.input_text,value;No Response|,switch.fields_sq_end1_.1,variable;@fields.sq_end1_endlineintro1a|type;has_text|name;had value,set_contact_field.sq_end1_endline.1,,yes,,sq_end1_endlineintro1a_complete

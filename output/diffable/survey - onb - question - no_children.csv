@@ -1,0 +1,39 @@
+row_id,type,edges.1.from,edges.2.from,edges.3.from,edges.4.from,edges.5.from,edges.6.from,edges.7.from,edges.8.from,edges.9.from,edges.10.from,edges.11.from,edges.12.from,edges.13.from,edges.14.from,edges.15.from,edges.16.from,edges.17.from,edges.18.from,edges.18.condition,edges.19.from,edges.1.condition,message_text,choices.1,choices.2,save_name
+switch.fields_sq_onb_n,split_by_value,start,,,,,,,,,,,,,,,,,,,,,@fields.sq_onb_nochildren,,,
+set_contact_field.sq_onb_nochildr,save_value,switch.fields_sq_onb_n,,,,,,,,,,,,,,,,,,,,value;NA|variable;@fields.sq_onb_nochildren|type;has_only_phrase|name;is NA,,,,sq_onb_nochildren
+switch.fields_sq_onb_c,split_by_value,set_contact_field.sq_onb_nochildr,switch.fields_sq_onb_n,,,,,,,,,,,,,,,,,,,,@fields.sq_onb_children,,,
+set_run_result.dummy,save_flow_result,switch.fields_sq_onb_c,,,,,,,,,,,,,,,,,,,,value;0|variable;@fields.sq_onb_children|type;has_only_phrase|name;0,"Block can’t start with for loop, see issue #47",,,dummy
+msg.These_tips_are_,send_message,set_run_result.dummy,,,,,,,,,,,,,,,,,,,,,"These tips are designed for those who look after children. Would you still like to receive the tips so you can share the advice with friends and family?
+
+Press a number on your keypad:
+1. I want the tips
+2. I do not want the tips",1,2,
+switch.input,wait_for_response,msg.These_tips_are_,,,,,,,,,,,,,,,,,,,,,,,,input
+set_run_result.variable,save_flow_result,switch.input,,,,,,,,,,,,,,,,,,,,"value;1,|variable;@input.text|type;has_any_word|name;I Want The Tips",want tips,,,variable
+set_run_result.variable.1,save_flow_result,switch.input,,,,,,,,,,,,,,,,,,,,"value;2,|variable;@input.text|type;has_any_word|name;I Do Not Want The Tips",no tips,,,variable
+set_contact_field.sq_onb_nochildr.1,save_value,set_run_result.variable,set_run_result.variable.1,,,,,,,,,,,,,,,,,,,,@results.variable,,,sq_onb_nochildren
+set_run_result.dummy.1,save_flow_result,set_contact_field.sq_onb_nochildr.1,,,,,,,,,,,,,,,,,,,,,Need something to apply this label to,,,dummy
+switch.fields_sq_onb_n.1,split_by_value,set_run_result.dummy.1,,,,,,,,,,,,,,,,,,,,,@fields.sq_onb_nochildren,,,
+set_run_result.next_action,save_flow_result,switch.fields_sq_onb_n.1,,,,,,,,,,,,,,,,,,,,value;no tips|variable;@fields.sq_onb_nochildren|type;has_only_phrase|name;stop,stop,,,next action
+switch.fields_joining_,split_by_value,set_run_result.next_action,,,,,,,,,,,,,,,,,,,,,@fields.joining_trigger_id,,,
+msg.Thank_you_for_y,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;advice|variable;@fields.joining_trigger_id|type;has_only_phrase|name;advice,"Thank you for your time. If you decide you want these tips later, type ADVICE.",,,
+msg.Thank_you_for_y.1,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;assistance|variable;@fields.joining_trigger_id|type;has_only_phrase|name;assistance,"Thank you for your time. If you decide you want these tips later, type ASSISTANCE.",,,
+msg.Thank_you_for_y.2,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;caregivers|variable;@fields.joining_trigger_id|type;has_only_phrase|name;caregivers,"Thank you for your time. If you decide you want these tips later, type CAREGIVERS.",,,
+msg.Thank_you_for_y.3,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;children|variable;@fields.joining_trigger_id|type;has_only_phrase|name;children,"Thank you for your time. If you decide you want these tips later, type CHILDREN.",,,
+msg.Thank_you_for_y.4,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;counseling|variable;@fields.joining_trigger_id|type;has_only_phrase|name;counseling,"Thank you for your time. If you decide you want these tips later, type COUNSELING.",,,
+msg.Thank_you_for_y.5,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;development|variable;@fields.joining_trigger_id|type;has_only_phrase|name;development,"Thank you for your time. If you decide you want these tips later, type DEVELOPMENT.",,,
+msg.Thank_you_for_y.6,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;enlightening|variable;@fields.joining_trigger_id|type;has_only_phrase|name;enlightening,"Thank you for your time. If you decide you want these tips later, type ENLIGHTENING.",,,
+msg.Thank_you_for_y.7,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;family|variable;@fields.joining_trigger_id|type;has_only_phrase|name;family,"Thank you for your time. If you decide you want these tips later, type FAMILY.",,,
+msg.Thank_you_for_y.8,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;guidance|variable;@fields.joining_trigger_id|type;has_only_phrase|name;guidance,"Thank you for your time. If you decide you want these tips later, type GUIDANCE.",,,
+msg.Thank_you_for_y.9,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;learn|variable;@fields.joining_trigger_id|type;has_only_phrase|name;learn,"Thank you for your time. If you decide you want these tips later, type LEARN.",,,
+msg.Thank_you_for_y.10,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;share|variable;@fields.joining_trigger_id|type;has_only_phrase|name;share,"Thank you for your time. If you decide you want these tips later, type SHARE.",,,
+msg.Thank_you_for_y.11,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;strengthening|variable;@fields.joining_trigger_id|type;has_only_phrase|name;strengthening,"Thank you for your time. If you decide you want these tips later, type STRENGTHENING.",,,
+msg.Thank_you_for_y.12,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;support|variable;@fields.joining_trigger_id|type;has_only_phrase|name;support,"Thank you for your time. If you decide you want these tips later, type SUPPORT.",,,
+msg.Thank_you_for_y.13,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;tips|variable;@fields.joining_trigger_id|type;has_only_phrase|name;tips,"Thank you for your time. If you decide you want these tips later, type TIPS.",,,
+msg.Thank_you_for_y.14,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;vision|variable;@fields.joining_trigger_id|type;has_only_phrase|name;vision,"Thank you for your time. If you decide you want these tips later, type VISION.",,,
+msg.Thank_you_for_y.15,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,,"Thank you for your time. If you decide you want these tips later, type TEST.",,,
+msg.Sorry_I_dont_un,send_message,switch.input,,,,,,,,,,,,,,,,,,,,,"Sorry, I don't understand what you mean.",,,
+goto.set_run_result.dummy,go_to,msg.Sorry_I_dont_un,,,,,,,,,,,,,,,,,,,,,set_run_result.dummy|,,,
+switch.fields_sq_onb_n.2,split_by_value,switch.fields_sq_onb_c,,,,,,,,,,,,,,,,,,,,,@fields.sq_onb_nochildren,,,
+set_contact_field.sq_onb_nochildr.2,save_value,switch.fields_sq_onb_n.2,,,,,,,,,,,,,,,,,,,,,NA,,,sq_onb_nochildren
+set_contact_field.sq_onb_nochildr.3,save_value,msg.Thank_you_for_y,msg.Thank_you_for_y.1,msg.Thank_you_for_y.2,msg.Thank_you_for_y.3,msg.Thank_you_for_y.4,msg.Thank_you_for_y.5,msg.Thank_you_for_y.6,msg.Thank_you_for_y.7,msg.Thank_you_for_y.8,msg.Thank_you_for_y.9,msg.Thank_you_for_y.10,msg.Thank_you_for_y.11,msg.Thank_you_for_y.12,msg.Thank_you_for_y.13,msg.Thank_you_for_y.14,msg.Thank_you_for_y.15,switch.fields_sq_onb_n.1,switch.fields_sq_onb_n.2,variable;@fields.sq_onb_nochildren|type;has_text|name;had value,set_contact_field.sq_onb_nochildr.2,,yes,,,sq_onb_nochildren_complete

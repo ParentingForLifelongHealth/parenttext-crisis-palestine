@@ -1,0 +1,16 @@
+row_id,type,edges.1.from,edges.1.condition,edges.2.from,edges.3.from,message_text
+remove_contact_groups.in_x_survey,remove_from_group,start,,,,in x survey|
+switch.contact_groups,split_by_group,remove_contact_groups.in_x_survey,,,,in program|
+remove_contact_groups.in_program,remove_from_group,switch.contact_groups,value;in program|,,,in program|
+switch.contact_groups.1,split_by_group,remove_contact_groups.in_program,,,,passive drop out|
+add_contact_groups.still_active_1m,add_to_group,switch.contact_groups.1,,,,still active 1month|
+add_contact_groups.in_1month_surve,add_to_group,switch.contact_groups.1,value;passive drop out|,add_contact_groups.still_active_1m,switch.contact_groups,in 1month survey|
+flow.interaction_-_1,start_new_flow,add_contact_groups.in_1month_surve,,,,interaction - 1month
+switch.child_results_p,split_by_value,flow.interaction_-_1,value;completed|,,,@child.results.proceed
+flow.survey_-_f1,start_new_flow,switch.child_results_p,value;yes|variable;@child.results.proceed|type;has_any_word|name;start survey,,,survey - f1
+switch.child_results_e,split_by_value,flow.survey_-_f1,value;completed|,,,@child.results.expired
+remove_contact_groups.in_1month_surve,remove_from_group,switch.child_results_e,,switch.child_results_p,,in 1month survey|
+switch.contact_groups.2,split_by_group,remove_contact_groups.in_1month_surve,,,,still active 1month|
+msg.You_will_contin,send_message,switch.contact_groups.2,value;still active 1month|,,,You will continue with your progress tomorrow.
+add_contact_groups.in_program,add_to_group,msg.You_will_contin,,,,in program|
+msg.It_looks_like_t,send_message,flow.interaction_-_1,value;expired|,,,It looks like this is not a good time. Please type 1 if you'd like to continue.

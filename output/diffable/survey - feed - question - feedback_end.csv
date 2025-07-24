@@ -1,0 +1,10 @@
+row_id,type,edges.1.from,edges.2.from,edges.2.condition,edges.3.from,edges.1.condition,message_text,save_name
+switch.fields_sq_feed_,split_by_value,start,,,,,@fields.sq_feed_feedbackend,
+set_contact_field.sq_feed_feedbac,save_value,switch.fields_sq_feed_,,,,value;NA|variable;@fields.sq_feed_feedbackend|type;has_only_phrase|name;is NA,,sq_feed_feedbackend
+switch.fields_opt_in_b,split_by_value,set_contact_field.sq_feed_feedbac,switch.fields_sq_feed_,,,,@fields.opt_in_base,
+switch.1,split_by_value,switch.fields_opt_in_b,,,,value;yes|variable;@fields.opt_in_base|type;has_any_word|name;Yes,1,
+set_run_result.dummy,save_flow_result,switch.1,,,,,"Block can’t start with for loop, see issue #47",dummy
+msg.Thanks_for_your,send_message,set_run_result.dummy,,,,,Thanks for your responses! You will help make ParentText better for families 🎉See you back for another tip soon.,
+switch.fields_sq_feed_.1,split_by_value,switch.fields_opt_in_b,,,,,@fields.sq_feed_feedbackend,
+set_contact_field.sq_feed_feedbac.1,save_value,switch.fields_sq_feed_.1,,,,,NA,sq_feed_feedbackend
+set_contact_field.sq_feed_feedbac.2,save_value,msg.Thanks_for_your,switch.fields_sq_feed_.1,variable;@fields.sq_feed_feedbackend|type;has_text|name;had value,set_contact_field.sq_feed_feedbac.1,,yes,sq_feed_feedbackend_complete

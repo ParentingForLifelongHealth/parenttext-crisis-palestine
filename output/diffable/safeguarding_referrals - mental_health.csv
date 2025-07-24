@@ -1,0 +1,41 @@
+row_id,type,edges.1.from,edges.2.from,edges.3.from,edges.4.from,edges.5.from,edges.6.from,edges.7.from,edges.8.from,edges.1.condition,message_text
+msg.Here_are_some_s,send_message,start,,,,,,,,,Here are some services that might be able to help:
+switch.fields_location,split_by_value,msg.Here_are_some_s,,,,,,,,,@fields.location
+msg.Psychological_S,send_message,switch.fields_location,,,,,,,,value;jordan|variable;@fields.location|type;has_only_phrase|name;Jordan,"Psychological Support Hotline (UNRWA): 06-580 9100 Website: www.unrwa.org
+
+Altibbi - +962 6 400 1111 - https://www.altibbi.com
+
+Find A Helpline - https://findahelpline.com"
+msg.PSTIC_Egypt_-_0,send_message,switch.fields_location,,,,,,,,value;egypt|variable;@fields.location|type;has_only_phrase|name;Egypt,"PSTIC Egypt - 0111 086 6333 - https://help.unhcr.org/egypt/en/partners/pstic/
+
+16328: National Hotline for Mental Health, Egypt"
+msg._Womens_Psychol,send_message,switch.fields_location,,,,,,,,value;gaza|variable;@fields.location|type;has_only_phrase|name;Gaza," Women’s Psychological and Social Counseling Hotline: 1800-600-606 (psychological and legal support)
+Website: www.mosa.pna.ps - Palestine
+
+"
+msg._Womens_Psychol.1,send_message,switch.fields_location,,,,,,,,value;west bank|variable;@fields.location|type;has_only_phrase|name;West Bank," Women’s Psychological and Social Counseling Hotline: 1800-600-606 (psychological and legal support)
+Website: www.mosa.pna.ps - Palestine
+
+"
+msg.Syrian_Arab_Red,send_message,switch.fields_location,,,,,,,,value;syria|variable;@fields.location|type;has_only_phrase|name;Syria,"
+Syrian Arab Red Crescent (Psychological Counseling): +963 944 868 444
+
+UNICEF (Support for children and youth): +963 11 611 3366
+
+Save the Children - Psychological Support for Children: +963 11 334 5555
+
+Altibbi - +962 6 400 1111 - https://www.altibbi.com
+
+Find A Helpline - https://findahelpline.com"
+msg.IMC_Lebanon_-_9,send_message,switch.fields_location,,,,,,,,value;lebanon|variable;@fields.location|type;has_only_phrase|name;Lebanon,IMC Lebanon - +961 1 447 447 - https://internationalmedicalcorps.org/country/lebanon/
+msg.Psychological_S.1,send_message,switch.fields_location,,,,,,,,value;yemen|variable;@fields.location|type;has_only_phrase|name;Yemen,"Psychological Support Hotline (UNRWA): 06-580 9100 Website: www.unrwa.org
+
+Altibbi - +962 6 400 1111 - https://www.altibbi.com
+
+Find A Helpline - https://findahelpline.com"
+msg.Psychological_S.2,send_message,switch.fields_location,,,,,,,,,"Psychological Support Hotline (UNRWA): 06-580 9100 Website: www.unrwa.org
+
+Altibbi - +962 6 400 1111 - https://www.altibbi.com
+
+Find A Helpline - https://findahelpline.com"
+msg.Type_HELP_at_an,send_message,msg.Psychological_S,msg.PSTIC_Egypt_-_0,msg._Womens_Psychol,msg._Womens_Psychol.1,msg.Syrian_Arab_Red,msg.IMC_Lebanon_-_9,msg.Psychological_S.1,msg.Psychological_S.2,,Type HELP at any time if you would like the details of emergency services or other hotlines. Remember everything you say will be completely private!

@@ -1,0 +1,12 @@
+row_id,type,edges.1.from,edges.2.from,edges.3.from,edges.4.from,edges.5.from,edges.6.from,edges.7.from,edges.8.from,edges.1.condition,message_text
+msg.Here_are_some_s,send_message,start,,,,,,,,,Here are some services that might be able to help:
+switch.fields_location,split_by_value,msg.Here_are_some_s,,,,,,,,,@fields.location
+msg.IMC_Jordan_-_96,send_message,switch.fields_location,,,,,,,,value;jordan|variable;@fields.location|type;has_only_phrase|name;Jordan,IMC Jordan - +962 6 568 3253 - https://internationalmedicalcorps.org/country/jordan/
+msg.Refugees_and_As,send_message,switch.fields_location,,,,,,,,value;egypt|variable;@fields.location|type;has_only_phrase|name;Egypt,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/)
+msg.Gaza_Community_,send_message,switch.fields_location,,,,,,,,value;gaza|variable;@fields.location|type;has_only_phrase|name;Gaza,Gaza Community Mental Health Programme (GCMHP) +970 8 264 1511 - https://www.gcmhp.org
+msg.Gaza_Community_.1,send_message,switch.fields_location,,,,,,,,value;west bank|variable;@fields.location|type;has_only_phrase|name;West Bank,Gaza Community Mental Health Programme (GCMHP) +970 8 264 1511 - https://www.gcmhp.org
+msg.UOSSM_Syria_-_1,send_message,switch.fields_location,,,,,,,,value;syria|variable;@fields.location|type;has_only_phrase|name;Syria,UOSSM Syria - +1 469 983 9393 - https://uossm.us
+msg.Refugees_and_As.1,send_message,switch.fields_location,,,,,,,,value;lebanon|variable;@fields.location|type;has_only_phrase|name;Lebanon,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/)
+msg.IMC_Yemen_-_967,send_message,switch.fields_location,,,,,,,,value;yemen|variable;@fields.location|type;has_only_phrase|name;Yemen,IMC Yemen - +967 1 234 567 - https://internationalmedicalcorps.org/country/yemen/
+msg.Refugees_and_As.2,send_message,switch.fields_location,,,,,,,,,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/)
+msg.Type_HELP_at_an,send_message,msg.IMC_Jordan_-_96,msg.Refugees_and_As,msg.Gaza_Community_,msg.Gaza_Community_.1,msg.UOSSM_Syria_-_1,msg.Refugees_and_As.1,msg.IMC_Yemen_-_967,msg.Refugees_and_As.2,,Type HELP at any time if you would like the details of emergency services or other hotlines. Remember everything you say will be completely private!

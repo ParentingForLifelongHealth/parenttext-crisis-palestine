@@ -1,0 +1,10 @@
+row_id,type,edges.1.from,edges.2.from,edges.2.condition,edges.3.from,edges.1.condition,message_text,save_name
+switch.fields_sq_f1_fo,split_by_value,start,,,,,@fields.sq_f1_followupintro,
+set_contact_field.sq_f1_followupi,save_value,switch.fields_sq_f1_fo,,,,value;NA|variable;@fields.sq_f1_followupintro|type;has_only_phrase|name;is NA,,sq_f1_followupintro
+switch.fields_over_six,split_by_value,set_contact_field.sq_f1_followupi,switch.fields_sq_f1_fo,,,,@fields.over_sixteen,
+switch.1,split_by_value,switch.fields_over_six,,,,value;yes|variable;@fields.over_sixteen|type;has_any_word|name;Yes,1,
+set_run_result.dummy,save_flow_result,switch.1,,,,,"Block can’t start with for loop, see issue #47",dummy
+msg.We_have_8_quick,send_message,set_run_result.dummy,,,,,"We have 8 quick questions. Your answers help us make these tips better for parents and children finding strength and hope during war, displacement, and other tough times.",
+switch.fields_sq_f1_fo.1,split_by_value,switch.fields_over_six,,,,,@fields.sq_f1_followupintro,
+set_contact_field.sq_f1_followupi.1,save_value,switch.fields_sq_f1_fo.1,,,,,NA,sq_f1_followupintro
+set_contact_field.sq_f1_followupi.2,save_value,msg.We_have_8_quick,switch.fields_sq_f1_fo.1,variable;@fields.sq_f1_followupintro|type;has_text|name;had value,set_contact_field.sq_f1_followupi.1,,yes,sq_f1_followupintro_complete

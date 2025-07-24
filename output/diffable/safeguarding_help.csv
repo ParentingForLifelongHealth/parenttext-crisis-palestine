@@ -1,0 +1,178 @@
+row_id,type,edges.1.from,edges.2.from,edges.3.from,edges.4.from,edges.5.from,edges.6.from,edges.7.from,edges.8.from,edges.9.from,edges.10.from,edges.11.from,edges.12.from,edges.13.from,edges.14.from,edges.15.from,edges.16.from,edges.17.from,edges.18.from,edges.19.from,edges.20.from,edges.21.from,edges.22.from,edges.23.from,edges.24.from,edges.25.from,edges.26.from,edges.27.from,edges.28.from,edges.29.from,edges.30.from,edges.31.from,edges.32.from,edges.33.from,edges.34.from,edges.35.from,edges.36.from,edges.37.from,edges.38.from,edges.39.from,edges.40.from,edges.41.from,edges.42.from,edges.43.from,edges.44.from,edges.45.from,edges.46.from,edges.47.from,edges.48.from,edges.1.condition,message_text,choices.1,choices.2,choices.3,choices.4,choices.5,choices.6,save_name
+msg.It_looks_like_y,send_message,start,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"It looks like you are facing an emergency. Can you please tell us what kind of assistance you need?
+
+Press a number on your keypad:
+1. Local and international support
+2. Medical services
+3. Mental health support
+4. Family counselling services
+5. Natural disasters
+6. Child Protection",1,2,3,4,5,6,
+switch.emergency,wait_for_response,msg.It_looks_like_y,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,emergency
+switch.fields_location,split_by_value,switch.emergency,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;1,|variable;@input.text|type;has_any_word|name;Local and international support",@fields.location,,,,,,,
+msg.Police_911Carit,send_message,switch.fields_location,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;jordan|variable;@fields.location|type;has_only_phrase|name;Jordan,"Police: 911
+
+Caritas Jordan: +962 6 463 9032 - https://caritasjordan.org.jo
+
+Jordanian Women’s Union: 06-5675721 (Provides support for women, including legal aid and shelter)
+Website: www.jwu.org.jo
+
+Abuse & domestic violence helplines in Jordan (findahelpline.com)
+
+Tamkeen Fields for Aid - +962 6 553 9501 - https://tamkeen-jo.org
+
+ARDD - +962 6 461 7277 - https://ardd-jo.org",,,,,,,
+msg.Refugees_and_As,send_message,switch.fields_location,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;egypt|variable;@fields.location|type;has_only_phrase|name;Egypt,"Refugees and Asylum Information from UNHCR (https://help.unhcr.org/)
+
+National Council for Women (NCW) - Egypt:  Email: info@ncw.gov.eg;  Website: http://ncw.gov.eg/;  Facebook Page: https://www.facebook.com/ncwegyptpage;  Instagram: @wcoegypt
+
+15115: Women’s Helpline, Egypt",,,,,,,
+msg.Police_100_-_Pa,send_message,switch.fields_location,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;gaza|variable;@fields.location|type;has_only_phrase|name;Gaza,"Police: 100
+ - Palestine
+
+SAWA - emergency hotline 121 - https://sawa.ps/en/
+
+Women’s Guidance and Training Center: 02-2966761 (psychological and legal support for abused women)
+ - Palestine
+
+Palestinian Working Woman Society for Development Hotline: 1800-404-404
+Website: www.pwwsd.org",,,,,,,
+msg.Police_100_-_Pa.1,send_message,switch.fields_location,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;west bank|variable;@fields.location|type;has_only_phrase|name;West Bank,"Police: 100
+ - Palestine
+
+SAWA - emergency hotline 121 - https://sawa.ps/en/
+
+Women’s Guidance and Training Center: 02-2966761 (psychological and legal support for abused women)
+ - Palestine
+
+Palestinian Working Woman Society for Development Hotline: 1800-404-404
+Website: www.pwwsd.org",,,,,,,
+msg.Refugees_and_As.1,send_message,switch.fields_location,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;syria|variable;@fields.location|type;has_only_phrase|name;Syria,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.Refugees_and_As.2,send_message,switch.fields_location,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;lebanon|variable;@fields.location|type;has_only_phrase|name;Lebanon,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.UNHCR_Yemen_-_9,send_message,switch.fields_location,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;yemen|variable;@fields.location|type;has_only_phrase|name;Yemen,UNHCR Yemen - +967 1 469 771 - https://help.unhcr.org/yemen/,,,,,,,
+msg.Refugees_and_As.3,send_message,switch.fields_location,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+switch.fields_location.1,split_by_value,switch.emergency,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;2,|variable;@input.text|type;has_any_word|name;Medical services",@fields.location,,,,,,,
+msg.IMC_Jordan_-_96,send_message,switch.fields_location.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;jordan|variable;@fields.location|type;has_only_phrase|name;Jordan,IMC Jordan - +962 6 568 3253 - https://internationalmedicalcorps.org/country/jordan/,,,,,,,
+msg.Refugees_and_As.4,send_message,switch.fields_location.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;egypt|variable;@fields.location|type;has_only_phrase|name;Egypt,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.Gaza_Community_,send_message,switch.fields_location.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;gaza|variable;@fields.location|type;has_only_phrase|name;Gaza,Gaza Community Mental Health Programme (GCMHP) +970 8 264 1511 - https://www.gcmhp.org,,,,,,,
+msg.Gaza_Community_.1,send_message,switch.fields_location.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;west bank|variable;@fields.location|type;has_only_phrase|name;West Bank,Gaza Community Mental Health Programme (GCMHP) +970 8 264 1511 - https://www.gcmhp.org,,,,,,,
+msg.UOSSM_Syria_-_1,send_message,switch.fields_location.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;syria|variable;@fields.location|type;has_only_phrase|name;Syria,UOSSM Syria - +1 469 983 9393 - https://uossm.us,,,,,,,
+msg.Refugees_and_As.5,send_message,switch.fields_location.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;lebanon|variable;@fields.location|type;has_only_phrase|name;Lebanon,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.IMC_Yemen_-_967,send_message,switch.fields_location.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;yemen|variable;@fields.location|type;has_only_phrase|name;Yemen,IMC Yemen - +967 1 234 567 - https://internationalmedicalcorps.org/country/yemen/,,,,,,,
+msg.Refugees_and_As.6,send_message,switch.fields_location.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+switch.fields_location.2,split_by_value,switch.emergency,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;3,|variable;@input.text|type;has_any_word|name;Mental health support",@fields.location,,,,,,,
+msg.Psychological_S,send_message,switch.fields_location.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;jordan|variable;@fields.location|type;has_only_phrase|name;Jordan,"Psychological Support Hotline (UNRWA): 06-580 9100 Website: www.unrwa.org
+
+Altibbi - +962 6 400 1111 - https://www.altibbi.com
+
+Find A Helpline - https://findahelpline.com",,,,,,,
+msg.PSTIC_Egypt_-_0,send_message,switch.fields_location.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;egypt|variable;@fields.location|type;has_only_phrase|name;Egypt,"PSTIC Egypt - 0111 086 6333 - https://help.unhcr.org/egypt/en/partners/pstic/
+
+16328: National Hotline for Mental Health, Egypt",,,,,,,
+msg._Womens_Psychol,send_message,switch.fields_location.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;gaza|variable;@fields.location|type;has_only_phrase|name;Gaza," Women’s Psychological and Social Counseling Hotline: 1800-600-606 (psychological and legal support)
+Website: www.mosa.pna.ps - Palestine
+
+",,,,,,,
+msg._Womens_Psychol.1,send_message,switch.fields_location.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;west bank|variable;@fields.location|type;has_only_phrase|name;West Bank," Women’s Psychological and Social Counseling Hotline: 1800-600-606 (psychological and legal support)
+Website: www.mosa.pna.ps - Palestine
+
+",,,,,,,
+msg.Syrian_Arab_Red,send_message,switch.fields_location.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;syria|variable;@fields.location|type;has_only_phrase|name;Syria,"
+Syrian Arab Red Crescent (Psychological Counseling): +963 944 868 444
+
+UNICEF (Support for children and youth): +963 11 611 3366
+
+Save the Children - Psychological Support for Children: +963 11 334 5555
+
+Altibbi - +962 6 400 1111 - https://www.altibbi.com
+
+Find A Helpline - https://findahelpline.com",,,,,,,
+msg.IMC_Lebanon_-_9,send_message,switch.fields_location.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;lebanon|variable;@fields.location|type;has_only_phrase|name;Lebanon,IMC Lebanon - +961 1 447 447 - https://internationalmedicalcorps.org/country/lebanon/,,,,,,,
+msg.Psychological_S.1,send_message,switch.fields_location.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;yemen|variable;@fields.location|type;has_only_phrase|name;Yemen,"Psychological Support Hotline (UNRWA): 06-580 9100 Website: www.unrwa.org
+
+Altibbi - +962 6 400 1111 - https://www.altibbi.com
+
+Find A Helpline - https://findahelpline.com",,,,,,,
+msg.Psychological_S.2,send_message,switch.fields_location.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Psychological Support Hotline (UNRWA): 06-580 9100 Website: www.unrwa.org
+
+Altibbi - +962 6 400 1111 - https://www.altibbi.com
+
+Find A Helpline - https://findahelpline.com",,,,,,,
+switch.fields_location.3,split_by_value,switch.emergency,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;4,|variable;@input.text|type;has_any_word|name;Family counselling services",@fields.location,,,,,,,
+msg.Family_Protecti,send_message,switch.fields_location.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;jordan|variable;@fields.location|type;has_only_phrase|name;Jordan,"Family Protection Hotline: 110
+
+Family and Juvenile Protection Department (Ministry of Interior): +962 6 581 5826 
+
+National Council for Family Affairs: +962 6 5544667 /8
+Website: www.ncfa.org.jo 
+
+Jordan River Foundation  - https://jordanriver.jo
+
+IFH – King Hussein Foundation - +962 6 477 1841 - https://kinghusseinfoundation.org",,,,,,,
+msg.16000_Child_Hel,send_message,switch.fields_location.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;egypt|variable;@fields.location|type;has_only_phrase|name;Egypt,"16000: Child Helpline, Egypt",,,,,,,
+msg.Women_and_Child,send_message,switch.fields_location.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;gaza|variable;@fields.location|type;has_only_phrase|name;Gaza,Women and Children Protection Hotline (Ministry of Social Development): 121 - Palestine,,,,,,,
+msg.Women_and_Child.1,send_message,switch.fields_location.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;west bank|variable;@fields.location|type;has_only_phrase|name;West Bank,Women and Children Protection Hotline (Ministry of Social Development): 121 - Palestine,,,,,,,
+msg.Refugees_and_As.7,send_message,switch.fields_location.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;syria|variable;@fields.location|type;has_only_phrase|name;Syria,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.Refugees_and_As.8,send_message,switch.fields_location.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;lebanon|variable;@fields.location|type;has_only_phrase|name;Lebanon,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.Refugees_and_As.9,send_message,switch.fields_location.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;yemen|variable;@fields.location|type;has_only_phrase|name;Yemen,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.Refugees_and_As.10,send_message,switch.fields_location.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+switch.fields_location.4,split_by_value,switch.emergency,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;5,|variable;@input.text|type;has_any_word|name;Natural disasters",@fields.location,,,,,,,
+msg.Jordan_Hashemit,send_message,switch.fields_location.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;jordan|variable;@fields.location|type;has_only_phrase|name;Jordan,"Jordan Hashemite Charity Organization - +962 6 552 3190 - https://jhco.org.jo
+
+Jordan Red Crescent - +962 6 477 3141 - https://jrcrelief.org
+
+Altibbi - +962 6 400 1111 - https://www.altibbi.com 
+
+Find A Helpline - https://findahelpline.com",,,,,,,
+msg.Refugees_and_As.11,send_message,switch.fields_location.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;egypt|variable;@fields.location|type;has_only_phrase|name;Egypt,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.Refugees_and_As.12,send_message,switch.fields_location.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;gaza|variable;@fields.location|type;has_only_phrase|name;Gaza,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.Refugees_and_As.13,send_message,switch.fields_location.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;west bank|variable;@fields.location|type;has_only_phrase|name;West Bank,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.Refugees_and_As.14,send_message,switch.fields_location.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;syria|variable;@fields.location|type;has_only_phrase|name;Syria,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.Refugees_and_As.15,send_message,switch.fields_location.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;lebanon|variable;@fields.location|type;has_only_phrase|name;Lebanon,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.CARE_Yemen_-_ht,send_message,switch.fields_location.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;yemen|variable;@fields.location|type;has_only_phrase|name;Yemen,CARE Yemen - https://www.care.org/our-work/where-we-work/yemen/,,,,,,,
+msg.Refugees_and_As.16,send_message,switch.fields_location.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+switch.fields_location.5,split_by_value,switch.emergency,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;6,|variable;@input.text|type;has_any_word|name;Child Protection",@fields.location,,,,,,,
+msg.Save_the_Childr,send_message,switch.fields_location.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;jordan|variable;@fields.location|type;has_only_phrase|name;Jordan,Save the Children Jordan - +962 6 567 0241 - https://savethechildren.org.jo,,,,,,,
+msg.Refugees_and_As.17,send_message,switch.fields_location.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;egypt|variable;@fields.location|type;has_only_phrase|name;Egypt,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.War_Child_OPT_-,send_message,switch.fields_location.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;gaza|variable;@fields.location|type;has_only_phrase|name;Gaza,War Child OPT - +31 20 422 7777 - https://www.warchild.net/country-opt/,,,,,,,
+msg.War_Child_OPT_-.1,send_message,switch.fields_location.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;west bank|variable;@fields.location|type;has_only_phrase|name;West Bank,War Child OPT - +31 20 422 7777 - https://www.warchild.net/country-opt/,,,,,,,
+msg.Refugees_and_As.18,send_message,switch.fields_location.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;syria|variable;@fields.location|type;has_only_phrase|name;Syria,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.UNICEF_Lebanon_,send_message,switch.fields_location.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;lebanon|variable;@fields.location|type;has_only_phrase|name;Lebanon,UNICEF Lebanon - +961 1 607 400 - https://www.unicef.org/lebanon,,,,,,,
+msg.Refugees_and_As.19,send_message,switch.fields_location.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;yemen|variable;@fields.location|type;has_only_phrase|name;Yemen,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+msg.Refugees_and_As.20,send_message,switch.fields_location.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/),,,,,,,
+switch.fields_consent,split_by_value,msg.Police_911Carit,msg.Refugees_and_As,msg.Police_100_-_Pa,msg.Police_100_-_Pa.1,msg.Refugees_and_As.1,msg.Refugees_and_As.2,msg.UNHCR_Yemen_-_9,msg.Refugees_and_As.3,msg.IMC_Jordan_-_96,msg.Refugees_and_As.4,msg.Gaza_Community_,msg.Gaza_Community_.1,msg.UOSSM_Syria_-_1,msg.Refugees_and_As.5,msg.IMC_Yemen_-_967,msg.Refugees_and_As.6,msg.Psychological_S,msg.PSTIC_Egypt_-_0,msg._Womens_Psychol,msg._Womens_Psychol.1,msg.Syrian_Arab_Red,msg.IMC_Lebanon_-_9,msg.Psychological_S.1,msg.Psychological_S.2,msg.Family_Protecti,msg.16000_Child_Hel,msg.Women_and_Child,msg.Women_and_Child.1,msg.Refugees_and_As.7,msg.Refugees_and_As.8,msg.Refugees_and_As.9,msg.Refugees_and_As.10,msg.Jordan_Hashemit,msg.Refugees_and_As.11,msg.Refugees_and_As.12,msg.Refugees_and_As.13,msg.Refugees_and_As.14,msg.Refugees_and_As.15,msg.CARE_Yemen_-_ht,msg.Refugees_and_As.16,msg.Save_the_Childr,msg.Refugees_and_As.17,msg.War_Child_OPT_-,msg.War_Child_OPT_-.1,msg.Refugees_and_As.18,msg.UNICEF_Lebanon_,msg.Refugees_and_As.19,msg.Refugees_and_As.20,,@fields.consent,,,,,,,
+switch.contact_groups,split_by_group,switch.fields_consent,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;yes|variable;@fields.consent|type;has_any_word|name;consented,completed program|,,,,,,,
+msg.What_would_you_,send_message,switch.contact_groups,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,value;completed program|,"What would you like to do?
+
+Press a number on your keypad:
+1. Get other emergency contacts
+2. Go to the Main Menu",1,2,,,,,
+switch.selection,wait_for_response,msg.What_would_you_,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,selection
+goto.msg.It_looks_like_y,go_to,switch.selection,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;1,|variable;@input.text|type;has_any_word|name;Get Other Emergency Contacts",msg.It_looks_like_y|,,,,,,,
+flow.safeguarding_tr,start_new_flow,switch.selection,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;2,|variable;@input.text|type;has_any_word|name;Go To The Main Menu",safeguarding_trigger_wrapper_program - menu,,,,,,,
+msg.Sorry_I_dont_un,send_message,switch.selection,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Sorry, I don't understand what you mean.",,,,,,,
+goto.msg.What_would_you_,go_to,msg.Sorry_I_dont_un,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,msg.What_would_you_|,,,,,,,
+msg.What_would_you_.1,send_message,switch.contact_groups,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"What would you like to do?
+
+Press a number on your keypad:
+1. Get other emergency contacts
+2. Get another tip
+3. Go to the Main Menu",1,2,3,,,,
+switch.selection.1,wait_for_response,msg.What_would_you_.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,selection
+goto.msg.It_looks_like_y.1,go_to,switch.selection.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;1,|variable;@input.text|type;has_any_word|name;Get Other Emergency Contacts",msg.It_looks_like_y|,,,,,,,
+flow.safeguarding_tr.1,start_new_flow,switch.selection.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;3,|variable;@input.text|type;has_any_word|name;Go To The Main Menu",safeguarding_trigger_wrapper_program - menu,,,,,,,
+flow.new_day_goal_co,start_new_flow,switch.selection.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;2,|variable;@input.text|type;has_any_word|name;Get Another Tip",new_day_goal_content,,,,,,,
+msg.Sorry_I_dont_un.1,send_message,switch.selection.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Sorry, I don't understand what you mean.",,,,,,,
+goto.msg.What_would_you_.1,go_to,msg.Sorry_I_dont_un.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,msg.What_would_you_.1|,,,,,,,
+msg.What_would_you_.2,send_message,switch.fields_consent,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"What would you like to do?
+
+Press a number on your keypad:
+1. Get other emergency contacts
+2. Exit menu",1,2,,,,,
+switch.selection.2,wait_for_response,msg.What_would_you_.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,selection
+goto.msg.It_looks_like_y.2,go_to,switch.selection.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;1,|variable;@input.text|type;has_any_word|name;Get Other Emergency Contacts",msg.It_looks_like_y|,,,,,,,
+msg.We_hope_this_wa,send_message,switch.selection.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"value;2,|variable;@input.text|type;has_any_word|name;Exit Menu",We hope this was helpful. You can access this information at any time by typing HELP.,,,,,,,
+msg.Sorry_I_dont_un.2,send_message,switch.selection.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Sorry, I don't understand what you mean.",,,,,,,
+goto.msg.What_would_you_.2,go_to,msg.Sorry_I_dont_un.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,msg.What_would_you_.2|,,,,,,,
+msg.Sorry_I_dont_un.3,send_message,switch.emergency,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Sorry, I don't understand what you mean.",,,,,,,
+goto.msg.It_looks_like_y.3,go_to,msg.Sorry_I_dont_un.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,msg.It_looks_like_y|,,,,,,,

@@ -1,0 +1,54 @@
+row_id,type,edges.1.from,edges.1.condition,edges.2.from,message_text,save_name
+switch.fields_sq_f1_fo,split_by_value,start,,,@fields.sq_f1_followupintro_complete,
+flow.survey_-_f1_-_q,start_new_flow,switch.fields_sq_f1_fo,,,survey - f1 - question - followup_intro,
+switch.child_results_n,split_by_value,flow.survey_-_f1_-_q,value;completed|,,@child.results.next_action,
+switch.fields_sq_f1_ph,split_by_value,switch.fields_sq_f1_fo,value;yes|variable;@fields.sq_f1_followupintro_complete|type;has_any_word|name;Yes,switch.child_results_n,@fields.sq_f1_phq2downf_complete,
+flow.survey_-_f1_-_q.1,start_new_flow,switch.fields_sq_f1_ph,,,survey - f1 - question - phq2_down_f,
+switch.child_results_n.1,split_by_value,flow.survey_-_f1_-_q.1,value;completed|,,@child.results.next_action,
+switch.fields_sq_f1_ph.1,split_by_value,switch.fields_sq_f1_ph,value;yes|variable;@fields.sq_f1_phq2downf_complete|type;has_any_word|name;Yes,switch.child_results_n.1,@fields.sq_f1_phq2interestf_complete,
+flow.survey_-_f1_-_q.2,start_new_flow,switch.fields_sq_f1_ph.1,,,survey - f1 - question - phq2_interest_f,
+switch.child_results_n.2,split_by_value,flow.survey_-_f1_-_q.2,value;completed|,,@child.results.next_action,
+switch.fields_sq_f1_po,split_by_value,switch.fields_sq_f1_ph.1,value;yes|variable;@fields.sq_f1_phq2interestf_complete|type;has_any_word|name;Yes,switch.child_results_n.2,@fields.sq_f1_positiveparentingf_complete,
+flow.survey_-_f1_-_q.3,start_new_flow,switch.fields_sq_f1_po,,,survey - f1 - question - positive_parenting_f,
+switch.child_results_n.3,split_by_value,flow.survey_-_f1_-_q.3,value;completed|,,@child.results.next_action,
+switch.fields_sq_f1_pa,split_by_value,switch.fields_sq_f1_po,value;yes|variable;@fields.sq_f1_positiveparentingf_complete|type;has_any_word|name;Yes,switch.child_results_n.3,@fields.sq_f1_parentchildcommf_complete,
+flow.survey_-_f1_-_q.4,start_new_flow,switch.fields_sq_f1_pa,,,survey - f1 - question - parent_child_comm_f,
+switch.child_results_n.4,split_by_value,flow.survey_-_f1_-_q.4,value;completed|,,@child.results.next_action,
+switch.fields_sq_f1_mo,split_by_value,switch.fields_sq_f1_pa,value;yes|variable;@fields.sq_f1_parentchildcommf_complete|type;has_any_word|name;Yes,switch.child_results_n.4,@fields.sq_f1_monitoringf_complete,
+flow.survey_-_f1_-_q.5,start_new_flow,switch.fields_sq_f1_mo,,,survey - f1 - question - monitoring_f,
+switch.child_results_n.5,split_by_value,flow.survey_-_f1_-_q.5,value;completed|,,@child.results.next_action,
+switch.fields_sq_f1_em,split_by_value,switch.fields_sq_f1_mo,value;yes|variable;@fields.sq_f1_monitoringf_complete|type;has_any_word|name;Yes,switch.child_results_n.5,@fields.sq_f1_emotionalviolencef_complete,
+flow.survey_-_f1_-_q.6,start_new_flow,switch.fields_sq_f1_em,,,survey - f1 - question - emotional_violence_f,
+switch.child_results_n.6,split_by_value,flow.survey_-_f1_-_q.6,value;completed|,,@child.results.next_action,
+switch.fields_sq_f1_ph.2,split_by_value,switch.fields_sq_f1_em,value;yes|variable;@fields.sq_f1_emotionalviolencef_complete|type;has_any_word|name;Yes,switch.child_results_n.6,@fields.sq_f1_physicalviolencef_complete,
+flow.survey_-_f1_-_q.7,start_new_flow,switch.fields_sq_f1_ph.2,,,survey - f1 - question - physical_violence_f,
+switch.child_results_n.7,split_by_value,flow.survey_-_f1_-_q.7,value;completed|,,@child.results.next_action,
+switch.fields_sq_f1_ho,split_by_value,switch.fields_sq_f1_ph.2,value;yes|variable;@fields.sq_f1_physicalviolencef_complete|type;has_any_word|name;Yes,switch.child_results_n.7,@fields.sq_f1_hopef_complete,
+flow.survey_-_f1_-_q.8,start_new_flow,switch.fields_sq_f1_ho,,,survey - f1 - question - hope_f,
+switch.child_results_n.8,split_by_value,flow.survey_-_f1_-_q.8,value;completed|,,@child.results.next_action,
+switch.fields_sq_f1_fo.1,split_by_value,switch.fields_sq_f1_ho,value;yes|variable;@fields.sq_f1_hopef_complete|type;has_any_word|name;Yes,switch.child_results_n.8,@fields.sq_f1_followupoutro_complete,
+flow.survey_-_f1_-_q.9,start_new_flow,switch.fields_sq_f1_fo.1,,,survey - f1 - question - followup_outro,
+switch.child_results_n.9,split_by_value,flow.survey_-_f1_-_q.9,value;completed|,,@child.results.next_action,
+set_run_result.proceed,save_flow_result,switch.fields_sq_f1_fo.1,value;yes|variable;@fields.sq_f1_followupoutro_complete|type;has_any_word|name;Yes,switch.child_results_n.9,yes,proceed
+set_contact_field.s_f1_complete,save_value,set_run_result.proceed,,,yes,s_f1_complete
+set_contact_field.s_f1_completion,save_value,set_contact_field.s_f1_complete,,,@(now()),s_f1_completion_time
+set_run_result.expired,save_flow_result,flow.survey_-_f1_-_q.9,value;expired|,,yes,expired
+msg.It_looks_like_t,send_message,set_run_result.expired,,,It looks like this is not a good time. Please type 1 if you'd like to continue.,
+set_run_result.expired.1,save_flow_result,flow.survey_-_f1_-_q.8,value;expired|,,yes,expired
+msg.It_looks_like_t.1,send_message,set_run_result.expired.1,,,It looks like this is not a good time. Please type 1 if you'd like to continue.,
+set_run_result.expired.2,save_flow_result,flow.survey_-_f1_-_q.7,value;expired|,,yes,expired
+msg.It_looks_like_t.2,send_message,set_run_result.expired.2,,,It looks like this is not a good time. Please type 1 if you'd like to continue.,
+set_run_result.expired.3,save_flow_result,flow.survey_-_f1_-_q.6,value;expired|,,yes,expired
+msg.It_looks_like_t.3,send_message,set_run_result.expired.3,,,It looks like this is not a good time. Please type 1 if you'd like to continue.,
+set_run_result.expired.4,save_flow_result,flow.survey_-_f1_-_q.5,value;expired|,,yes,expired
+msg.It_looks_like_t.4,send_message,set_run_result.expired.4,,,It looks like this is not a good time. Please type 1 if you'd like to continue.,
+set_run_result.expired.5,save_flow_result,flow.survey_-_f1_-_q.4,value;expired|,,yes,expired
+msg.It_looks_like_t.5,send_message,set_run_result.expired.5,,,It looks like this is not a good time. Please type 1 if you'd like to continue.,
+set_run_result.expired.6,save_flow_result,flow.survey_-_f1_-_q.3,value;expired|,,yes,expired
+msg.It_looks_like_t.6,send_message,set_run_result.expired.6,,,It looks like this is not a good time. Please type 1 if you'd like to continue.,
+set_run_result.expired.7,save_flow_result,flow.survey_-_f1_-_q.2,value;expired|,,yes,expired
+msg.It_looks_like_t.7,send_message,set_run_result.expired.7,,,It looks like this is not a good time. Please type 1 if you'd like to continue.,
+set_run_result.expired.8,save_flow_result,flow.survey_-_f1_-_q.1,value;expired|,,yes,expired
+msg.It_looks_like_t.8,send_message,set_run_result.expired.8,,,It looks like this is not a good time. Please type 1 if you'd like to continue.,
+set_run_result.expired.9,save_flow_result,flow.survey_-_f1_-_q,value;expired|,,yes,expired
+msg.It_looks_like_t.9,send_message,set_run_result.expired.9,,,It looks like this is not a good time. Please type 1 if you'd like to continue.,

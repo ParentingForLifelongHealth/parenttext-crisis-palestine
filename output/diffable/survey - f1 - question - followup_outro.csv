@@ -1,0 +1,10 @@
+row_id,type,edges.1.from,edges.2.from,edges.2.condition,edges.3.from,edges.1.condition,message_text,save_name
+switch.fields_sq_f1_fo,split_by_value,start,,,,,@fields.sq_f1_followupoutro,
+set_contact_field.sq_f1_followupo,save_value,switch.fields_sq_f1_fo,,,,value;NA|variable;@fields.sq_f1_followupoutro|type;has_only_phrase|name;is NA,,sq_f1_followupoutro
+switch.fields_over_six,split_by_value,set_contact_field.sq_f1_followupo,switch.fields_sq_f1_fo,,,,@fields.over_sixteen,
+switch.1,split_by_value,switch.fields_over_six,,,,value;yes|variable;@fields.over_sixteen|type;has_any_word|name;Yes,1,
+set_run_result.dummy,save_flow_result,switch.1,,,,,"Block can’t start with for loop, see issue #47",dummy
+msg.Thank_you_for_y,send_message,set_run_result.dummy,,,,,Thank you for your answers. ❤️,
+switch.fields_sq_f1_fo.1,split_by_value,switch.fields_over_six,,,,,@fields.sq_f1_followupoutro,
+set_contact_field.sq_f1_followupo.1,save_value,switch.fields_sq_f1_fo.1,,,,,NA,sq_f1_followupoutro
+set_contact_field.sq_f1_followupo.2,save_value,msg.Thank_you_for_y,switch.fields_sq_f1_fo.1,variable;@fields.sq_f1_followupoutro|type;has_text|name;had value,set_contact_field.sq_f1_followupo.1,,yes,sq_f1_followupoutro_complete

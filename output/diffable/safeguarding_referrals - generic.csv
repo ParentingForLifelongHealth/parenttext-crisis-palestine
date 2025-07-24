@@ -1,0 +1,45 @@
+row_id,type,edges.1.from,edges.2.from,edges.3.from,edges.4.from,edges.5.from,edges.6.from,edges.7.from,edges.8.from,edges.1.condition,message_text
+msg.Here_are_some_s,send_message,start,,,,,,,,,Here are some services that might be able to help:
+switch.fields_location,split_by_value,msg.Here_are_some_s,,,,,,,,,@fields.location
+msg.Police_911Carit,send_message,switch.fields_location,,,,,,,,value;jordan|variable;@fields.location|type;has_only_phrase|name;Jordan,"Police: 911
+
+Caritas Jordan: +962 6 463 9032 - https://caritasjordan.org.jo
+
+Jordanian Women’s Union: 06-5675721 (Provides support for women, including legal aid and shelter)
+Website: www.jwu.org.jo
+
+Abuse & domestic violence helplines in Jordan (findahelpline.com)
+
+Tamkeen Fields for Aid - +962 6 553 9501 - https://tamkeen-jo.org
+
+ARDD - +962 6 461 7277 - https://ardd-jo.org"
+msg.Refugees_and_As,send_message,switch.fields_location,,,,,,,,value;egypt|variable;@fields.location|type;has_only_phrase|name;Egypt,"Refugees and Asylum Information from UNHCR (https://help.unhcr.org/)
+
+National Council for Women (NCW) - Egypt:  Email: info@ncw.gov.eg;  Website: http://ncw.gov.eg/;  Facebook Page: https://www.facebook.com/ncwegyptpage;  Instagram: @wcoegypt
+
+15115: Women’s Helpline, Egypt"
+msg.Police_100_-_Pa,send_message,switch.fields_location,,,,,,,,value;gaza|variable;@fields.location|type;has_only_phrase|name;Gaza,"Police: 100
+ - Palestine
+
+SAWA - emergency hotline 121 - https://sawa.ps/en/
+
+Women’s Guidance and Training Center: 02-2966761 (psychological and legal support for abused women)
+ - Palestine
+
+Palestinian Working Woman Society for Development Hotline: 1800-404-404
+Website: www.pwwsd.org"
+msg.Police_100_-_Pa.1,send_message,switch.fields_location,,,,,,,,value;west bank|variable;@fields.location|type;has_only_phrase|name;West Bank,"Police: 100
+ - Palestine
+
+SAWA - emergency hotline 121 - https://sawa.ps/en/
+
+Women’s Guidance and Training Center: 02-2966761 (psychological and legal support for abused women)
+ - Palestine
+
+Palestinian Working Woman Society for Development Hotline: 1800-404-404
+Website: www.pwwsd.org"
+msg.Refugees_and_As.1,send_message,switch.fields_location,,,,,,,,value;syria|variable;@fields.location|type;has_only_phrase|name;Syria,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/)
+msg.Refugees_and_As.2,send_message,switch.fields_location,,,,,,,,value;lebanon|variable;@fields.location|type;has_only_phrase|name;Lebanon,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/)
+msg.UNHCR_Yemen_-_9,send_message,switch.fields_location,,,,,,,,value;yemen|variable;@fields.location|type;has_only_phrase|name;Yemen,UNHCR Yemen - +967 1 469 771 - https://help.unhcr.org/yemen/
+msg.Refugees_and_As.3,send_message,switch.fields_location,,,,,,,,,Refugees and Asylum Information from UNHCR (https://help.unhcr.org/)
+msg.Type_HELP_at_an,send_message,msg.Police_911Carit,msg.Refugees_and_As,msg.Police_100_-_Pa,msg.Police_100_-_Pa.1,msg.Refugees_and_As.1,msg.Refugees_and_As.2,msg.UNHCR_Yemen_-_9,msg.Refugees_and_As.3,,Type HELP at any time if you would like the details of emergency services or other hotlines. Remember everything you say will be completely private!

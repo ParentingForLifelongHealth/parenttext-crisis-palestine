@@ -1,0 +1,14 @@
+row_id,type,edges.1.from,edges.1.condition,message_text,save_name,wa_template.name,wa_template.uuid,choices.1,choices.2
+msg.Can_you_believe,send_message,start,,"Can you believe it’s been a month? ⏳
+We’d love to check in and see how you’re doing ❤️. It’ll take less than 5 minutes.
+Is now a good time? 🙂
+
+Press a number on your keypad: 
+1. Yes
+2. No",,1month,2a1c42a2-1469-4f8b-867c-707c9d3e4095,1,2
+switch.interaction,wait_for_response,msg.Can_you_believe,,,interaction,,,,
+set_run_result.proceed,save_flow_result,switch.interaction,value;1|variable;@input.text|type;has_only_phrase|name;1,yes,proceed,,,,
+set_run_result.proceed.1,save_flow_result,switch.interaction,value;2|variable;@input.text|type;has_only_phrase|name;2,,proceed,,,,
+msg.Thats_okay_,send_message,set_run_result.proceed.1,,That's okay.,,,,,
+msg.Sorry_I_dont_un,send_message,switch.interaction,,"Sorry, I don't understand what you mean.",,,,,
+goto.msg.Can_you_believe,go_to,msg.Sorry_I_dont_un,,msg.Can_you_believe|,,,,,

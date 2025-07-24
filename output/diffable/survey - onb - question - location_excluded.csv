@@ -1,0 +1,41 @@
+row_id,type,edges.1.from,edges.2.from,edges.3.from,edges.4.from,edges.5.from,edges.6.from,edges.7.from,edges.8.from,edges.9.from,edges.10.from,edges.11.from,edges.12.from,edges.13.from,edges.14.from,edges.15.from,edges.16.from,edges.17.from,edges.18.from,edges.18.condition,edges.19.from,edges.1.condition,message_text,choices.1,choices.2,save_name
+switch.fields_sq_onb_l,split_by_value,start,,,,,,,,,,,,,,,,,,,,,@fields.sq_onb_locationexcluded,,,
+set_contact_field.sq_onb_location,save_value,switch.fields_sq_onb_l,,,,,,,,,,,,,,,,,,,,value;NA|variable;@fields.sq_onb_locationexcluded|type;has_only_phrase|name;is NA,,,,sq_onb_locationexcluded
+switch.fields_sq_onb_l.1,split_by_value,set_contact_field.sq_onb_location,switch.fields_sq_onb_l,,,,,,,,,,,,,,,,,,,,@fields.sq_onb_location,,,
+set_run_result.dummy,save_flow_result,switch.fields_sq_onb_l.1,,,,,,,,,,,,,,,,,,,,value;Gaza West Bank|variable;@fields.sq_onb_location|type;has_any_word|name;Gaza West Bank,"Block can’t start with for loop, see issue #47",,,dummy
+msg.This_is_a_very_,send_message,set_run_result.dummy,,,,,,,,,,,,,,,,,,,,,"This is a very difficult time for you and your family. We are glad you are here. You may need more support than just these tips, but we hope these tips can help even just a little. 
+
+What would you like to do?
+
+Press a number on your keypad:
+1. I want the tips
+2. I do not want the tips",1,2,
+switch.input,wait_for_response,msg.This_is_a_very_,,,,,,,,,,,,,,,,,,,,,,,,input
+set_run_result.variable,save_flow_result,switch.input,,,,,,,,,,,,,,,,,,,,"value;1,|variable;@input.text|type;has_any_word|name;I Want The Tips",want tips,,,variable
+set_run_result.variable.1,save_flow_result,switch.input,,,,,,,,,,,,,,,,,,,,"value;2,|variable;@input.text|type;has_any_word|name;I Do Not Want The Tips",no tips,,,variable
+set_contact_field.sq_onb_location.1,save_value,set_run_result.variable,set_run_result.variable.1,,,,,,,,,,,,,,,,,,,,@results.variable,,,sq_onb_locationexcluded
+set_run_result.dummy.1,save_flow_result,set_contact_field.sq_onb_location.1,,,,,,,,,,,,,,,,,,,,,Need something to apply this label to,,,dummy
+switch.fields_sq_onb_l.2,split_by_value,set_run_result.dummy.1,,,,,,,,,,,,,,,,,,,,,@fields.sq_onb_locationexcluded,,,
+set_run_result.next_action,save_flow_result,switch.fields_sq_onb_l.2,,,,,,,,,,,,,,,,,,,,value;no tips|variable;@fields.sq_onb_locationexcluded|type;has_only_phrase|name;stop,stop,,,next action
+switch.fields_joining_,split_by_value,set_run_result.next_action,,,,,,,,,,,,,,,,,,,,,@fields.joining_trigger_id,,,
+msg.Thats_okay__If_,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;advice|variable;@fields.joining_trigger_id|type;has_only_phrase|name;advice,"That's okay. If you decide you want these tips later, type ADVICE.",,,
+msg.Thats_okay__If_.1,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;assistance|variable;@fields.joining_trigger_id|type;has_only_phrase|name;assistance,"That's okay. If you decide you want these tips later, type ASSISTANCE.",,,
+msg.Thats_okay__If_.2,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;caregivers|variable;@fields.joining_trigger_id|type;has_only_phrase|name;caregivers,"That's okay. If you decide you want these tips later, type CAREGIVERS.",,,
+msg.Thats_okay__If_.3,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;children|variable;@fields.joining_trigger_id|type;has_only_phrase|name;children,"That's okay. If you decide you want these tips later, type CHILDREN.",,,
+msg.Thats_okay__If_.4,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;counseling|variable;@fields.joining_trigger_id|type;has_only_phrase|name;counseling,"That's okay. If you decide you want these tips later, type COUNSELING.",,,
+msg.Thats_okay__If_.5,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;development|variable;@fields.joining_trigger_id|type;has_only_phrase|name;development,"That's okay. If you decide you want these tips later, type DEVELOPMENT.",,,
+msg.Thats_okay__If_.6,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;enlightening|variable;@fields.joining_trigger_id|type;has_only_phrase|name;enlightening,"That's okay. If you decide you want these tips later, type ENLIGHTENING.",,,
+msg.Thats_okay__If_.7,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;family|variable;@fields.joining_trigger_id|type;has_only_phrase|name;family,"That's okay. If you decide you want these tips later, type FAMILY.",,,
+msg.Thats_okay__If_.8,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;guidance|variable;@fields.joining_trigger_id|type;has_only_phrase|name;guidance,"That's okay. If you decide you want these tips later, type GUIDANCE.",,,
+msg.Thats_okay__If_.9,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;learn|variable;@fields.joining_trigger_id|type;has_only_phrase|name;learn,"That's okay. If you decide you want these tips later, type LEARN.",,,
+msg.Thats_okay__If_.10,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;share|variable;@fields.joining_trigger_id|type;has_only_phrase|name;share,"That's okay. If you decide you want these tips later, type SHARE.",,,
+msg.Thats_okay__If_.11,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;strengthening|variable;@fields.joining_trigger_id|type;has_only_phrase|name;strengthening,"That's okay. If you decide you want these tips later, type STRENGTHENING.",,,
+msg.Thats_okay__If_.12,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;support|variable;@fields.joining_trigger_id|type;has_only_phrase|name;support,"That's okay. If you decide you want these tips later, type SUPPORT.",,,
+msg.Thats_okay__If_.13,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;tips|variable;@fields.joining_trigger_id|type;has_only_phrase|name;tips,"That's okay. If you decide you want these tips later, type TIPS.",,,
+msg.Thats_okay__If_.14,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,value;vision|variable;@fields.joining_trigger_id|type;has_only_phrase|name;vision,"That's okay. If you decide you want these tips later, type VISION.",,,
+msg.Thats_okay__If_.15,send_message,switch.fields_joining_,,,,,,,,,,,,,,,,,,,,,"That's okay. If you decide you want these tips later, type TEST.",,,
+msg.Sorry_I_dont_un,send_message,switch.input,,,,,,,,,,,,,,,,,,,,,"Sorry, I don't understand what you mean.",,,
+goto.set_run_result.dummy,go_to,msg.Sorry_I_dont_un,,,,,,,,,,,,,,,,,,,,,set_run_result.dummy|,,,
+switch.fields_sq_onb_l.3,split_by_value,switch.fields_sq_onb_l.1,,,,,,,,,,,,,,,,,,,,,@fields.sq_onb_locationexcluded,,,
+set_contact_field.sq_onb_location.2,save_value,switch.fields_sq_onb_l.3,,,,,,,,,,,,,,,,,,,,,NA,,,sq_onb_locationexcluded
+set_contact_field.sq_onb_location.3,save_value,msg.Thats_okay__If_,msg.Thats_okay__If_.1,msg.Thats_okay__If_.2,msg.Thats_okay__If_.3,msg.Thats_okay__If_.4,msg.Thats_okay__If_.5,msg.Thats_okay__If_.6,msg.Thats_okay__If_.7,msg.Thats_okay__If_.8,msg.Thats_okay__If_.9,msg.Thats_okay__If_.10,msg.Thats_okay__If_.11,msg.Thats_okay__If_.12,msg.Thats_okay__If_.13,msg.Thats_okay__If_.14,msg.Thats_okay__If_.15,switch.fields_sq_onb_l.2,switch.fields_sq_onb_l.3,variable;@fields.sq_onb_locationexcluded|type;has_text|name;had value,set_contact_field.sq_onb_location.2,,yes,,,sq_onb_locationexcluded_complete

@@ -1,0 +1,11 @@
+row_id,type,edges.1.from,no_response,edges.2.from,edges.2.condition,edges.3.from,edges.3.condition,edges.4.from,edges.1.condition,message_text,choices.1,save_name
+switch.fields_sq_feed_,split_by_value,start,,,,,,,,@fields.sq_feed_feedbackintro,,
+set_contact_field.sq_feed_feedbac,save_value,switch.fields_sq_feed_,,,,,,,value;NA|variable;@fields.sq_feed_feedbackintro|type;has_only_phrase|name;is NA,,,sq_feed_feedbackintro
+switch.fields_opt_in_b,split_by_value,set_contact_field.sq_feed_feedbac,,switch.fields_sq_feed_,,,,,,@fields.opt_in_base,,
+switch.1,split_by_value,switch.fields_opt_in_b,,,,,,,value;yes|variable;@fields.opt_in_base|type;has_any_word|name;Yes,1,,
+set_run_result.dummy,save_flow_result,switch.1,,,,,,,,"Block can’t start with for loop, see issue #47",,dummy
+msg.Lastly_today_we,send_message,set_run_result.dummy,,,,,,,,"Lastly, today we want to ask 2 questions to make these tips better for others 🎉",NEXT,
+wait_for.input_text,wait_for_response,msg.Lastly_today_we,60,,,,,,,,,
+switch.fields_sq_feed_.1,split_by_value,switch.fields_opt_in_b,,,,,,,,@fields.sq_feed_feedbackintro,,
+set_contact_field.sq_feed_feedbac.1,save_value,switch.fields_sq_feed_.1,,,,,,,,NA,,sq_feed_feedbackintro
+set_contact_field.sq_feed_feedbac.2,save_value,wait_for.input_text,,wait_for.input_text,value;No Response|,switch.fields_sq_feed_.1,variable;@fields.sq_feed_feedbackintro|type;has_text|name;had value,set_contact_field.sq_feed_feedbac.1,,yes,,sq_feed_feedbackintro_complete

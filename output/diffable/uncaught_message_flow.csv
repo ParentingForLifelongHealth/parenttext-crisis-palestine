@@ -1,0 +1,9 @@
+row_id,type,edges.1.from,edges.1.condition,edges.2.from,edges.2.condition,message_text
+switch.contact_groups,split_by_group,start,,,,in 1month survey|
+flow.study_safeguard,start_new_flow,switch.contact_groups,value;in 1month survey|,,,study_safeguarding_redirect_to_topic
+switch.child_results_o,split_by_value,flow.study_safeguard,value;completed|,,,@child.results.other_trigger
+switch.child_results_p,split_by_value,switch.child_results_o,,,,@child.results.proceed
+switch.contact_groups.1,split_by_group,switch.child_results_o,value;yes|variable;@child.results.other_trigger|type;has_any_word|name;other_trigger,switch.child_results_p,value;yes|variable;@child.results.proceed|type;has_any_word|name;proceed,in 1month survey|
+msg.Welcome_back,send_message,switch.contact_groups.1,value;in 1month survey|,,,Welcome back!
+flow.1month_survey_p,start_new_flow,msg.Welcome_back,,,,1month_survey_pre_wrapper
+flow.crisis_uncaught,start_new_flow,switch.contact_groups,,,,crisis_uncaught_message_flow

@@ -1,0 +1,21 @@
+row_id,type,edges.1.from,edges.1.condition,edges.2.from,edges.2.condition,edges.3.from,edges.3.condition,edges.4.from,message_text,choices.1,choices.2,save_name
+switch.fields_sq_onb_l,split_by_value,start,,,,,,,@fields.sq_onb_lang,,,
+set_contact_field.sq_onb_lang,save_value,switch.fields_sq_onb_l,value;NA|variable;@fields.sq_onb_lang|type;has_only_phrase|name;is NA,,,,,,,,,sq_onb_lang
+switch.fields_joining_,split_by_value,set_contact_field.sq_onb_lang,,switch.fields_sq_onb_l,,,,,@fields.joining_trigger_id,,,
+set_run_result.dummy,save_flow_result,switch.fields_joining_,value;testers|variable;@fields.joining_trigger_id|type;has_any_word|name;Testers,,,,,,"Block can’t start with for loop, see issue #47",,,dummy
+msg.Please_select_y,send_message,set_run_result.dummy,,,,,,,"Please select your language:
+
+من فضلك ادخل اللغة",English,اللغة العربية,
+switch.input,wait_for_response,msg.Please_select_y,,,,,,,,,,input
+set_run_result.variable,save_flow_result,switch.input,value;English|variable;@input.text|type;has_only_phrase|name;English,,,,,,eng,,,variable
+set_run_result.variable.1,save_flow_result,switch.input,value;اللغة العربية|variable;@input.text|type;has_only_phrase|name;اللغة العربية,,,,,,ara,,,variable
+set_contact_field.sq_onb_lang.1,save_value,set_run_result.variable,,set_run_result.variable.1,,,,,@results.variable,,,sq_onb_lang
+set_run_result.dummy.1,save_flow_result,set_contact_field.sq_onb_lang.1,,,,,,,Need something to apply this label to,,,dummy
+set_contact_field.lang_code,save_value,set_run_result.dummy.1,,,,,,,@fields.sq_onb_lang,,,lang_code
+set_contact_field.completed_langu,save_value,set_contact_field.lang_code,,,,,,,yes,,,completed_language
+flow.set_contact_lan,start_new_flow,set_contact_field.completed_langu,,,,,,,set_contact_language,,,
+msg.Sorry_I_dont_un,send_message,switch.input,,,,,,,"Sorry, I don't understand what you mean.",,,
+goto.set_run_result.dummy,go_to,msg.Sorry_I_dont_un,,,,,,,set_run_result.dummy|,,,
+switch.fields_sq_onb_l.1,split_by_value,switch.fields_joining_,,,,,,,@fields.sq_onb_lang,,,
+set_contact_field.sq_onb_lang.2,save_value,switch.fields_sq_onb_l.1,,,,,,,NA,,,sq_onb_lang
+set_contact_field.sq_onb_lang_com,save_value,flow.set_contact_lan,value;completed|,flow.set_contact_lan,value;expired|,switch.fields_sq_onb_l.1,variable;@fields.sq_onb_lang|type;has_text|name;had value,set_contact_field.sq_onb_lang.2,yes,,,sq_onb_lang_complete
