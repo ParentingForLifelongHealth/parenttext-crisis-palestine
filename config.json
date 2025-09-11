@@ -117,10 +117,7 @@
                 }
             },
             "path_template": [
-                "{{ format | title }}",
-                "{{ (annotations['Caregiver Gender'] or '') | title }}",
-                "{{ (language or '') | title }}",
-                "{{ name }}"
+                "{% if format == 'image' %}{% if folder == 'Comics' %}comic/{{ name }}{% else %}image/universal/{{ name }}{% endif %}{% else %}voiceover/resourceType/{{ format }}/gender/{{ (annotations['Caregiver Gender'] or 'unknown') }}/language/{{ (language or 'unknown') }}/{{ name }}{% endif %}"
             ],
             "storage": {
                 "system": "canto",
