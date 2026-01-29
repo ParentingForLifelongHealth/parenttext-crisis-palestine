@@ -68,7 +68,7 @@
         },
         "translation": {
             "format": "translation_repo",
-            "translation_repo": "https://github.com/edmoss345/palestine-translations",
+            "translation_repo": "https://github.com/IDEMSInternational/palestine-translations",
             "folder_within_repo": "translations/parent_text_crisis_palestine",
             "commit_hash": "",
             "commit_tag": "",
