@@ -227,6 +227,34 @@
         "Cap Users At": "500",
         "Location, if applicable": "",
         "Description": ""
+      },
+      {
+        "ID": "balance",
+        "Trigger (en)": "balance",
+        "Trigger (ar)": "ميزان",
+        "Link (en)": "https://wa.me/447400410660?text=balance",
+        "Link (ar)": "https://wa.me/447400410660?text=ميزان",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "RCT",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "150",
+        "Location, if applicable": "Jordan",
+        "Description": "arm 1 of RCT in Jordan"
+      },
+      {
+        "ID": "path",
+        "Trigger (en)": "path",
+        "Trigger (ar)": "مسار",
+        "Link (en)": "https://wa.me/447400410660?text=path",
+        "Link (ar)": "https://wa.me/447400410660?text=مسار",
+        "Experience (user group)": "digital",
+        "Recruitment (user group)": "RCT",
+        "Additional (user group)": "",
+        "Included in Reach? ": "reach",
+        "Cap Users At": "150",
+        "Location, if applicable": "Jordan",
+        "Description": "arm 2 of RCT in Jordan"
       }
     ],
     "content_index": [
@@ -373,6 +401,20 @@
         "groups": "digital;Social Share;reach",
         "cap": "500",
         "location": ""
+      },
+      {
+        "ID": "balance",
+        "triggers": "balance;ميزان",
+        "groups": "digital;RCT;reach",
+        "cap": "150",
+        "location": "Jordan"
+      },
+      {
+        "ID": "path",
+        "triggers": "path;مسار",
+        "groups": "digital;RCT;reach",
+        "cap": "150",
+        "location": "Jordan"
       }
     ],
     "cap_data": [
@@ -455,6 +497,16 @@
         "ID": "share",
         "var_key": "n_share",
         "var_value": "500"
+      },
+      {
+        "ID": "balance",
+        "var_key": "n_balance",
+        "var_value": "150"
+      },
+      {
+        "ID": "path",
+        "var_key": "n_path",
+        "var_value": "150"
       }
     ]
   }

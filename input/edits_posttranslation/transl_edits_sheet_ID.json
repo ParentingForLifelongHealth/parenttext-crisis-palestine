@@ -1103,7 +1103,13 @@
         "condition_type:tips": "has_only_phrase",
         "category:vision": "{joining_trigger_vision}",
         "condition:vision": "vision",
-        "condition_type:vision": "has_only_phrase"
+        "condition_type:vision": "has_only_phrase",
+        "category:path": "{joining_trigger_path}",
+        "condition:path": "path",
+        "condition_type:path": "has_only_phrase",
+        "category:balance": "{joining_trigger_balance}",
+        "condition:balance": "balance",
+        "condition_type:balance": "has_only_phrase"
       }
     ],
     "joining_triggers_eng": [
@@ -1250,6 +1256,24 @@
         "change": "{joining_trigger_share}",
         "condition_var": "",
         "category": "SHARE"
+      },
+      {
+        "type_of_edit": "replace_bit_of_text",
+        "flow_id": "Regex:.*",
+        "original_row_id": "",
+        "node_identifier": "Regex:.*{joining_trigger_balance}.*",
+        "change": "{joining_trigger_balance}",
+        "condition_var": "",
+        "category": "BALANCE"
+      },
+      {
+        "type_of_edit": "replace_bit_of_text",
+        "flow_id": "Regex:.*",
+        "original_row_id": "",
+        "node_identifier": "Regex:.*{joining_trigger_path}.*",
+        "change": "{joining_trigger_path}",
+        "condition_var": "",
+        "category": "PATH"
       }
     ],
     "joining_triggers_transl": [
@@ -1396,6 +1420,24 @@
         "original": "{joining_trigger}",
         "language": "ara",
         "replacement": "شارك"
+      },
+      {
+        "type_of_edit": "replace_bit_of_text",
+        "flow_id": "Regex:.*",
+        "original_row_id": "",
+        "node_identifier": "Regex:.*{joining_trigger_balance}.*",
+        "original": "{joining_trigger}",
+        "language": "ara",
+        "replacement": "ميزان"
+      },
+      {
+        "type_of_edit": "replace_bit_of_text",
+        "flow_id": "Regex:.*",
+        "original_row_id": "",
+        "node_identifier": "Regex:.*{joining_trigger_path}.*",
+        "original": "{joining_trigger}",
+        "language": "ara",
+        "replacement": "مسار"
       }
     ],
     "parenttext_name_transl": [

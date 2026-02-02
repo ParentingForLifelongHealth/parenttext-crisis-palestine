@@ -1468,6 +1468,42 @@
                     "mispellings": []
                 }
             }
+        },
+        {
+            "English": {
+                "keywords": [
+                    "balance",
+                    "\u0645\u064a\u0632\u0627\u0646"
+                ],
+                "mispellings": []
+            },
+            "Translation": {
+                "ara": {
+                    "keywords": [
+                        "balance",
+                        "\u0645\u064a\u0632\u0627\u0646"
+                    ],
+                    "mispellings": []
+                }
+            }
+        },
+        {
+            "English": {
+                "keywords": [
+                    "path",
+                    "\u0645\u0633\u0627\u0631"
+                ],
+                "mispellings": []
+            },
+            "Translation": {
+                "ara": {
+                    "keywords": [
+                        "path",
+                        "\u0645\u0633\u0627\u0631"
+                    ],
+                    "mispellings": []
+                }
+            }
         }
     ],
     "stop": [
