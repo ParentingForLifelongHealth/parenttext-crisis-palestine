@@ -162,6 +162,18 @@
     "note": ""
   },
   {
+    "SourceText": "You have already completed the survey.",
+    "text": "شكرًا لمشاركتك لقد أكملتَ/أكملتِ هذا الاستبيان بالفعل.",
+    "type": "text",
+    "note": ""
+  },
+  {
+    "SourceText": "🎉🎉🎉🎉",
+    "text": "🎉🎉🎉🎉",
+    "type": "text",
+    "note": ""
+  },
+  {
     "SourceText": "NEXT",
     "text": "التالي",
     "type": "quick_replies",
