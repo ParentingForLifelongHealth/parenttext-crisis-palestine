@@ -3118,6 +3118,14 @@
       {
         "ID": "restart_tomorrow",
         "msg": "You will continue with your progress tomorrow."
+      },
+      {
+        "ID": "rct_already_completed",
+        "msg": "You have already completed the survey."
+      },
+      {
+        "ID": "rct_completion",
+        "msg": "🎉🎉🎉🎉"
       }
     ],
     "survey_push_interaction_data": [
