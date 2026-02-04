@@ -1009,7 +1009,7 @@
         "node_identifier": "Regex:.*{consent_link}.*",
         "change": "{consent_link}",
         "condition_var": "",
-        "category": "https://bit.ly/4jU90CY"
+        "category": "https://bit.ly/4roIPbs"
       },
       {
         "type_of_edit": "replace_bit_of_text",
@@ -1038,7 +1038,7 @@
         "node_identifier": "Regex:.*{consent_link}.*",
         "original": "{consent_link}",
         "language": "ara",
-        "replacement": "https://bit.ly/parenttext-consent-ar"
+        "replacement": "https://bit.ly/4roIPbs"
       },
       {
         "type_of_edit": "replace_bit_of_text",
