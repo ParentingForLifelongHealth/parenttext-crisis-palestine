@@ -390,14 +390,14 @@
     "note": ""
   },
   {
-    "SourceText": "text / images",
-    "text": "نص/ صور",
+    "SourceText": "text and images only",
+    "text": "نص وصور فقط",
     "type": "arguments",
     "note": ""
   },
   {
-    "SourceText": "audio",
-    "text": "ملف صوتي",
+    "SourceText": "text, images, and audio",
+    "text": "نص وصور والصوت",
     "type": "arguments",
     "note": ""
   },
