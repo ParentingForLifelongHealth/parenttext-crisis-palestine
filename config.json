@@ -5,14 +5,12 @@
     },
     "parents": {
         "base": {
-            "location": "https://github.com/IDEMSInternational/parenttext-crisis-base/archive/refs/tags/v1.1.1.zip"
+            "location": "https://github.com/IDEMSInternational/parenttext-crisis-base/archive/refs/tags/v1.1.8.zip"
         }
     },
     "flows_outputbasename": "parenttext_all",
     "output_split_number": 1,
     "sheet_names": {
-        
-        "T_trial": "1BifL5eSoEo3b7WS8KsrnXDYg3t36yYLqzr75Y8V9Vhw",
 
         "deployment_localised_sheets" : "1tLDsUe-NxOxpxOBuTJmopOnP9dOcmLVHjO2YQxGxe28",
 
@@ -37,7 +35,6 @@
             "format": "sheets",
             "subformat": "google_sheets",
             "files_list": [
-                "T_trial",
                 "N_onboarding_data",
                 "C_ltp_activities",
                 "C_modules_all_ages",
