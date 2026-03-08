@@ -1609,14 +1609,14 @@
         "keywords": "footprint",
         "match_type": "O",
         "flow": "rct_1month_survey_wrapper",
-        "groups": ""
+        "groups": "RCT"
       },
       {
         "type": "K",
         "keywords": "بصمة",
         "match_type": "O",
         "flow": "rct_1month_survey_wrapper",
-        "groups": ""
+        "groups": "RCT"
       }
     ],
     "local_default_contact_fields_data": [
